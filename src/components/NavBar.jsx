@@ -87,8 +87,10 @@ const NavBar = () => {
   };
 
   const handleSubmenuClick = (key, e) => {
-    e.stopPropagation();
-    if (window.innerWidth < 769) { // Detectar dispositivos móviles
+    if(e) {
+      e.stopPropagation();
+    }
+    if (window.innerWidth < 982) { // Detectar dispositivos móviles
       toggleSubmenu(key);
     }
   };

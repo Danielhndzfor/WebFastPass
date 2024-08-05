@@ -9,7 +9,7 @@ const servicesData = [
         image: '/cita.jpg', // Cambia por tus propias imágenes
         title: 'Cita Informativa',
         description: 'Brindamos asesoría personalizada para tu trámite de visa y pasaporte.',
-        link: '/services/citainformativa'
+        link: '/services/cita-informativa'
     },
     {
         image: '/Pasaporte-mexicano.webp', // Cambia por tus propias imágenes
@@ -81,12 +81,15 @@ const testimonialsData = [
 
 const Services = () => {
     const { t } = useTranslation();
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
 
     return (
         <>
             <div className="services-section">
                 <h2>{t('Nuestros Servicios')}</h2>
-                <div className="services-grid">
+                <div className="services-grid" onClick={scrollToTop}>
                     {servicesData.map((service, index) => (
                         <ServiceCard
                             key={index}

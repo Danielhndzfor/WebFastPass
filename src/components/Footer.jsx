@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import '../css/Footer.css';
 
 function Footer() {
     const { t } = useTranslation();
@@ -60,12 +61,12 @@ function Footer() {
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a href='/about' className='text-reset'>
                                         {t('Quienes Somos')}
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a href='/contact' className='text-reset'>
                                         {t('Contacto')}
                                     </a>
                                 </p>
@@ -88,15 +89,22 @@ function Footer() {
                             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>{t('Contacto')}</h6>
                                 <p>
-                                    <MDBIcon icon="home" className="me-2" />
-                                    Av. Paseo de las Garzas #274, Local 13 (Segundo piso), Barrio 5, Valle de las Garzas C.P. 28219 Manzanillo, Colima
+                                    <a href="https://maps.app.goo.gl/tostpFRhyjGWeZLr6">
+                                        <MDBIcon icon="home" className="me-2" />
+                                        Av. Paseo de las Garzas #274, Local 13 (Segundo piso), Barrio 5, Valle de las Garzas C.P. 28219 Manzanillo, Colima
+                                    </a>
                                 </p>
                                 <p>
-                                    <MDBIcon icon="envelope" className="me-3" />
-                                    info@fastpass-visas.com
+                                    <a href="mailto:info@example.com">
+                                        <MDBIcon icon="envelope" className="me-3" />
+                                        info@fastpass-visas.com
+                                    </a>
                                 </p>
                                 <p>
-                                    <MDBIcon icon="phone" className="me-3" /> + 52 314 688 5645
+                                    <a href="tel:1234567890">
+                                        <MDBIcon icon="phone" className="me-3" /> 
+                                        + 52 314 688 5645
+                                    </a>
                                 </p>
                             </MDBCol>
                         </MDBRow>

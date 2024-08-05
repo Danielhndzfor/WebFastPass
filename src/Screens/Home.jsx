@@ -12,7 +12,7 @@ const servicesData = [
         image: '/cita.jpg', // Cambia por tus propias imágenes
         title: 'Cita Informativa',
         description: 'Brindamos asesoría personalizada para tu trámite de visa y pasaporte.',
-        link: '/services/citainformativa'
+        link: '/services/cita-informativa'
     },
     {
         image: '/visa.jpg', // Cambia por tus propias imágenes
@@ -30,6 +30,9 @@ const servicesData = [
 
 function Home() {
     const { t } = useTranslation();
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
 
     return (
         <>
@@ -37,13 +40,13 @@ function Home() {
             <section className="intro">
                 <h1>{t('Bienvenido a Fast Pass Visas')}</h1>
                 <p>{t('Tu aliado confiable para todas tus necesidades de visa.')}</p>
-                <Link to="/about" className="cta-button">{t('Conócenos Más')}</Link>
+                <Link to="/about" className="cta-button" onClick={scrollToTop}>{t('Conócenos Más')}</Link>
             </section>
 
             <section className="services">
                 <h2>{t('Nuestros Servicios')}</h2>
                 <div className="services-section">
-                    <div className="services-grid">
+                    <div className="services-grid" onClick={scrollToTop}>
                         {servicesData.map((service, index) => (
                             <ServiceCard
                                 key={index}
@@ -51,11 +54,12 @@ function Home() {
                                 title={t(service.title)}
                                 description={t(service.description)}
                                 link={service.link}
+                                
                             />
                         ))}
                     </div>
                 </div>
-                <Link to="/services" className="more-services-button">{t('Explora Más Servicios')}</Link>
+                <Link to="/services" className="more-services-button" onClick={scrollToTop}>{t('Explora Más Servicios')}</Link>
             </section>
 
             <section className="contact">
