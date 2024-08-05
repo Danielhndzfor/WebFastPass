@@ -83,8 +83,33 @@
     transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #0056b3;
+.contact-form button.disabled {
+    background-color: #cccccc; /* Gris para botón deshabilitado */
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.contact-form button.enabled {
+    background-color: #007BFF; /* Verde para botón habilitado */
+    color: white;
+    cursor: pointer;
+}
+
+.contact-form button.enabled:hover {
+    background-color: #0056b3; /* Verde más oscuro al pasar el mouse */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
 }
 
 

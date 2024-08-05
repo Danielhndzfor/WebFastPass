@@ -139,6 +139,19 @@
     background-color: #0056b3;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
 /* Media Queries para hacer responsive */
 @media (max-width: 768px) {
     .section {

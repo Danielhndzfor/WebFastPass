@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Logo from "/logoP.png";
+import Logo from "/logoP.webp";
 import "../css/NavBar.css";
 import { MDBIcon } from "mdb-react-ui-kit";
 

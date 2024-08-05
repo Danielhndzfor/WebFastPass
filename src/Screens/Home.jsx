@@ -9,13 +9,13 @@ import Contact from '../Screens/Contact';
 
 const servicesData = [
     {
-        image: '/cita.jpg', // Cambia por tus propias imágenes
+        image: '/cita.webp', // Cambia por tus propias imágenes
         title: 'Cita Informativa',
         description: 'Brindamos asesoría personalizada para tu trámite de visa y pasaporte.',
         link: '/services/cita-informativa'
     },
     {
-        image: '/visa.jpg', // Cambia por tus propias imágenes
+        image: '/visa.webp', // Cambia por tus propias imágenes
         title: 'Visa Americana',
         description: 'Asistimos en todos los pasos para la obtención de tu visa.',
         link: '/services/visa-americana'
@@ -37,7 +37,7 @@ function Home() {
     return (
         <>
             <Parallax />
-            <section className="intro">
+            <section className="intro fade-in">
                 <h1>{t('Bienvenido a Fast Pass Visas')}</h1>
                 <p>{t('Tu aliado confiable para todas tus necesidades de visa.')}</p>
                 <Link to="/about" className="cta-button" onClick={scrollToTop}>{t('Conócenos Más')}</Link>

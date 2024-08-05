@@ -5,18 +5,18 @@ import '../css/About.css';
 const About = () => {
     const { t } = useTranslation();
     const values = [
-        { img: '/honestidad.jpeg', title: 'Honestidad', description: 'Descripción de Honestidad.' },
-        { img: '/honestidad.jpeg', title: 'Respeto', description: 'Descripción de Respeto.' },
-        { img: '/honestidad.jpeg', title: 'Integridad', description: 'Descripción de Integridad.' },
-        { img: '/honestidad.jpeg', title: 'Responsabilidad', description: 'Descripción de Responsabilidad.' },
-        { img: '/honestidad.jpeg', title: 'Trabajo en Equipo', description: 'Descripción de Trabajo en Equipo.' },
-        { img: '/honestidad.jpeg', title: 'Innovación', description: 'Descripción de Innovación.' },
+        { img: '/honestidad.webp', title: 'Honestidad', description: 'Descripción de Honestidad.' },
+        { img: '/honestidad.webp', title: 'Respeto', description: 'Descripción de Respeto.' },
+        { img: '/honestidad.webp', title: 'Integridad', description: 'Descripción de Integridad.' },
+        { img: '/honestidad.webp', title: 'Responsabilidad', description: 'Descripción de Responsabilidad.' },
+        { img: '/honestidad.webp', title: 'Trabajo en Equipo', description: 'Descripción de Trabajo en Equipo.' },
+        { img: '/honestidad.webp', title: 'Innovación', description: 'Descripción de Innovación.' },
     ];
 
     return (
         <div className="about-container">
             {/* Historia */}
-            <section className="section history-section">
+            <section className="section history-section fade-in">
                 <div className="content">
                     <h2>{t('Nuestra Historia')}</h2>
                     <p>
@@ -24,16 +24,16 @@ const About = () => {
                     </p>
                 </div>
                 <div className="image">
-                    <img src="/oficina1.jpg" alt="Historia" />
-                    <img src="/oficina2.jpg" alt="Historia" />
-                    <img src="/oficina3.jpg" alt="Historia" />
+                    <img src="/oficina1.webp" alt="Historia" />
+                    <img src="/oficina2.webp" alt="Historia" />
+                    <img src="/oficina3.webp" alt="Historia" />
                 </div>
             </section>
 
             {/* Misión */}
-            <section className="section mission-section">
+            <section className="section mission-section fade-in">
                 <div className="image">
-                    <img src="/mision.png" alt="Misión" className="section-image" />
+                    <img src="/mision.webp" alt="Misión" className="section-image" />
                 </div>
                 <div className="content">
                     <h2>{t('Misión')}</h2>
@@ -46,7 +46,7 @@ const About = () => {
             {/* Visión */}
             <section className="section vision-section">
                 <div className="image">
-                    <img src="/vision.png" alt="Visión" className="section-image" />
+                    <img src="/vision.webp" alt="Visión" className="section-image" />
                 </div>
                 <div className="content">
                     <h2>{t('Visión')}</h2>

@@ -12,10 +12,15 @@ function Contact() {
         servicio: '',
         mensaje: '',
     });
+    const [isChecked, setIsChecked] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
+    };
+
+    const handleCheckboxChange = (e) => {
+        setIsChecked(e.target.checked);
     };
 
     const handleSubmit = (e) => {
@@ -29,7 +34,7 @@ function Contact() {
     };
 
     return (
-        <div className="contact-container">
+        <div className="contact-container fade-in">
             <form className="contact-form" onSubmit={handleSubmit}>
                 <h2>{t('Contactarse')}</h2>
                 <p>{t('Por favor rellene el formulario para contactarse con nosotros')}</p>
@@ -92,15 +97,19 @@ function Contact() {
                     required
                 ></textarea>
                 <div className="checkbox-group">
-                    <input type="checkbox" name="terminos" required />
+                    <input
+                        type="checkbox"
+                        name="terminos"
+                        checked={isChecked}
+                        onChange={handleCheckboxChange}
+                        required
+                    />
                     <label>{t('Acepto términos de uso y condiciones de privacidad')}</label>
                 </div>
-                <button type="submit">{t('Enviar')}</button>
+                <button type="submit" className={isChecked ? 'enabled' : 'disabled'} disabled={!isChecked}>{t('Enviar')}</button>
             </form>
         </div>
     );
 }
 
 export default Contact;
-
-

@@ -6,7 +6,7 @@ import '../css/Services.css';
 
 const servicesData = [
     {
-        image: '/cita.jpg', // Cambia por tus propias imágenes
+        image: '/cita.webp', // Cambia por tus propias imágenes
         title: 'Cita Informativa',
         description: 'Brindamos asesoría personalizada para tu trámite de visa y pasaporte.',
         link: '/services/cita-informativa'
@@ -18,43 +18,43 @@ const servicesData = [
         link: '/services/pasaporte-mexicano'
     },
     {
-        image: '/passport.png', // Cambia por tus propias imágenes
+        image: '/passport.webp', // Cambia por tus propias imágenes
         title: 'Pasaporte Americano',
         description: 'Facilitamos el proceso para obtener tu pasaporte sin complicaciones.',
         link: '/services/pasaporte-americano'
     },
     {
-        image: '/visa.jpg', // Cambia por tus propias imágenes
+        image: '/visa.webp', // Cambia por tus propias imágenes
         title: 'Visa Americana',
         description: 'Asistimos en todos los pasos para la obtención de tu visa.',
         link: '/services/visa-americana'
     },
     {
-        image: '/visarechazada.jpg', // Cambia por tus propias imágenes
+        image: '/visarechazada.webp', // Cambia por tus propias imágenes
         title: 'Visas Rechazadas/Canceladas',
         description: 'Te ayudamos a recuperar tu visa si ha sido rechazada o cancelada.',
         link: '/services/visa-rechazada'
     },
     {
-        image: '/citas-emergencia.jpg', // Cambia por tus propias imágenes
+        image: '/citas-emergencia.webp', // Cambia por tus propias imágenes
         title: 'Citas de Emergencia',
         description: 'Gestionamos citas urgentes para trámites de visas y pasaportes.',
         link: '/services/citas-emergencia'
     },
     {
-        image: '/actaN.jpg', // Cambia por tus propias imágenes
+        image: '/actaN.webp', // Cambia por tus propias imágenes
         title: 'Actas de Nacimiento',
         description: 'Obtenemos actas de nacimiento de manera rápida y segura.',
         link: '/services/actas-nacimiento'
     },
     {
-        image: '/traduccion.jpeg', // Cambia por tus propias imágenes
+        image: '/traduccion.webp', // Cambia por tus propias imágenes
         title: 'Traducción de Documentos',
         description: 'Proveemos traducción profesional para documentos oficiales.',
         link: '/services/traduccion-documentos'
     },
     {
-        image: '/preparacion.jpg', // Cambia por tus propias imágenes
+        image: '/preparacion.webp', // Cambia por tus propias imágenes
         title: 'Preparación para Entrevista',
         description: 'Te preparamos para tu entrevista consular y aumentamos tus posibilidades de éxito.',
         link: '/services/preparacion-entrevista'
@@ -87,7 +87,7 @@ const Services = () => {
 
     return (
         <>
-            <div className="services-section">
+            <div className="services-section fade-in">
                 <h2>{t('Nuestros Servicios')}</h2>
                 <div className="services-grid" onClick={scrollToTop}>
                     {servicesData.map((service, index) => (
