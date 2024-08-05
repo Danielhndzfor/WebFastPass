@@ -1,0 +1,47 @@
+/* Estilo para el contenedor parallax */
+.parallax-container {
+    position: relative;
+    height: 600px;
+    background-image: url('/r1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Contenido dentro del contenedor parallax */
+.parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.parallax-content p {
+    font-size: 24px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .parallax-container {
+        height: 400px;
+        /* Ajusta la altura para pantallas pequeñas */
+    }
+
+    .parallax-content h1 {
+        font-size: 32px;
+    }
+
+    .parallax-content p {
+        font-size: 18px;
+    }
+}

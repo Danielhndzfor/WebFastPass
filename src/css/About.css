@@ -1,0 +1,177 @@
+.about-container {
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.history-section {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.history-section img {
+    width: 500px;
+    height: 500px;
+    border-radius: 8px;
+    object-fit: cover;
+    padding: 20px;
+}
+
+.mission-section .content,
+.vision-section .content {
+    flex: 1;
+    padding: 20px;
+}
+
+.mission-section .image,
+.vision-section .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission-section .content,
+.vision-section .content {
+    text-align: center;
+}
+
+.mission-section img,
+.vision-section img {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.mission-section {
+    flex-direction: row-reverse;
+    background-color: #f0f8ff;
+}
+
+.vision-section {
+    background-color: #f0f0f0;
+}
+
+.values-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.values-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajuste de columnas */
+    gap: 50px; /* Espacio entre las tarjetas */
+}
+
+.values-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Efecto de hover */
+}
+
+.values-card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+
+.values-card img {
+    width: 100px; /* Ajusta según tus necesidades */
+    height: 100px; /* Mantiene proporción */
+    border-radius: 50%; /* Imagen circular */
+    margin-bottom: 10px;
+}
+
+.values-card h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.values-card p {
+    text-align: center;
+}
+
+.position {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+.contact-button {
+    text-align: center;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+.contact-text {
+    font-size: 24px;
+}
+
+.contact-button .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.contact-button .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries para hacer responsive */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .history-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .mission-section,
+    .vision-section {
+        flex-direction: column;
+    }
+
+    .mission-section img,
+    .vision-section img {
+        width: 80%;
+        height: auto;
+    }
+
+    .values-section .values-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .contact-text {
+        font-size: 20px;
+    }
+
+    .contact-button .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,103 @@
+/* Contact.css */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0; /* Cambia esto si es necesario */
+}
+
+.contact-form {
+    background-color: #0A1547; /* Color de fondo del formulario */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: calc(50% - 10px); /* Ajuste para dos campos en línea */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%; /* Ajuste para un solo campo */
+}
+
+.contact-form textarea {
+    height: 100px; /* Altura del textarea */
+    resize: none; /* Desactiva el redimensionado del textarea */
+}
+
+.contact-form input[type="checkbox"] {
+    width: auto; /* Ajuste para checkbox */
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    margin-left: 10px;
+}
+
+.contact-form button {
+    padding: 10px 50px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form select,
+    .contact-form textarea {
+        width: 100%; /* Ajuste para un solo campo */
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,79 @@
+/* components/ServiceCard.css */
+.service-card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    color: white; /* Texto blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .overlay {
+    opacity: 1;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.service-card p {
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.service-card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service-card-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-card {
+        height: 200px; /* Reduce the height for smaller screens */
+    }
+
+    .service-card:hover {
+        transform: none; /* Remove the zoom effect on hover for mobile */
+    }
+
+    .overlay {
+        opacity: 1; /* Always show the overlay on mobile */
+        background: rgba(0, 0, 0, 0.7); /* Increase the opacity of the overlay */
+    }
+}

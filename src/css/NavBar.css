@@ -1,0 +1,381 @@
+/* Estilos generales */
+.logo {
+    margin-bottom: 0;
+}
+
+.logo img {
+    margin-left: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 150px;
+    animation: slideIn 2s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    /* Asegúrate de que el nav use flexbox */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    justify-content: space-between;
+    /* Espacia los elementos */
+    padding: 10px;
+    /* Añade padding si lo necesitas */
+    background-color: #0A1547;
+    /* Color de fondo del navbar */
+    animation: fadeIn 2s ease-in-out;
+    z-index: 10;
+}
+
+.nav-menu {
+    flex: 1;
+    /* Toma el espacio disponible entre el logo y los botones */
+    display: flex;
+    justify-content: center;
+    /* Centra el menú horizontalmente */
+    margin-right: 20px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    /* Centra el contenido del ul */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.nav-menu ul li ul {
+    display: none;
+    position: absolute;
+    width: 300px;
+    /* Ancho del submenú */
+    top: 100%;
+    left: 0;
+    background-color: #0A1547;
+    /* Color de fondo del menú desplegable */
+    padding: 10px;
+    list-style-type: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    /* Menú desplegable tiene un z-index aún más alto */
+}
+
+.nav-menu ul li ul li {
+    margin: 10px 0;
+    /* Espaciado entre opciones */
+    padding-left: 10px;
+    white-space: nowrap;
+    /* Evita que el texto se corte */
+    border-left: white 1px solid;
+    /* Línea divisoria entre elementos */
+}
+
+.nav-menu ul li:hover ul {
+    display: block;
+    /* Muestra el submenú al pasar el mouse */
+}
+
+.nav-link {
+    display: flex;
+    /* Usar flexbox para alinear los elementos */
+    align-items: center;
+    /* Centra verticalmente */
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+    /* Cambia el color según tu preferencia */
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007BFF;
+    /* Cambia el color según tu preferencia */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.selected {
+    color: #007BFF;
+    /* Cambia el color según tu preferencia */
+}
+
+.nav-link.selected::after {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    /* Centra los botones verticalmente */
+    margin-right: 20px;
+    /* Alinea los botones a la derecha */
+}
+
+.language-button,
+.appointment-button,
+.menu-button {
+    margin-left: 10px;
+    /* Espaciado entre los botones */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-button {
+    background-color: #007BFF;
+    /* Color del botón de cita */
+    color: white;
+}
+
+.appointment-button:hover {
+    background-color: #0056b3;
+    /* Color al pasar el mouse */
+}
+
+.language-button {
+    background-color: #c30404;
+    /* Color del botón de idioma */
+    color: white;
+}
+
+.language-button:hover {
+    background-color: #970303;
+    /* Color al pasar el mouse */
+}
+
+.menu-button {
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    display: none;
+    /* Oculto por defecto */
+}
+
+.menu-button:hover {
+    color: #007BFF;
+    /* Cambia el color según tu preferencia */
+}
+
+.res {
+    display: none;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    /* Transición suave para la rotación */
+    font-size: 16px;
+    /* Asegura que la flecha tenga un tamaño adecuado */
+    cursor: pointer;
+    /* Cambia el cursor para indicar que es clickeable */
+}
+
+.arrow.open {
+    transform: rotate(90deg);
+    /* Rota la flecha al abrir el submenú */
+}
+
+/* Estilos para vista móvil */
+@media (max-width: 982px) {
+
+    .nav-link:hover+ul,
+    ul:hover {
+        display: block;
+    }
+
+    .logo img {
+        margin-left: 20px;
+        height: 120px;
+    }
+
+    .res {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        /* Usa fixed para que se mantenga en su lugar al hacer scroll */
+        top: 150px;
+        left: -100%;
+        /* Oculta el menú fuera de la vista */
+        width: 100%;
+        /* Ajusta el ancho según tus necesidades */
+        height: 40vh;
+        /* Ocupa toda la altura de la ventana */
+        background-color: #0A1547;
+        /* Color de fondo del menú */
+        transition: left 0.3s ease;
+        /* Efecto de transición al abrir */
+        z-index: 10;
+        /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .nav-menu.open {
+        left: 0;
+        /* Mueve el menú a la vista al abrir */
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        /* Acomoda los elementos verticalmente */
+        width: 80%;
+        /* Asegúrate de que ocupe el 80% */
+        margin: 0 auto;
+        /* Centra el menú en el contenedor */
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+        width: 100%;
+        /* Asegúrate de que ocupe el 100% */
+        display: flex;
+        /* Usar flexbox para alinear los elementos */
+        justify-content: center;
+        /* Centra el contenido de las opciones */
+    }
+
+    .nav-menu ul li ul {
+        width: 100%;
+        /* Asegúrate de que ocupe el 100% */
+        display: block;
+        /* Mostrar el submenú en vista móvil */
+    }
+
+    .nav-menu ul li ul li {
+        width: auto;
+        /* Ancho automático para las opciones del submenú */
+        white-space: normal;
+        /* Permitir que el texto se ajuste */
+        display: flex;
+        /* Usar flexbox para alinear los elementos */
+        justify-content: center;
+        /* Centra el contenido de las opciones del submenú */
+    }
+
+
+    .sublink {
+        margin: 13px 0;
+        border-bottom: white 1px solid;
+        /* Línea divisoria entre elementos */
+    }
+
+    .nav-buttons {
+        margin-right: 10px;
+    }
+
+    .appointment-button {
+        display: none;
+        /* Ocultar el botón de cita en vista móvil */
+    }
+
+    .appointment-button2 {
+        width: 100%;
+        /* Asegúrate de que ocupe el 100% */
+        margin-top: 10px;
+        /* Margen para separar del contenido anterior */
+        padding: 15px;
+        /* Asegura que el botón sea más grande */
+        background-color: #007BFF;
+        /* Cambia el color según tu preferencia */
+        color: white;
+        /* Color del texto */
+        border: none;
+        /* Sin bordes */
+        border-radius: 5px;
+        /* Bordes redondeados */
+        cursor: pointer;
+        /* Cambia el cursor para indicar que es clickeable */
+    }
+
+    .language-button {
+        width: 110px;
+        font-size: 12px;
+    }
+
+    .menu-button {
+        display: block;
+        /* Mostrar el botón de menú hamburguesa en vista móvil */
+    }
+
+    .arrow {
+        padding-left: 5px;
+        transition: transform 0.3s ease;
+        /* Transición suave para la rotación */
+        font-size: 18px;
+        /* Asegura que la flecha tenga un tamaño adecuado */
+        cursor: pointer;
+        /* Cambia el cursor para indicar que es clickeable */
+    }
+
+    .arrow.open {
+        transform: rotate(90deg);
+        /* Rota la flecha al abrir el submenú */
+    }
+}
+
+@media (max-width: 1120px) {
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .appointment-button {
+        padding: 10px 15px;
+    }
+}
