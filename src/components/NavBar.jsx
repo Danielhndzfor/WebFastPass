@@ -86,10 +86,20 @@ const NavBar = () => {
     setSubmenuOpen({});
   };
 
-  const handleSubmenuClick = (key) => {
+  const handleSubmenuClick = (key, e) => {
+    e.stopPropagation();
     if (window.innerWidth < 769) { // Detectar dispositivos móviles
       toggleSubmenu(key);
     }
+  };
+
+  const handleMenuToggle = () => {
+    setMenuOpen((prev) => {
+      if (prev) {
+        setSubmenuOpen({});
+      }
+      return !prev;
+    });
   };
 
   return (
@@ -116,6 +126,7 @@ const NavBar = () => {
                   <span
                     className={`arrow ${submenuOpen[link.key] ? "open" : ""} mobile-only`}
                     style={{ marginLeft: '8px', cursor: 'pointer' }}
+                    onClick={(e) => handleSubmenuClick(link.key, e)}
                   >
                     &gt;
                   </span>
@@ -158,7 +169,7 @@ const NavBar = () => {
           <MDBIcon fas icon="language" className="me-2" />
           {i18n.language === "es" ? "English" : "Español"}
         </button>
-        <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="menu-button" onClick={handleMenuToggle}>
           <MDBIcon fas icon="bars" />
         </button>
       </div>
