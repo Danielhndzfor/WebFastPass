@@ -27,8 +27,28 @@
 }
 
 .parallax-content p {
-    font-size: 24px;
+    font-size: 21px;
     margin: 0;
+}
+
+.contactbtn {
+    display: inline-block;
+    padding: 8px 16px; /* Reduce el padding */
+    font-size: 14px; /* Reduce el tamaño de fuente */
+    color: white;
+    background-color: transparent; /* Botón transparente */
+    border: 2px solid white; /* Borde blanco */
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición de color */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.contactbtn:hover {
+    background-color: #007BFF; /* Azul en hover */
+    color: white; /* Asegura que el texto siga siendo blanco en hover */
+    border-color: #007BFF; /* Cambia el borde a azul en hover */
 }
 
 @keyframes fadeIn {
