@@ -11,6 +11,10 @@ const links = [
     href: "/",
   },
   {
+    key: "¿Quienes Somos?",
+    href: "/about",
+  },
+  {
     key: "Servicios",
     href: "/services",
     submenu: [
@@ -53,8 +57,8 @@ const links = [
     ],
   },
   {
-    key: "Quienes Somos",
-    href: "/about",
+    key: "Preguntas Frecuentes",
+    href: "/faq",
   },
   {
     key: "Contacto",

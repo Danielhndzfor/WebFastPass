@@ -56,13 +56,18 @@ function Footer() {
                                     </a>
                                 </p>
                                 <p>
+                                    <a href='/about' className='text-reset'>
+                                        {t('¿Quienes Somos?')}
+                                    </a>
+                                </p>
+                                <p>
                                     <a href='/services' className='text-reset'>
                                         {t('Servicios')}
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='/about' className='text-reset'>
-                                        {t('Quienes Somos')}
+                                    <a href='/faq' className='text-reset'>
+                                        {t('Preguntas Frecuentes')}
                                     </a>
                                 </p>
                                 <p>
@@ -76,7 +81,12 @@ function Footer() {
                                 <h6 className='text-uppercase fw-bold mb-4'>{t('Politicas')}</h6>
                                 <p>
                                     <a href='#!' className='text-reset'>
-                                        {t('Terminos y Condiciones')}
+                                        {t('Politicas de la Empresa')}
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href='#!' className='text-reset'>
+                                        {t('Politicas de Privacidad')}
                                     </a>
                                 </p>
                                 <p>
@@ -95,13 +105,13 @@ function Footer() {
                                     </a>
                                 </p>
                                 <p>
-                                    <a href="mailto:info@example.com">
+                                    <a href="mailto:info@fastpass-visas.com">
                                         <MDBIcon icon="envelope" className="me-3" />
                                         info@fastpass-visas.com
                                     </a>
                                 </p>
                                 <p>
-                                    <a href="tel:1234567890">
+                                    <a href="tel:+523146885645">
                                         <MDBIcon icon="phone" className="me-3" /> 
                                         + 52 314 688 5645
                                     </a>

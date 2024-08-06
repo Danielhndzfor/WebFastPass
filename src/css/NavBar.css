@@ -232,7 +232,7 @@ nav {
 }
 
 /* Estilos para vista móvil */
-@media (max-width: 982px) {
+@media (max-width: 1230px) {
 
     .nav-link:hover+ul,
     ul:hover {
@@ -370,12 +370,23 @@ nav {
     }
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1320px) {
     .nav-link {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .appointment-button {
         padding: 10px 15px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .nav-link {
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .appointment-button {
+        padding: 8px 12px;
     }
 }
