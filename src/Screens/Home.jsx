@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Parallax from '../components/Parallax';
-import Card from '../components/Card';
 import ServiceCard from '../components/ServiceCard';
 import { Link } from 'react-router-dom';
 import '../css/Home.css'; // Asegúrate de crear y ajustar el archivo CSS
 import Contact from '../Screens/Contact';
+import fondoH from '/r1.webp'
+
 
 const servicesData = [
     {
@@ -36,12 +37,12 @@ function Home() {
 
     return (
         <>
-            <Parallax />
-            <section className="intro fade-in">
-                <h1>{t('Bienvenido a Fast Pass Visas')}</h1>
-                <p>{t('Tu aliado confiable para todas tus necesidades de visa.')}</p>
-                <Link to="/about" className="cta-button" onClick={scrollToTop}>{t('Conócenos Más')}</Link>
-            </section>
+            <Parallax 
+            height="800px"
+            backgroundImage={fondoH} 
+            title="Uniendo Familias" 
+            subtitle="Especialistas en visas y migración" 
+            linkText="Contáctanos"  />
 
             <section className="services">
                 <h2>{t('Nuestros Servicios')}</h2>
@@ -54,7 +55,7 @@ function Home() {
                                 title={t(service.title)}
                                 description={t(service.description)}
                                 link={service.link}
-                                
+
                             />
                         ))}
                     </div>

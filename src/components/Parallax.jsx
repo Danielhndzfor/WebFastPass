@@ -1,20 +1,20 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import '../css/Parallax.css'; // Asegúrate de que la ruta sea correcta
+import '../css/Parallax.css';
 
-function Parallax() {
+function Parallax({ height, backgroundImage, title, subtitle, linkText }) {
     const { t } = useTranslation();
-    const whatsappNumber = '523143526003'; // Reemplaza con el número de WhatsApp de destino
+    const whatsappNumber = '523143526003';
     const textMessage = `Buenas tardes, me gustaría realizar una cita 📅🕒`;
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textMessage)}`;
 
     return (
-        <div className="parallax-container fade-in">
+        <div className="parallax-container fade-in" style={{ backgroundImage: `url(${backgroundImage})`, height: `${height}` }}>
             <div className="parallax-content">
-                <h1>{t('Uniendo Familias')}</h1>
-                <p>{t('Especialistas en visas y migración')}</p>
+                <h1>{t(title)}</h1>
+                <p>{t(subtitle)}</p>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="contactbtn">
-                    {t('Contáctanos')}
+                    {t(linkText)}
                 </a>
             </div>
         </div>

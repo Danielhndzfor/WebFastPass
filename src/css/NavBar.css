@@ -1,13 +1,29 @@
 /* Estilos generales */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: rgb(255, 254, 254);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    border-radius: 20px;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    z-index: 1000;
+    height: 140px;
+}
+
 .logo {
     margin-bottom: 0;
+    margin-left: 5%;
 }
 
 .logo img {
-    margin-left: 70px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 150px;
+    height: 140px;
     animation: slideIn 2s ease-in-out;
     transition: transform 0.3s ease;
 }
@@ -16,377 +32,346 @@
     transform: scale(1.1);
 }
 
-body {
+ul {
+    display: flex;
+    list-style: none;
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    margin-right: 10px;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    /* Distribuye equitativamente los elementos */
 }
 
-nav {
-    display: flex;
-    /* Asegúrate de que el nav use flexbox */
-    align-items: center;
-    /* Centra verticalmente los elementos */
-    justify-content: space-between;
-    /* Espacia los elementos */
-    padding: 10px;
-    /* Añade padding si lo necesitas */
-    background-color: #0A1547;
-    /* Color de fondo del navbar */
-    animation: fadeIn 2s ease-in-out;
-    z-index: 10;
-}
-
-.nav-menu {
-    flex: 1;
-    /* Toma el espacio disponible entre el logo y los botones */
-    display: flex;
-    justify-content: center;
-    /* Centra el menú horizontalmente */
-    margin-right: 20px;
-}
-
-.nav-menu ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    /* Centra el contenido del ul */
-    margin: 0;
-    padding: 0;
-}
-
-.nav-menu ul li {
+li {
     position: relative;
-    margin: 0 20px;
+    /* Necesario para que el submenú se posicione correctamente */
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 .nav-menu ul li ul {
     display: none;
     position: absolute;
-    width: 300px;
-    /* Ancho del submenú */
     top: 100%;
+    /* Posiciona el submenú justo debajo del elemento padre */
     left: 0;
-    background-color: #0A1547;
-    /* Color de fondo del menú desplegable */
+    /* Alinea el submenú con el borde izquierdo del elemento padre */
+    width: 300px;
+    background-color: #EAEAEA;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    list-style-type: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 20;
-    /* Menú desplegable tiene un z-index aún más alto */
+    z-index: 1000;
+    transform: translateY(10px);
+    /* Añade un pequeño desplazamiento */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .nav-menu ul li ul li {
-    margin: 10px 0;
-    /* Espaciado entre opciones */
-    padding-left: 10px;
-    white-space: nowrap;
-    /* Evita que el texto se corte */
-    border-left: white 1px solid;
-    /* Línea divisoria entre elementos */
+    margin: 5px 0;
 }
 
 .nav-menu ul li:hover ul {
     display: block;
-    /* Muestra el submenú al pasar el mouse */
+    transform: translateY(0);
+    /* Muestra el submenú en su posición original */
+    opacity: 1;
+    pointer-events: auto;
 }
 
-.nav-link {
-    display: flex;
-    /* Usar flexbox para alinear los elementos */
-    align-items: center;
-    /* Centra verticalmente */
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #007BFF;
-    /* Cambia el color según tu preferencia */
-}
-
-.nav-link::after {
+li .nav-link::after {
     content: '';
-    display: block;
+    position: absolute;
     width: 0;
     height: 2px;
-    background: #007BFF;
-    /* Cambia el color según tu preferencia */
+    display: block;
+    background: #0A1547; /* Color del subrayado */
     transition: width 0.3s;
-    position: absolute;
     bottom: -5px;
     left: 0;
 }
 
-.nav-link:hover::after {
+li .nav-link:hover::after,
+li .nav-link.active::after {
     width: 100%;
+    /* Subraya todo el texto */
 }
 
-.nav-link.selected {
-    color: #007BFF;
-    /* Cambia el color según tu preferencia */
-}
-
-.nav-link.selected::after {
-    width: 100%;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.nav-buttons {
-    display: flex;
+.nav-link {
+    display: inline-flex;
     align-items: center;
-    /* Centra los botones verticalmente */
-    margin-right: 20px;
-    /* Alinea los botones a la derecha */
+    text-decoration: none;
+    color: #0A1547;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-.language-button,
-.appointment-button,
+.nav-link .icon {
+    margin-left: 2px;
+    font-size: 12px;
+}
+
 .menu-button {
-    margin-left: 10px;
-    /* Espaciado entre los botones */
-    padding: 10px 15px;
+    display: none;
+}
+
+.language-button {
     border: none;
-    border-radius: 5px;
+    background-color: transparent;
     cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.language-button .language-text {
+    display: none;
+}
+
+.language-button:hover .language-text {
+    display: flex;
+    position: absolute;
+    background-color: #EAEAEA;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .appointment-button {
     background-color: #007BFF;
-    /* Color del botón de cita */
     color: white;
-}
-
-.appointment-button:hover {
-    background-color: #0056b3;
-    /* Color al pasar el mouse */
-}
-
-.language-button {
-    background-color: #c30404;
-    /* Color del botón de idioma */
-    color: white;
-}
-
-.language-button:hover {
-    background-color: #970303;
-    /* Color al pasar el mouse */
-}
-
-.menu-button {
-    background-color: transparent;
-    color: white;
-    font-size: 24px;
-    display: none;
-    /* Oculto por defecto */
-}
-
-.menu-button:hover {
-    color: #007BFF;
-    /* Cambia el color según tu preferencia */
-}
-
-.res {
-    display: none;
-}
-
-.arrow {
-    transition: transform 0.3s ease;
-    /* Transición suave para la rotación */
-    font-size: 16px;
-    /* Asegura que la flecha tenga un tamaño adecuado */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    /* Cambia el cursor para indicar que es clickeable */
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.arrow.open {
-    transform: rotate(90deg);
-    /* Rota la flecha al abrir el submenú */
+.contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    width: 90%;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    z-index: 1000;
 }
 
-/* Estilos para vista móvil */
-@media (max-width: 1230px) {
+.contacto-info {
+    display: flex;
+    padding: 0 10px;
+}
 
-    .nav-link:hover+ul,
-    ul:hover {
-        display: block;
+.contacto-info p {
+    margin: 0 10px;
+}
+
+.contacto-social {
+    display: flex;
+    padding: 0 10px;
+}
+
+.contacto-social a {
+    margin: 0 10px;
+}
+
+.contacto-social span {
+    color: #EAEAEA;
+    margin: 0 10px;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    /* Light grey */
+    border-top: 6px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+.nav-buttons-container {
+    display: none;
+}
+
+@media (min-width: 1101px) and (max-width: 1440px) {
+    .logo {
+        margin: 0;
+    }
     .logo img {
-        margin-left: 20px;
         height: 120px;
     }
-
-    .res {
-        display: block;
+    ul {
+        padding: 0;
+    }
+    li {
+        margin: 0 5px;
     }
 
-    .nav-menu {
-        position: fixed;
-        /* Usa fixed para que se mantenga en su lugar al hacer scroll */
-        top: 150px;
-        left: -100%;
-        /* Oculta el menú fuera de la vista */
-        width: 100%;
-        /* Ajusta el ancho según tus necesidades */
-        height: 40vh;
-        /* Ocupa toda la altura de la ventana */
-        background-color: #0A1547;
-        /* Color de fondo del menú */
-        transition: left 0.3s ease;
-        /* Efecto de transición al abrir */
-        z-index: 10;
-        /* Asegúrate de que esté por encima de otros elementos */
-    }
-
-    .nav-menu.open {
-        left: 0;
-        /* Mueve el menú a la vista al abrir */
-    }
-
-    .nav-menu ul {
-        display: flex;
-        flex-direction: column;
-        /* Acomoda los elementos verticalmente */
-        width: 80%;
-        /* Asegúrate de que ocupe el 80% */
-        margin: 0 auto;
-        /* Centra el menú en el contenedor */
-    }
-
-    .nav-menu ul li {
-        margin: 10px 0;
-        width: 100%;
-        /* Asegúrate de que ocupe el 100% */
-        display: flex;
-        /* Usar flexbox para alinear los elementos */
-        justify-content: center;
-        /* Centra el contenido de las opciones */
-    }
-
-    .nav-menu ul li ul {
-        width: 100%;
-        /* Asegúrate de que ocupe el 100% */
-        display: block;
-        /* Mostrar el submenú en vista móvil */
-    }
-
-    .nav-menu ul li ul li {
-        width: auto;
-        /* Ancho automático para las opciones del submenú */
-        white-space: normal;
-        /* Permitir que el texto se ajuste */
-        display: flex;
-        /* Usar flexbox para alinear los elementos */
-        justify-content: center;
-        /* Centra el contenido de las opciones del submenú */
-    }
-
-
-    .sublink {
-        margin: 13px 0;
-        border-bottom: white 1px solid;
-        /* Línea divisoria entre elementos */
-    }
-
-    .nav-buttons {
-        margin-right: 10px;
-    }
-
-    .appointment-button {
-        display: none;
-        /* Ocultar el botón de cita en vista móvil */
-    }
-
-    .appointment-button2 {
-        width: 100%;
-        /* Asegúrate de que ocupe el 100% */
-        margin-top: 10px;
-        /* Margen para separar del contenido anterior */
-        padding: 15px;
-        /* Asegura que el botón sea más grande */
-        background-color: #007BFF;
-        /* Cambia el color según tu preferencia */
-        color: white;
-        /* Color del texto */
-        border: none;
-        /* Sin bordes */
-        border-radius: 5px;
-        /* Bordes redondeados */
-        cursor: pointer;
-        /* Cambia el cursor para indicar que es clickeable */
-    }
-
-    .language-button {
-        width: 110px;
-        font-size: 12px;
-    }
-
-    .menu-button {
-        display: block;
-        /* Mostrar el botón de menú hamburguesa en vista móvil */
-    }
-
-    .arrow {
-        padding-left: 5px;
-        transition: transform 0.3s ease;
-        /* Transición suave para la rotación */
-        font-size: 18px;
-        /* Asegura que la flecha tenga un tamaño adecuado */
-        cursor: pointer;
-        /* Cambia el cursor para indicar que es clickeable */
-    }
-
-    .arrow.open {
-        transform: rotate(90deg);
-        /* Rota la flecha al abrir el submenú */
-    }
-}
-
-@media (max-width: 1320px) {
     .nav-link {
         font-size: 15px;
     }
 
     .appointment-button {
-        padding: 10px 15px;
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+    .language-button {
+        margin: 0 5px;
     }
 }
 
-@media (max-width: 1150px) {
-    .nav-link {
-        font-size: 10px;
+@media (min-width: 988px) and (max-width: 1100px) {
+    .logo {
         margin: 0;
+    }
+    .logo img {
+        height: 120px;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        margin: 0 5px;
+    }
+
+    .nav-link {
+        font-size: 13px;
     }
 
     .appointment-button {
-        padding: 8px 12px;
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    .language-button {
+        margin: 0 5px;
     }
 }
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 982px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+
+    .logo img {
+        height: 150px;
+    }
+
+    .nav-buttons-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sizeM {
+        font-size: 25px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .nav-menu ul li ul {
+        position: relative; /* Cambiado de absolute a relative */
+        left: 0;
+        width: 100%;
+        top: 0; /* Asegurarse de que el submenu comience justo debajo del menú principal */
+        padding-left: 20px; /* Desplazamiento del submenu */
+    }
+
+    .nav-menu ul li ul li {
+        padding-left: 20px;
+    }
+
+    .menu-button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: #0A1547;
+    }
+
+    .language-button .language-text {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .contacto-social {
+        margin: 0 50px;
+        padding: 0 10px;
+    }
+
+    .nav-buttons, .contacto-info {
+        display: none;
+    }
+}
+

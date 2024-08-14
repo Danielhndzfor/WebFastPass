@@ -1,8 +1,7 @@
 /* Estilo para el contenedor parallax */
 .parallax-container {
     position: relative;
-    height: 600px;
-    background-image: url('/r1.webp');
+    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,14 +63,15 @@
     animation: fadeIn 2s ease-in-out;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     .parallax-container {
-        height: 400px;
+        height: 600px;
         /* Ajusta la altura para pantallas pequeñas */
     }
 
     .parallax-content h1 {
         font-size: 32px;
+        margin-top: 200px;
     }
 
     .parallax-content p {
