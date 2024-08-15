@@ -298,6 +298,9 @@ li .nav-link.active::after {
         justify-content: space-between;
         width: 100%;
         margin-bottom: 10px;
+        position: absolute;
+        top: 70px;
+
     }
 
     .sizeM {
@@ -318,32 +321,29 @@ li .nav-link.active::after {
     ul {
         flex-direction: column;
         align-items: flex-start;
-        margin: 0;
-        margin-left: 0;
         width: 100%;
+        padding: 10px 30px;
     }
 
     li {
-        margin: 10px 0;
+        margin: 5px 0;
         width: 100%;
     }
 
     .nav-link {
-        font-size: 18px;
-        padding: 10px 0;
+        font-size: 13px;
+        padding: 5px 0;
         width: 100%;
     }
 
     .nav-menu ul li ul {
         position: relative; /* Cambiado de absolute a relative */
-        left: 0;
         width: 100%;
         top: 0; /* Asegurarse de que el submenu comience justo debajo del menú principal */
-        padding-left: 20px; /* Desplazamiento del submenu */
     }
 
     .nav-menu ul li ul li {
-        padding-left: 20px;
+        margin: 5px 0;
     }
 
     .menu-button {
@@ -372,6 +372,14 @@ li .nav-link.active::after {
 
     .nav-buttons, .contacto-info {
         display: none;
+    }
+
+    .menu-button {
+        padding-right: 25px;
+    }
+
+    .language-button {
+        padding-left: 15px;
     }
 }
 
