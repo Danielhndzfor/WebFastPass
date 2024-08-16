@@ -1,0 +1,102 @@
+.tabs {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 680px;
+    height: 600px;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 10px 5px #ccc;
+    overflow: hidden;
+}
+
+.tabs .tab-header {
+    float: left;
+    width: 180px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    padding: 50px 0px;
+}
+
+.tabs .tab-header > div {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.tabs .tab-header > div span {
+    flex-grow: 1; /* Permite que el span tome el espacio necesario */
+    margin-left: 10px;
+}
+
+.tabs .tab-header > div:hover,
+.tabs .tab-header > div.active {
+    color: #00acee;
+}
+
+.tabs .tab-header div .iconH {
+    width: 24px; /* Establece un ancho fijo para los iconos */
+    height: 24px; /* Establece un alto fijo para los iconos */
+    display: inline-flex; /* Asegura que se respeten las dimensiones */
+    align-items: center; /* Centra verticalmente el contenido del icono */
+    justify-content: center; /* Centra horizontalmente el contenido del icono */
+    margin-right: 10px;
+}
+
+
+.tabs .tab-content {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 25%;
+}
+
+.tabs .tab-content > div > .iconT {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #555;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+}
+
+.tabs .tab-content > div > p {
+    margin-left: 15%;
+    width: 70%;
+}
+
+.tabs .tab-content > div {
+    position: absolute;
+    text-align: center;
+    padding: 30px 10px;
+    width: 500px;
+    top: -200%;
+    transition: all 500ms ease-in-out;
+}
+
+h2 {
+    padding-top: 40px;
+}
+
+.tabs .tab-content > div.active {
+    top: 0;
+}
+
+.tabs .tab-indicator {
+    position: absolute;
+    width: 4px;
+    height: 50px;
+    background-color: #00acee;
+    left: 198px;
+    top: 80px;
+    transition: all 500ms ease-in-out;
+}

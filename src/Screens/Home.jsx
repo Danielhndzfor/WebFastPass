@@ -7,7 +7,8 @@ import '../css/Home.css'; // Asegúrate de crear y ajustar el archivo CSS
 import Contact from '../Screens/Contact';
 import fondoH from '/r1.webp'
 import Contador from '../components/Contador';
-
+import Steps from '/Pasos.png'
+import { MDBIcon } from 'mdb-react-ui-kit';
 
 const servicesData = [
     {
@@ -35,61 +36,87 @@ function Home() {
     const scrollToTop = () => {
         window.scrollTo(0, 0);
     };
+    const handleButtonClick = () => {
+        window.location.href = 'https://wa.me/523143526003';
+    };
 
     return (
         <>
             <Parallax
-                height="800px"
                 backgroundImage={fondoH}
                 title="Uniendo Familias"
                 subtitle="Especialistas en visas y migración"
                 linkText="Contáctanos" />
 
             <section className="services">
-                <h2>{t('Nuestros Servicios')}</h2>
-                <div className="services-section">
-                    <div className="services-grid" onClick={scrollToTop}>
-                        {servicesData.map((service, index) => (
-                            <ServiceCard
-                                key={index}
-                                image={service.image}
-                                title={t(service.title)}
-                                description={t(service.description)}
-                                link={service.link}
-
-                            />
-                        ))}
+                <div className="positionS">
+                    <div className="service-card1">
+                        <div className="icon-container">
+                            {/* Aquí puedes colocar un ícono adecuado para "Asesoría" */}
+                            <i className="fas fa-headset"></i>
+                        </div>
+                        <h3>Asesoría</h3>
+                        <p>Ofrecemos asesoría personalizada para ayudarte a entender los requisitos y procesos necesarios.</p>
+                    </div>
+                    <div className="service-card1">
+                        <div className="icon-container">
+                            {/* Aquí puedes colocar un ícono adecuado para "Gestión" */}
+                            <i className="fas fa-tasks"></i>
+                        </div>
+                        <h3>Gestión</h3>
+                        <p>Nos encargamos de gestionar todos los documentos y procesos necesarios para tu solicitud.</p>
+                    </div>
+                    <div className="service-card1">
+                        <div className="icon-container">
+                            {/* Aquí puedes colocar un ícono adecuado para "Trámite" */}
+                            <i className="fas fa-passport"></i>
+                        </div>
+                        <h3>Trámite</h3>
+                        <p>Facilitamos el trámite de pasaportes y visas, asegurando que todo se realice de manera eficiente y correcta.</p>
                     </div>
                 </div>
-                <Link to="/services" className="more-services-button" onClick={scrollToTop}>{t('Explora Más Servicios')}</Link>
+                <Link to="/services" className="more-services-button" onClick={scrollToTop}>{t('Explorar Servicios')}</Link>
+            </section>
+
+            <section className="steps">
+                <div className="imageS">
+                    <img src={Steps} alt="Pasos para Tramite" className='imgSteps' />
+                </div>
+                <button onClick={handleButtonClick} className='appointment-button'>
+                    <MDBIcon fas icon="calendar-check" className='me-2' />
+                    {t('Quiero cita')}
+                </button>
             </section>
 
             <section className="contadores">
                 <div className="contadores-grid">
-                    <Contador 
+                    <Contador
                         end={15}
-                        duration={2000} 
-                        id="counter1" 
-                        texto="Años de Experiencia" 
+                        duration={2000}
+                        id="counter1"
+                        texto="Años de Experiencia"
                         icon="+"
                     />
-                    <Contador 
-                        end={80} 
-                        duration={2000} 
-                        id="counter2" 
-                        texto="Tasa de Aprobación" 
+                    <Contador
+                        end={80}
+                        duration={2000}
+                        id="counter2"
+                        texto="Tasa de Aprobación"
                         icon="%"
                     />
-                    <Contador 
-                        end={1000} 
-                        duration={2000} 
-                        id="counter3" 
-                        texto="Trámites Realizados" 
+                    <Contador
+                        end={1000}
+                        duration={2000}
+                        id="counter3"
+                        texto="Trámites Realizados"
                         icon="+"
                     />
                 </div>
             </section>
 
+            {/* <section className="process">
+                <Panel />
+            </section> */}
 
             <section className="contact">
                 <Contact />

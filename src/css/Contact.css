@@ -6,6 +6,7 @@
     align-items: center;
     padding: 50px 20px;
     background-color: #f0f0f0; /* Cambia esto si es necesario */
+    
 }
 
 .contact-form {
@@ -114,6 +115,12 @@
 
 
 @media (max-width: 768px) {
+    .contact-form {
+        padding: 25px;
+    }
+    .contact-container {
+        padding: 10px 0;
+    }
     .contact-form input[type="text"],
     .contact-form input[type="email"],
     .contact-form input[type="tel"],

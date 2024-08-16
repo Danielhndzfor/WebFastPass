@@ -1,12 +1,12 @@
 /* Estilo para el contenedor parallax */
 .parallax-container {
     position: relative;
-    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
+    height: 800px;
 }
 
 /* Contenido dentro del contenedor parallax */
@@ -65,10 +65,8 @@
 
 @media (max-width: 980px) {
     .parallax-container {
-        height: 600px;
-        /* Ajusta la altura para pantallas pequeñas */
+        height: 650px;
     }
-
     .parallax-content h1 {
         font-size: 32px;
         margin-top: 200px;

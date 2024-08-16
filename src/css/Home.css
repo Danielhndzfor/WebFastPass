@@ -12,6 +12,7 @@ body {
     text-align: center;
     padding: 80px 20px;
     position: relative;
+    
 }
 
 .contadores::before {
@@ -55,8 +56,9 @@ body {
     color: #FFFFFF;
 }
 
-.contador:hover h3 {
-    color: #FF4500; /* Cambia a un color más vibrante al hacer hover */
+.contador:hover h3,
+.contador:hover p {
+    color: #ff8000; /* Cambia a un color más vibrante al hacer hover */
 }
 
 
@@ -80,26 +82,92 @@ body {
 
 .services {
     text-align: center;
-    padding: 60px 10px;
-    background-color: #ffffff;
+    padding: 80px 20px;
+    background-color: #f4f4f4;
 }
 
+.positionS {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    top: 70%;
+}
 
-.more-services-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
+.service-card1 {
+    width: 30%;
+    margin: 20px;
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    z-index: 1000;
+}
+
+.service-card1:hover {
+    transform: translateY(-10px);
+}
+
+.icon-container {
+    font-size: 40px;
+    color: #00acee;
+    margin-bottom: 10px;
+}
+
+.learn-more-button {
+    margin-top: 15px;
+    background-color: #00acee;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.more-services-button:hover {
-    background-color: #0056b3;
-    color: white;
+.learn-more-button:hover {
+    background-color: #008bb5;
 }
+
+.more-services-button {
+    margin-top: 120px;
+    margin-bottom: 0;
+    text-align: center;
+    display: inline-block; /* Cambio de block a inline-block para mejor manejo de tamaño */
+    color: #00acee;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 24px; /* Más espacio interno para mejor apariencia */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #00acee; /* Borde con color de acento */
+    background-color: transparent; /* Fondo transparente */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+;
+}
+
+.more-services-button:hover {
+    background-color: #00acee; /* Cambio de fondo en hover */
+    color: #ffffff; /* Cambio de color de texto en hover */
+    border-color: #008bbf; /* Borde más oscuro en hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+
+.steps {
+    display: wrap;
+    text-align: center;
+    
+    padding: 40px 20px;
+}
+
+
+
 
 .about-us {
     text-align: center;
@@ -164,6 +232,14 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
+.process {
+    box-sizing: border-box;
+    background-color: #ddd;
+    padding: 450px 20px;
+}
+
+
+
 @media (max-width: 988px) {
     .contadores-grid {
         flex-direction: column;
@@ -171,5 +247,35 @@ body {
 
     .contador {
         margin-bottom: 20px;
+    }
+
+    .services {
+        padding: 30px 20px;
+        height: 950px;
+    }
+
+    .positionS {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 65%;
+    }
+
+    .service-card1 {
+        width: 80%;
+        
+    }
+
+    .more-services-button {
+        margin-top: 50px;
+    }
+
+    .steps {
+        padding: 20px 20px;
+    }
+
+    .imgSteps {
+        width: 100%;
     }
 }
