@@ -252,7 +252,8 @@ body {
 
     .services {
         padding: 30px 20px;
-        height: 999px;
+        height: 1200px;
+        margin-bottom: 100px;
     }
 
     .positionS {
