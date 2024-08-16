@@ -1,6 +1,7 @@
 /* Estilo para el contenedor parallax */
 .parallax-container {
-    position: relative;
+    position: relative; /* Asegura que los elementos dentro se posicionen en relación al contenedor */
+    overflow: hidden; /* Para evitar cualquier desbordamiento */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
