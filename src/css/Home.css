@@ -269,7 +269,7 @@ body {
     }
 
     .more-services-button {
-        margin-top: 880px;
+        margin-top: 860px;
         margin-bottom: 10px;
     }
 
@@ -284,5 +284,12 @@ body {
     .imgSteps {
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 390) {
+    .more-services-button {
+        margin-top: 880px;
+        margin-bottom: 10px;
     }
 }
