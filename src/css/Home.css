@@ -269,7 +269,8 @@ body {
     }
 
     .more-services-button {
-        margin-top: 860px;
+        margin-top: 880px;
+        margin-bottom: 10px;
     }
 
     .steps {
