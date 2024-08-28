@@ -76,14 +76,22 @@ function FAQ() {
         setFilteredResults(results);
     };
 
-    const handleSearchSubmit = () => {
+    const handleSearchSubmit = (event) => {
+        event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
         if (searchQuery.trim() !== '') {
+            // Ejecuta la búsqueda y despliega resultados
             performSearch(searchQuery);
             setShowSearchResults(true);
             setShowSearchSuggestions(false);
             setIsItemSelected(false);
-            // Desplazar la vista a la sección de resultados de búsqueda
-            searchResultsRef.current?.scrollIntoView({ behavior: 'smooth' });
+
+            // Desplaza la vista a la sección de resultados
+            setTimeout(() => {
+                searchResultsRef.current?.scrollIntoView({ behavior: 'smooth' });
+            }, 0); // Ajuste para asegurar que el DOM esté actualizado antes de desplazarse
+
+            // Limpia el input de búsqueda
+            setSearchQuery('');
         }
     };
 
@@ -117,7 +125,7 @@ function FAQ() {
                     <MDBIcon
                         fas
                         icon="search"
-                        className='icon'
+                        className="icon"
                         onClick={handleSearchSubmit}
                     />
                     <input
@@ -126,9 +134,12 @@ function FAQ() {
                         value={searchQuery}
                         onChange={handleSearchInputChange}
                         onKeyDown={(e) => {
-                            if (e.key === 'Enter') handleSearchSubmit();
+                            if (e.key === 'Enter') {
+                                handleSearchSubmit(e);
+                            }
                         }}
                     />
+
                     {showSearchSuggestions && filteredResults.length > 0 && (
                         <div className="search-results">
                             {filteredResults.map((result, index) => (

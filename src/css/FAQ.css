@@ -277,20 +277,32 @@
     }
 
     .help h1 {
-        font-size: 1.7em; /* Reducido para que se ajuste mejor en pantallas pequeñas */
+        font-size: 1.5em; /* Reducido para que se ajuste mejor en pantallas pequeñas */
         margin-top: 200px; /* Ajustado para mejorar la apariencia */
     }
 
     .container-search {
         width: 90%; /* Ajustado para ocupar el 100% del ancho disponible */
         margin-bottom: 20px; /* Ajustado para mejorar el espaciado en pantallas más pequeñas */
+        position: relative; /* Necesario para que el z-index funcione en .search-results */
     }
 
     .container-search input {
         width: 80%; /* Ajustado para ocupar el 100% del ancho disponible */
         height: 40px; /* Reducido para mejorar la usabilidad en dispositivos móviles */
         font-size: 1em; /* Reducido para que sea más legible en pantallas pequeñas */
-        
+    }
+
+    .search-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: 200px; /* Ajustado para que se vea mejor en pantallas pequeñas */
+        z-index: 1000; /* Asegura que esté sobre otros elementos */
+        background-color: #162E84; /* Ajustado para que se vea sobre todo */
+        border-bottom: 1px solid #ccc;
+        overflow-y: auto;
     }
 
     .principales {
@@ -328,12 +340,13 @@
     .tema-item, .pregunta-item-movil h3 {
         font-size: 1em; /* Ajustado para mejorar la legibilidad en pantallas pequeñas */
     }
-    
-    .search-results {
-        max-height: 150px; /* Ajustado para que se vea mejor en pantallas pequeñas */
-    }
 
     .pregunta-item h3 {
         font-size: 1.1em; /* Ajustado para que se vea mejor en pantallas pequeñas */
     }
+
+    .search-results-full {
+        padding: 20px; /* Ajustado para mejorar el espaciado en pantallas más pequeñas */
+    }
 }
+
