@@ -27,9 +27,6 @@ function Footer() {
                         <a href='https://www.instagram.com/fastpass_visa/' className='me-4 text-reset'>
                             <MDBIcon fab icon="instagram" />
                         </a>
-                        <a href='https://wa.me/523143526003' className='me-4 text-reset'>
-                            <MDBIcon fab icon="whatsapp" />
-                        </a>
                     </div>
                 </section>
 

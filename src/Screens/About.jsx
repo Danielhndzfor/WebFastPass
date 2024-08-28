@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import '../css/About.css';
 import Parallax from '../components/Parallax'
-import fondoQ from '/fondoQ.jpg'
+import fondoQ from '/fondoQS.jpg'
 
 const About = () => {
     const { t } = useTranslation();
@@ -22,6 +22,7 @@ const About = () => {
             backgroundImage={fondoQ}
             title="Nuestra Historia"
             subtitle="Somos una consultoria con mas de 10 años de experiencia"
+            linkText={t('Contactar')}
             />
             <div className="about-container">
                 {/* Historia */}
@@ -33,9 +34,9 @@ const About = () => {
                         </p>
                     </div>
                     <div className="image">
-                        <img src="/oficina1.webp" alt="Historia" />
-                        <img src="/oficina2.webp" alt="Historia" />
-                        <img src="/oficina3.webp" alt="Historia" />
+                        <img src="/oficina1.webp" alt="Historia" className='imgH' />
+                        <img src="/oficina2.webp" alt="Historia" className='imgH' />
+                        <img src="/oficina3.webp" alt="Historia" className='imgH' />
                     </div>
                 </section>
 

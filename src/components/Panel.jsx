@@ -17,7 +17,8 @@ function Panel() {
     }, [activeIndex]);
 
     return (
-        <div className="tabs">
+        <div className='container'>
+            <div className="tabs">
             <div className="tab-header">
                 <div className={activeIndex === 0 ? 'active' : ''} onClick={() => handleTabClick(0)}>
                     <MDBIcon fas icon="search" className="iconH" /> <span>Paso 1</span>
@@ -76,6 +77,7 @@ function Panel() {
                     <p>Some text about home section.</p>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

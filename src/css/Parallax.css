@@ -35,20 +35,21 @@
     display: inline-block;
     padding: 8px 16px; /* Reduce el padding */
     font-size: 14px; /* Reduce el tamaño de fuente */
+    border: 2px solid white;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
-    background-color: transparent; /* Botón transparente */
-    border: 2px solid white; /* Borde blanco */
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición de color */
     margin-top: 20px; /* Espacio superior */
 }
 
 .contactbtn:hover {
-    background-color: #007BFF; /* Azul en hover */
+    background-color: #0A1547;; /* Azul en hover */
     color: white; /* Asegura que el texto siga siendo blanco en hover */
-    border-color: #007BFF; /* Cambia el borde a azul en hover */
+    border-color: #0A1547;; /* Cambia el borde a azul en hover */
 }
 
 @keyframes fadeIn {

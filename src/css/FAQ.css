@@ -1,0 +1,339 @@
+.help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    /* background-color: #000000; */
+    background-image: url(/fondoPF.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.help h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 15%;
+}
+
+.container-search {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.container-search input {
+    width: 600px;
+    height: 50px;
+    border: none;
+    padding: 0 20px;
+    font-size: 1.2em;
+    text-align: left;
+    outline: none;
+    background: none;
+    color: white;
+}
+
+.container-search input::placeholder {
+    color: white;
+}
+
+.principales {
+    display: flex;
+}
+
+.principales .columna {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.principales h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.principales h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.temas {
+    margin: 40px 100px;
+}
+
+.temas-container {
+    display: flex;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.temas-sidebar {
+    width: 25%;
+    background-color: #0A1547;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.tema-item {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.tema-item.active, .tema-item:hover {
+    background-color: #143687;
+    font-weight: bold;
+}
+
+.tema-item .icon {
+    margin-right: 10px;
+}
+
+.temas-content {
+    width: 75%;
+    padding: 30px;
+    background-color: white;
+    border-left: 1px solid #ddd;
+}
+
+.pregunta-item {
+    margin-bottom: 20px;
+    background-color: #f0f4f8;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.pregunta-item h3 {
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0A1547;
+}
+
+.pregunta-item:hover {
+    background-color: #e2e8f0;
+}
+
+.toggle-icon {
+    margin-left: 10px;
+    color: #0A1547;
+}
+
+.answer {
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Panel móvil */
+.panel-movil {
+    display: none;
+    padding: 0;
+    margin: 0 ;
+}
+
+.tema-item-movil {
+    background-color: #0A1547;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left; /* Para alinear el texto a la izquierda */
+    word-wrap: break-word; /* Para evitar desbordamiento de texto */
+}
+
+.tema-item-movil.active {
+    background-color: #162E84;
+}
+
+.tema-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tema-header .icon {
+    margin-right: 10px;
+}
+
+.tema-content {
+    margin-top: 10px;
+}
+
+.pregunta-item-movil {
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.pregunta-item-movil h3 {
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 0;
+}
+
+.answer {
+    font-size: 0.9em;
+    color: #ccc;
+    padding-left: 1.5em;
+    margin-top: 5px;
+}
+
+.container-search {
+    position: relative;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #162E84;
+    border-bottom: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.search-result-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-result-item:hover {
+    background-color: #4231f9;
+}
+
+
+
+.search-results-full {
+    padding: 100px;
+    background-color: aliceblue;
+
+}
+
+.positionr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.positionr h2 {
+    margin-bottom: 30px;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: white;
+}
+
+.pregunta-item {
+    width: 900px;
+}
+
+
+/* Responsividad */
+/* Mostrar el panel móvil en vista móvil */
+@media (max-width: 988px) {
+    .help {
+        height: 600px;
+        padding: 20px; /* Agregado para mejorar el espaciado en pantallas más pequeñas */
+    }
+
+    .help h1 {
+        font-size: 1.7em; /* Reducido para que se ajuste mejor en pantallas pequeñas */
+        margin-top: 200px; /* Ajustado para mejorar la apariencia */
+    }
+
+    .container-search {
+        width: 90%; /* Ajustado para ocupar el 100% del ancho disponible */
+        margin-bottom: 20px; /* Ajustado para mejorar el espaciado en pantallas más pequeñas */
+    }
+
+    .container-search input {
+        width: 80%; /* Ajustado para ocupar el 100% del ancho disponible */
+        height: 40px; /* Reducido para mejorar la usabilidad en dispositivos móviles */
+        font-size: 1em; /* Reducido para que sea más legible en pantallas pequeñas */
+        
+    }
+
+    .principales {
+        display: none;
+    }
+
+    .temas {
+        margin: 20px 20px; /* Ajustado para reducir márgenes en pantallas más pequeñas */
+    }
+
+    .panel-movil {
+        display: block;
+        margin: 0; /* Elimina márgenes negativos */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .panel-escritorio {
+        display: none;
+    }
+
+    .temas-container {
+        flex-direction: column; /* Ajustado para apilar los elementos verticalmente */
+    }
+
+    .temas-sidebar, .temas-content {
+        width: 100%;
+        padding: 10px; /* Reducido para mejorar el espaciado */
+    }
+
+    .pregunta-item {
+        width: 100%; /* Ajustado para ocupar el 100% del ancho disponible */
+    }
+    
+    .tema-item, .pregunta-item-movil h3 {
+        font-size: 1em; /* Ajustado para mejorar la legibilidad en pantallas pequeñas */
+    }
+    
+    .search-results {
+        max-height: 150px; /* Ajustado para que se vea mejor en pantallas pequeñas */
+    }
+
+    .pregunta-item h3 {
+        font-size: 1.1em; /* Ajustado para que se vea mejor en pantallas pequeñas */
+    }
+}

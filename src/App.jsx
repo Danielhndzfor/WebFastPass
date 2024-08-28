@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Home from './Screens/Home';
 import Services from './Screens/Services';
 import About from './Screens/About';
+import FAQ from './Screens/FAQ';
 import Contact from './Screens/Contact';
 
 import CitaInfo from './Screens/Services/CitaInfo';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/services/cita-informativa" element={<CitaInfo />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
@@ -46,6 +48,9 @@ function TitleUpdater() {
         break;
       case '/about':
         document.title = 'Acerca de'; // Cambia este texto al título deseado
+        break;
+      case '/faq':
+        document.title = 'Preguntas frecuentes'; // Cambia este texto al título deseado
         break;
       case '/contact':
         document.title = 'Contacto'; // Cambia este texto al título deseado

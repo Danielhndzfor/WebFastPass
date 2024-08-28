@@ -4,7 +4,7 @@ import Parallax from '../components/Parallax';
 import ServiceCard from '../components/ServiceCard';
 import { Link } from 'react-router-dom';
 import '../css/Home.css'; // Asegúrate de crear y ajustar el archivo CSS
-import Contact from '../Screens/Contact';
+import ContactForm from '../components/ContactForm';
 import fondoH from '/r1.webp'
 import Contador from '../components/Contador';
 import Steps from '/Pasos.png'
@@ -119,7 +119,7 @@ function Home() {
             </section> */}
 
             <section className="contact">
-                <Contact />
+                <ContactForm />
             </section>
 
             <div className="map">

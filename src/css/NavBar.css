@@ -138,14 +138,20 @@ li .nav-link.active::after {
 }
 
 .appointment-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
+    border: 2px solid #0A1547;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #0A1547;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 18px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.appointment-button:hover {
+    background-color: #0A1547;
+    color: white;
 }
 
 .contacto {
@@ -284,9 +290,19 @@ li .nav-link.active::after {
 /* Estilos para dispositivos móviles */
 @media (max-width: 982px) {
     nav {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         padding: 10px;
         height: auto;
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
     }
 
     .logo img {
@@ -300,7 +316,6 @@ li .nav-link.active::after {
         margin-bottom: 10px;
         position: absolute;
         top: 70px;
-
     }
 
     .sizeM {
@@ -366,8 +381,18 @@ li .nav-link.active::after {
     }
 
     .contacto-social {
-        margin: 0 50px;
-        padding: 0 10px;
+        position: fixed;
+        bottom: 10px;
+        left: 20%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white; /* O el color de fondo que prefieras */
+        padding: 5px 15px;
+        border-radius: 20px; /* Si quieres bordes redondeados */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Añadir sombra para destacar */
+        z-index: 1000; /* Asegura que esté siempre visible */
     }
 
     .nav-buttons, .contacto-info {
@@ -376,10 +401,15 @@ li .nav-link.active::after {
 
     .menu-button {
         padding-right: 25px;
+        position: absolute;
+        right: 0;
+        top: 10px;
     }
 
     .language-button {
         padding-left: 15px;
+        position: absolute;
+        left: 0;
+        top: 10px;
     }
 }
-

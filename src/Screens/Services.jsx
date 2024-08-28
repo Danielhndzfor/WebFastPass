@@ -3,6 +3,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiceCard from '../components/ServiceCard';
 import '../css/Services.css';
+import Parallax from '../components/Parallax';
+import fondoS from '/fondoS.jpg';
 
 const servicesData = [
     {
@@ -42,6 +44,18 @@ const servicesData = [
         link: '/services/citas-emergencia'
     },
     {
+        image: '/adelantar-cita.png', // Cambia por tus propias imágenes
+        title: 'Adelantar Cita',
+        description: 'Te ayudamos a adelantar tu cita consular para tu trámite de visa.',
+        link: '/services/adelantar-cita'
+    },
+    {
+        image: '/preparacion.webp', // Cambia por tus propias imágenes
+        title: 'Preparación para Entrevista',
+        description: 'Te preparamos para tu entrevista consular y aumentamos tus posibilidades de éxito.',
+        link: '/services/preparacion-entrevista'
+    },
+    {
         image: '/actaN.webp', // Cambia por tus propias imágenes
         title: 'Actas de Nacimiento',
         description: 'Obtenemos actas de nacimiento de manera rápida y segura.',
@@ -54,11 +68,24 @@ const servicesData = [
         link: '/services/traduccion-documentos'
     },
     {
-        image: '/preparacion.webp', // Cambia por tus propias imágenes
-        title: 'Preparación para Entrevista',
-        description: 'Te preparamos para tu entrevista consular y aumentamos tus posibilidades de éxito.',
-        link: '/services/preparacion-entrevista'
+        image: '/poder-notarial.jpg',
+        title: 'Poder Notarial para mexicanos menores de 18 años (Consentimiento padres)',
+        description: 'Trámite de poder notarial para menores de 18 años.',
+        link: '/services/poder-notarial'
+    },
+    {
+        image: '/DS3053.png',
+        title: 'Poder Notarial para americanos menores de 16 años (Consentimiento padres)',
+        description: 'Trámite de poder notarial para menores de 16 años.',
+        link: '/services/poder-notarial-americano'
+    },
+    {
+        image: '/SAM.png',
+        title: 'Formato SAM para Menores Mexicanos que viajan solos o con un familiar a EU.',
+        description: 'Trámite de formato SAM para menores mexicanos.',
+        link: '/services/formato-sam'
     }
+    
 ];
 
 const testimonialsData = [
@@ -87,6 +114,13 @@ const Services = () => {
 
     return (
         <>
+            <Parallax 
+            height="700px"
+            backgroundImage={fondoS}
+            title="Nuestros Servicios"
+            subtitle="Ofrecemos una amplia gama de servicios para facilitar tus trámites de visa y pasaporte."
+            linkText={t('Contactar')}
+            />
             <div className="services-section fade-in">
                 <h2>{t('Nuestros Servicios')}</h2>
                 <div className="services-grid" onClick={scrollToTop}>
