@@ -225,10 +225,14 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-.process {
-    box-sizing: border-box;
-    background-color: #ddd;
-    padding: 450px 20px;
+.facebook {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.faceMovil {
+    display: none;
 }
 
 
@@ -280,6 +284,19 @@ body {
     .imgSteps {
         width: 100%;
         height: auto;
+    }
+
+    .facebook {
+        padding: 30px 35px;
+    }
+
+    .faceEscritorio{
+        display: none;
+    }
+
+    .faceMovil{
+        display: block;
+        text-align: center;
     }
 }
 
