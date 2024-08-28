@@ -277,8 +277,13 @@
     }
 
     .help h1 {
-        font-size: 1.5em; /* Reducido para que se ajuste mejor en pantallas pequeñas */
+        font-size: 1.4em; /* Reducido para que se ajuste mejor en pantallas pequeñas */
         margin-top: 200px; /* Ajustado para mejorar la apariencia */
+    }
+
+    .panel-movil .tit {
+        margin-top: 20px;
+        text-align: center;
     }
 
     .container-search {

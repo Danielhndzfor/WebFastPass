@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import '../css/Parallax.css';
+import Contact from '../Screens/Contact';
 
 function Parallax({ backgroundImage, title, subtitle, linkText }) {
     const { t } = useTranslation();
@@ -10,7 +11,7 @@ function Parallax({ backgroundImage, title, subtitle, linkText }) {
             <div className="parallax-content">
                 <h1>{t(title)}</h1>
                 <p>{t(subtitle)}</p>
-                <a href="/contact" className="contactbtn">
+                <a href={Contact} rel="noopener noreferrer" className="contactbtn">
                     {t(linkText)}
                 </a>
             </div>

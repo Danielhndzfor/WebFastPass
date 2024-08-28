@@ -240,8 +240,8 @@ function FAQ() {
 
             {/* Vista móvil */}
             <section className="panel-movil">
+                <h3 className='tit'>Preguntas Frecuentes</h3>
                 <section className="temas">
-                    <h1>¿En qué podemos ayudarte?</h1>
                     <div className="temas-lista">
                         {topics.map((topic, index) => (
                             <div
