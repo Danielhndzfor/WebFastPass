@@ -63,9 +63,9 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 988px) {
     .service-card {
-        height: 200px; /* Reduce the height for smaller screens */
+        height: 260px; /* Reduce the height for smaller screens */
     }
 
     .service-card:hover {
