@@ -8,11 +8,11 @@ const About = () => {
     const { t } = useTranslation();
     const values = [
         { img: '/honestidad.webp', title: 'Honestidad', description: 'Descripción de Honestidad.' },
-        { img: '/honestidad.webp', title: 'Respeto', description: 'Descripción de Respeto.' },
-        { img: '/honestidad.webp', title: 'Integridad', description: 'Descripción de Integridad.' },
-        { img: '/honestidad.webp', title: 'Responsabilidad', description: 'Descripción de Responsabilidad.' },
-        { img: '/honestidad.webp', title: 'Trabajo en Equipo', description: 'Descripción de Trabajo en Equipo.' },
-        { img: '/honestidad.webp', title: 'Innovación', description: 'Descripción de Innovación.' },
+        { img: '/respeto.png', title: 'Respeto', description: 'Descripción de Respeto.' },
+        { img: '/integridad.jpg', title: 'Integridad', description: 'Descripción de Integridad.' },
+        { img: '/responsabilidad.jpg', title: 'Responsabilidad', description: 'Descripción de Responsabilidad.' },
+        { img: '/trabajoequipo.jpeg', title: 'Trabajo en Equipo', description: 'Descripción de Trabajo en Equipo.' },
+        { img: '/innovacion.jpeg', title: 'Innovación', description: 'Descripción de Innovación.' },
     ];
 
     return (
@@ -81,7 +81,7 @@ const About = () => {
                 </div>
 
                 {/* Botón de contacto */}
-                <div className="contact-button">
+                <div className="contact-button1">
                     <p className="contact-text">{t('¿Estás listo para tu primera cita?')}</p>
                     <a href="/contact" className="btn btn-primary">{t('Contactar')}</a>
                 </div>

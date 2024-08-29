@@ -1,44 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Parallax from '../components/Parallax';
-import ServiceCard from '../components/ServiceCard';
 import { Link } from 'react-router-dom';
 import '../css/Home.css'; // Asegúrate de crear y ajustar el archivo CSS
 import ContactForm from '../components/ContactForm';
-import fondoH from '/r1.webp'
+import fondoH from '/r1.webp';
 import Contador from '../components/Contador';
-import Steps from '/Pasos.png'
+import Steps from '/Pasos.png';
 import { MDBIcon } from 'mdb-react-ui-kit';
-
-const servicesData = [
-    {
-        image: '/cita.webp', // Cambia por tus propias imágenes
-        title: 'Cita Informativa',
-        description: 'Brindamos asesoría personalizada para tu trámite de visa y pasaporte.',
-        link: '/services/cita-informativa'
-    },
-    {
-        image: '/visa.webp', // Cambia por tus propias imágenes
-        title: 'Visa Americana',
-        description: 'Asistimos en todos los pasos para la obtención de tu visa.',
-        link: '/services/visa-americana'
-    },
-    {
-        image: '/Pasaporte-mexicano.webp', // Cambia por tus propias imágenes
-        title: 'Pasaporte Mexicano',
-        description: 'Gestionamos tu pasaporte de manera rápida y eficiente.',
-        link: '/services/pasaporte-mexicano'
-    }
-];
+import Facebook from '../components/Facebook';
 
 function Home() {
     const { t } = useTranslation();
+
     const scrollToTop = () => {
         window.scrollTo(0, 0);
     };
+    
     const handleButtonClick = () => {
-        window.location.href = 'https://wa.me/523143526003';
+        window.location.href = 'tel:+523131313131'; // Cambia por tu número de teléfono
     };
+
 
     return (
         <>
@@ -89,15 +71,13 @@ function Home() {
             </section>
 
             <section className="facebook">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fvisasmanzanillo%3Fmibextid%3DdGKdO6&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" className='faceEscritorio' width="500" height="700" style={{ border: 'none', borderRadius: '20px' , overflow: 'hidden' }} seamless allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fvisasmanzanillo%3Fmibextid%3DdGKdO6&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" className='faceMovil' width="300" height="400" style={{ border: 'none', borderRadius: '20px' , overflow: 'hidden' }} seamless allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <Facebook />
             </section>
 
             <section className="contadores">
                 <div className="contadores-grid">
                     <Contador
-                        end={15}
+                        end={10}
                         duration={2000}
                         id="counter1"
                         texto="Años de Experiencia"
@@ -108,7 +88,7 @@ function Home() {
                         duration={2000}
                         id="counter2"
                         texto="Tasa de Aprobación"
-                        icon="%"
+                        icon="%+"
                     />
                     <Contador
                         end={1000}

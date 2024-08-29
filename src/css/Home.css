@@ -231,9 +231,7 @@ body {
     background-color: #f4f4f4;
 }
 
-.faceMovil {
-    display: none;
-}
+
 
 
 
@@ -287,16 +285,11 @@ body {
     }
 
     .facebook {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 30px 35px;
-    }
-
-    .faceEscritorio{
-        display: none;
-    }
-
-    .faceMovil{
-        display: block;
-        text-align: center;
     }
 }
 

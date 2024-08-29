@@ -2,12 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import '../css/Footer.css';
+import Logo from '/logoPeque.webp';
 
 function Footer() {
     const { t } = useTranslation();
-    const handleButtonClick = () => {
-        window.location.href = 'https://wa.me/523143526003';
-    };
+
 
     return (
         <>
@@ -39,10 +38,16 @@ function Footer() {
                                     Fast Pass Visas
                                 </h6>
                                 <p>{t('Consultoria en trámites de visas y pasaportes')}</p>
-                                <button onClick={handleButtonClick} className='appointment-button'>
-                                    <MDBIcon fas icon="calendar-check" className='me-2' />
-                                    {t('Quiero cita')}
-                                </button>
+                                <a href='https://www.paypal.com/mx/home' className='btnPay'>
+                                    <div className='Pagos'>
+                                        <div className='btn-paypal'>
+                                            <MDBIcon fab icon='paypal' />
+                                        </div>
+                                        <p>Pagar en línea</p>
+                                    </div>
+                                </a>
+
+
                             </MDBCol>
 
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
@@ -77,17 +82,17 @@ function Footer() {
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>{t('Politicas')}</h6>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a href='/politica-de-empresa' className='text-reset'>
                                         {t('Politicas de la Empresa')}
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a href='/politica-de-privacidad' className='text-reset'>
                                         {t('Politicas de Privacidad')}
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a href='/aviso-de-privacidad' className='text-reset'>
                                         {t('Aviso de Privacidad')}
                                     </a>
                                 </p>
@@ -109,7 +114,7 @@ function Footer() {
                                 </p>
                                 <p>
                                     <a href="tel:+523146885645">
-                                        <MDBIcon icon="phone" className="me-3" /> 
+                                        <MDBIcon icon="phone" className="me-3" />
                                         + 52 314 688 5645
                                     </a>
                                 </p>

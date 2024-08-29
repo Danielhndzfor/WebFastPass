@@ -115,12 +115,11 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    padding: 50px;
+    padding: 150px;
 }
 
-.contact-button {
+.contact-button1 {
     text-align: center;
-    margin-top: 20px;
     padding: 50px;
 }
 
@@ -128,7 +127,7 @@
     font-size: 24px;
 }
 
-.contact-button .btn {
+.contact-button1 .btn {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -138,7 +137,7 @@
     font-size: 16px;
 }
 
-.contact-button .btn:hover {
+.contact-button1 .btn:hover {
     background-color: #0056b3;
 }
 

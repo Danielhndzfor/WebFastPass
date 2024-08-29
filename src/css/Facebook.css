@@ -1,0 +1,14 @@
+.faceMovil {
+    display: none;
+}
+
+@media (max-width: 988px) {
+    .faceEscritorio{
+        display: none;
+    }
+
+    .faceMovil{
+        display: block;
+        text-align: center;
+    }
+}

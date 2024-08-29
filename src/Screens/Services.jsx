@@ -136,7 +136,7 @@ const Services = () => {
                 </div>
             </div>
 
-            <div className="testimonials-section">
+            {/* <div className="testimonials-section">
                 <h2>{t('Testimonios')}</h2>
                 <div className="testimonials-grid">
                     {testimonialsData.map((testimonial, index) => (
@@ -147,7 +147,7 @@ const Services = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </>
     );
 };

@@ -3,3 +3,43 @@ a {
     color: white;
     cursor: pointer;
 }
+
+.btnPay {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.Pagos {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido */
+    padding: 10px; /* Espaciado interno */
+    background-color: #0070ba; /* Color de fondo de PayPal */
+    border-radius: 8px; /* Esquinas redondeadas */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white; /* Color del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}
+
+.Pagos:hover {
+    background-color: #005f8d; /* Color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de aumento en hover */
+}
+
+.btn-paypal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Ajusta el tamaño del botón */
+    height: 40px; /* Ajusta el tamaño del botón */
+    border-radius: 50%;
+    background-color: #ffffff; /* Color de fondo blanco para el ícono */
+    color: #0070ba; /* Color del ícono */
+    font-size: 20px; /* Tamaño del ícono */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.Pagos p {
+    margin: 0; /* Elimina el margen del párrafo */
+    font-size: 16px; /* Tamaño del texto */
+}
+
