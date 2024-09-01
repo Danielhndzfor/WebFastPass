@@ -28,55 +28,56 @@ function PolPrivacidad() {
                     <h2>2. Datos Personales Recopilados</h2>
                     <p>
                         Podemos recopilar los siguientes tipos de datos personales:
-                        <ul className='restriction-list'>
-                            <li>Datos de identificación: nombre completo, fecha de nacimiento, estado civil, dirección postal, correo electrónico, número de teléfono.</li>
-                            <li>Datos laborales: ocupación, puesto, labores, nombre de la empresa, dirección de la empresa.</li>
-                            <li>Datos migratorios: pasaporte, información de visas anteriores, historial de viajes.</li>
-                            <li>Datos financieros: información de tarjetas de crédito o débito, solamente si se hacen pagos en línea, detalles de ingresos, cartas laborales, detalles de estados de cuenta bancarios, percepciones, descuentos, únicamente cuando sea estrictamente necesario para el servicio solicitado.</li>
-                            <li>Datos sensibles: información sobre salud o antecedentes penales, únicamente cuando sea estrictamente necesario para el servicio solicitado.</li>
-                        </ul>
                     </p>
+                    <ul className='restriction-list'>
+                        <li>Datos de identificación: nombre completo, fecha de nacimiento, estado civil, dirección postal, correo electrónico, número de teléfono.</li>
+                        <li>Datos laborales: ocupación, puesto, labores, nombre de la empresa, dirección de la empresa.</li>
+                        <li>Datos migratorios: pasaporte, información de visas anteriores, historial de viajes.</li>
+                        <li>Datos financieros: información de tarjetas de crédito o débito, solamente si se hacen pagos en línea, detalles de ingresos, cartas laborales, detalles de estados de cuenta bancarios, percepciones, descuentos, únicamente cuando sea estrictamente necesario para el servicio solicitado.</li>
+                        <li>Datos sensibles: información sobre salud o antecedentes penales, únicamente cuando sea estrictamente necesario para el servicio solicitado.</li>
+                    </ul>
 
                     <h2>3. Finalidades del Tratamiento de Datos</h2>
                     <p>
                         Los datos personales que recopilamos son utilizados para las siguientes finalidades:
-                        <ul className='restriction-list'>
-                            <li><strong>Prestación de servicios:</strong></li>
-                            <ul className='restriction-list subList'>
-                                <li>Procesamiento y gestión de solicitudes de visa y pasaportes.</li>
-                                <li>Asesoría personalizada y seguimiento de trámites migratorios.</li>
-                                <li>Comunicación con el cliente para proporcionar actualizaciones sobre sus solicitudes.</li>
-                                <li>Envío de información promocional sobre nuestros servicios.</li>
-                            </ul>
-                        </ul>
-
-                        <ul className='restriction-list'>
-                            <li><strong>Mejoramiento del sitio:</strong></li>
-                            <ul className='restriction-list subList'>
-                                <li>Analizar el uso del sitio para mejorar su funcionamiento y contenido.</li>
-                                <li>Realización de encuestas de satisfacción y análisis estadísticos.</li>
-                                <li>Personalizar experiencia en el sitio.</li>
-                            </ul>
-                        </ul>
-
-                        <ul className='restriction-list'>
-                            <li><strong>Cumplimiento Legal:</strong></li>
-                            <ul className='restriction-list subList'>
-                                <li>Cumplir con obligaciones legales y normativas.</li>
-                                <li>Prevenir fraudes y actividades ilícitas.</li>
-                            </ul>
-                        </ul>
                     </p>
+                    <ul className='restriction-list'>
+                        <li><strong>Prestación de servicios:</strong></li>
+                        <ul className='restriction-list subList'>
+                            <li>Procesamiento y gestión de solicitudes de visa y pasaportes.</li>
+                            <li>Asesoría personalizada y seguimiento de trámites migratorios.</li>
+                            <li>Comunicación con el cliente para proporcionar actualizaciones sobre sus solicitudes.</li>
+                            <li>Envío de información promocional sobre nuestros servicios.</li>
+                        </ul>
+                    </ul>
+
+                    <ul className='restriction-list'>
+                        <li><strong>Mejoramiento del sitio:</strong></li>
+                        <ul className='restriction-list subList'>
+                            <li>Analizar el uso del sitio para mejorar su funcionamiento y contenido.</li>
+                            <li>Realización de encuestas de satisfacción y análisis estadísticos.</li>
+                            <li>Personalizar experiencia en el sitio.</li>
+                        </ul>
+                    </ul>
+
+                    <ul className='restriction-list'>
+                        <li><strong>Cumplimiento Legal:</strong></li>
+                        <ul className='restriction-list subList'>
+                            <li>Cumplir con obligaciones legales y normativas.</li>
+                            <li>Prevenir fraudes y actividades ilícitas.</li>
+                        </ul>
+                    </ul>
 
                     <h2>4. Transferencia de Datos Personales</h2>
                     <p>
                         FastPass Visa no vende, alquila ni comparte sus datos personales con terceros, excepto en los casos siguientes:
-                        <ul className='restriction-list'>
-                            <li><strong>Proveedores de Servicios:</strong> Podemos compartir sus datos con proveedores que nos ayudan a realizar servicios, siempre bajo acuerdos de confidencialidad y protección de datos.</li>
-                            <li><strong>Autoridades compentes:</strong> FastPass Visa puede transferir sus datos personales a terceros únicamente para cumplir con las finalidades descritas, como embajadas, consulados, y otras autoridades competentes.</li>
-                        </ul>
-                        Todas las transferencias de datos se realizarán conforme al artículo 57, 65, 66, 67, 68, 69 y 70 de la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados.
                     </p>
+
+                    <ul className='restriction-list'>
+                        <li><strong>Proveedores de Servicios:</strong> Podemos compartir sus datos con proveedores que nos ayudan a realizar servicios, siempre bajo acuerdos de confidencialidad y protección de datos.</li>
+                        <li><strong>Autoridades compentes:</strong> FastPass Visa puede transferir sus datos personales a terceros únicamente para cumplir con las finalidades descritas, como embajadas, consulados, y otras autoridades competentes.</li>
+                    </ul>
+                    Todas las transferencias de datos se realizarán conforme al artículo 57, 65, 66, 67, 68, 69 y 70 de la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados.
 
                     <h2>5. Consentimiento del Usuario</h2>
                     <p>
@@ -90,17 +91,18 @@ function PolPrivacidad() {
                         <strong>2.</strong> Para ejercer sus derechos ARCO, puede ponerse en contacto con nuestro Oficial de Protección de Datos en el correo electrónico <a href="mailto:info@fastpass-visa.com">info@fastpass-visas.com</a> o en nuestra dirección física.
                         <br />
                         <strong>Procedimiento para el Ejercicio de Derechos ARCO:</strong>
-                        <ul className='restriction-list'>
-                            <li>Enviar una solicitud al correo electrónico mencionado o entregar personalmente en nuestra dirección física.</li>
-                            <li>La solicitud debe contener:</li>
-                            <ul className='restriction-list subList'>
-                                <li>Nombre completo y datos de contacto del titular.</li>
-                                <li>Copia de una identificación oficial.</li>
-                                <li>Descripción clara del derecho que desea ejercer.</li>
-                                <li>Cualquier otro documento que facilite la localización de los datos personales.</li>
-                            </ul>
-                        </ul>
                     </p>
+
+                    <ul className='restriction-list'>
+                        <li>Enviar una solicitud al correo electrónico mencionado o entregar personalmente en nuestra dirección física.</li>
+                        <li>La solicitud debe contener:</li>
+                        <ul className='restriction-list subList'>
+                            <li>Nombre completo y datos de contacto del titular.</li>
+                            <li>Copia de una identificación oficial.</li>
+                            <li>Descripción clara del derecho que desea ejercer.</li>
+                            <li>Cualquier otro documento que facilite la localización de los datos personales.</li>
+                        </ul>
+                    </ul>
 
                     <h2>7. Seguridad de Datos Personales</h2>
                     <p>
