@@ -32,7 +32,7 @@ function Home() {
 
             <section className="services">
                 <div className="positionS">
-                    <div className="service-card1">
+                    <div className="service-card1 fade-in">
                         <div className="icon-container">
                             {/* Aquí puedes colocar un ícono adecuado para "Asesoría" */}
                             <i className="fas fa-headset"></i>
@@ -41,7 +41,7 @@ function Home() {
                         <p>Le ofrecemos una asesoría personalizada para cada situación personal o familiar de manera entendible para todas las edades, efectiva y transparente ya que no utilizamos datos o correos de usuarios de terceros. Lo acompañamos en cada uno de los pasos durante el proceso de trámite de su visa.</p>
                     </div>
 
-                    <div className="service-card1">
+                    <div className="service-card1 fade-in">
                         <div className="icon-container">
                             {/* Aquí puedes colocar un ícono adecuado para "Trámite" */}
                             <i className="fas fa-passport"></i>
@@ -50,7 +50,7 @@ function Home() {
                         <p>Facilitamos el proceso de su trámite, preparando previamente un perfil de solicitante adecuado de manera previa a la solicitud de visa, y posteriormente le enlistamos y sugerimos los documentos personales que deberá llevar con usted a su cita de entrevista.</p>
                     </div>
 
-                    <div className="service-card1">
+                    <div className="service-card1 fade-in" >
                         <div className="icon-container">
                             {/* Aquí puedes colocar un ícono adecuado para "Gestión" */}
                             <i className="fas fa-tasks"></i>

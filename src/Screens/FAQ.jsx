@@ -119,7 +119,7 @@ function FAQ() {
 
     return (
         <>
-            <section className="help">
+            <section className="help fade-in">
                 <h1>¿En qué podemos ayudarte?</h1>
                 <div className="container-search">
                     <MDBIcon
@@ -201,7 +201,7 @@ function FAQ() {
                 </section>
             )}
 
-            <section className="temas panel-escritorio">
+            <section className="temas panel-escritorio fade-in">
                 <div className="temas-container">
                     <div className="temas-sidebar">
                         {topics.map((topic, index) => (

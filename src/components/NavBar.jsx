@@ -45,7 +45,7 @@ const NavBar = () => {
   };
 
   const handleButtonClick = () => {
-    window.location.href = 'tel:+523146885645';
+    window.location.href = '/contact';
   };
 
   const handleLinkClick = () => {
@@ -117,7 +117,7 @@ const NavBar = () => {
               ))}
               {menuOpen && (
                 <li>
-                  <button onClick={handleButtonClick} className='appointment-button2' style={{ width: '100%', marginTop: '40px' }}>
+                  <button onClick={handleButtonClick} className='appointment-button' style={{ width: '100%', marginTop: '40px' }}>
                     <MDBIcon fas icon="calendar-check" className='me-2' />
                     {t("Quiero cita")}
                   </button>

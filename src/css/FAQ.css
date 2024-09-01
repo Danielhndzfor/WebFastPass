@@ -267,6 +267,15 @@
     width: 900px;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /* Responsividad */
 /* Mostrar el panel móvil en vista móvil */

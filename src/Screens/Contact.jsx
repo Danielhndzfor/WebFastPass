@@ -16,7 +16,7 @@ function Contact() {
                 subtitle="Estamos aquí para ayudarte con tus trámites de visa y pasaporte."
                 linkText={t('Contactar')}
             />
-            <div className='introC'>
+            <div className='introC fade-in'>
                 <h2 className="contact-title">Contáctanos</h2>
                 <p>
                 Para mas información o mas detalles acerca de nuestros servicios, trámites en proceso o solicitudes por llevar a cabo, favor de contactar a un asesor a través de nuestros medios de difusión oficiales. Las consultas son personalizadas solamente despues de haber solicitado algún servicio de atención por este medio o en nuestros teléfonos, correos o redes sociales.

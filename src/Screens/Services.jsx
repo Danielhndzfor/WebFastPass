@@ -117,12 +117,13 @@ const Services = () => {
             <Parallax 
             height="700px"
             backgroundImage={fondoS}
-            title="Nuestros Servicios"
+            title="Servicios"
             subtitle="Ofrecemos una amplia gama de servicios para facilitar tus trámites de visa y pasaporte."
             linkText={t('Contactar')}
             />
             <div className="services-section fade-in">
                 <h2>{t('Nuestros Servicios')}</h2>
+                <p className='description'>{t('Ofrecemos asistencia a nuestros clientes para obtener la Visa Americana que se ajuste a sus necesidades, ya sea para fines turísticos, de negocios, estudios o trabajo. Nuestro equipo está disponible para acompañarle en cada paso del proceso de solicitud, garantizando que su documentación esté en regla y que usted asista a tiempo y bien preparado a su entrevista consular.')}</p>
                 <div className="services-grid" onClick={scrollToTop}>
                     {servicesData.map((service, index) => (
                         <ServiceCard

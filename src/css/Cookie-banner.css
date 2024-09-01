@@ -1,0 +1,55 @@
+/* src/components/CookieBanner.css */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0A1547;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cookie-banner p {
+    margin: 0;
+    flex: 1;
+}
+
+.cookie-banner-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-banner button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cookie-banner button:first-child {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.cookie-banner button:last-child {
+    background-color: #fff;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cookie-banner-buttons {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

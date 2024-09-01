@@ -1,14 +1,27 @@
 import React from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import '../css/Footer.css';
-import Logo from '/logoPeque.webp';
+import CookieSettings from './CookieSettings';
 
 function Footer() {
     const { t } = useTranslation();
+    const [showSettings, setShowSettings] = useState(false);
+
+    const handleCustomize = () => {
+        setShowSettings(true);
+    };
+
+    const handleCloseSettings = () => {
+        setShowSettings(false);
+        setShowBanner(false);
+    };
+
 
     return (
         <>
+            <CookieSettings isOpen={showSettings} onClose={handleCloseSettings} />
             <MDBFooter style={{ backgroundColor: '#0A1547', color: 'white' }} className='text-center text-lg-start text-muted'>
                 <section style={{ color: 'white' }} className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
@@ -34,7 +47,7 @@ function Footer() {
                                     Fast Pass Visas
                                 </h6>
                                 <p>{t('Empresa dedicada a la asesoría, gestión y trámite de pasaportes y visas')}</p>
-                                <a href='https://www.paypal.com/mx/home' className='btnPay'>
+                                <a href='/contact' className='btnPay'>
                                     <div className='Pagos'>
                                         <div className='btn-paypal'>
                                             <MDBIcon fas icon='calendar-alt' />
@@ -73,7 +86,7 @@ function Footer() {
                                 </p>
                             </MDBCol> */}
 
-                            
+
 
                             <MDBCol md="3" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>{t('Contacto')}</h6>
@@ -132,6 +145,11 @@ function Footer() {
                                         {t('Aviso Legal')}
                                     </a>
                                 </p>
+                                <p className='politicas'>
+                                    <a href='/politica-de-cookies' className='text-reset'>
+                                        {t('Política de Cookies')}
+                                    </a>
+                                </p>
                             </MDBCol>
                         </MDBRow>
                     </MDBContainer>
@@ -139,6 +157,9 @@ function Footer() {
 
                 <div className='text-center p-4 border-top' style={{ color: 'white' }}>
                     © 2024 Copyright | FastPass Visas
+                    <div>
+                        <a className='settings' onClick={handleCustomize}>Cambiar Preferencias</a>
+                    </div>
                 </div>
             </MDBFooter>
         </>

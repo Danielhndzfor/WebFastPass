@@ -47,3 +47,8 @@ a {
     font-size: 16px; /* Tamaño del texto */
 }
 
+.settings {
+    text-decoration: underline;
+    font-size: 0.8rem;
+}
+
