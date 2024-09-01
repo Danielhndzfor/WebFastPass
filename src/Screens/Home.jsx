@@ -4,7 +4,7 @@ import Parallax from '../components/Parallax';
 import { Link } from 'react-router-dom';
 import '../css/Home.css'; // Asegúrate de crear y ajustar el archivo CSS
 import ContactForm from '../components/ContactForm';
-import fondoH from '/r1.webp';
+import fondoH from '/r1.png';
 import Contador from '../components/Contador';
 import Steps from '/Pasos.png';
 import { MDBIcon } from 'mdb-react-ui-kit';
