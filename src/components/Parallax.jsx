@@ -8,11 +8,20 @@ function Parallax({ backgroundImage, title, subtitle, linkText }) {
     const navigate = useNavigate();
 
     return (
-        <div className="parallax-container fade-in" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div 
+            className="parallax-container fade-in" 
+            style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            role="img" 
+            aria-label={t(title)}
+        >
             <div className="parallax-content">
                 <h1>{t(title)}</h1>
                 <p>{t(subtitle)}</p>
-                <button onClick={() => navigate('/contact')} className="contactbtn">
+                <button 
+                    onClick={() => navigate('/contact')} 
+                    className="contactbtn" 
+                    aria-label={t(linkText)}
+                >
                     {t(linkText)}
                 </button>
             </div>
@@ -21,3 +30,4 @@ function Parallax({ backgroundImage, title, subtitle, linkText }) {
 }
 
 export default Parallax;
+

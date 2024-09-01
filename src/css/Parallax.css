@@ -22,12 +22,12 @@
 }
 
 .parallax-content h1 {
-    font-size: 48px;
+    font-size: 4vw; /* Escala en relación al ancho de la pantalla */
     margin: 0;
 }
 
 .parallax-content p {
-    font-size: 21px;
+    font-size: 1.7vw;
     margin: 0;
 }
 
@@ -67,7 +67,8 @@
 
 @media (max-width: 980px) {
     .parallax-container {
-        height: 650px;
+        background-attachment: scroll;
+        height: 500px; /* Ajusta la altura en móviles */
     }
     .parallax-content h1 {
         font-size: 32px;

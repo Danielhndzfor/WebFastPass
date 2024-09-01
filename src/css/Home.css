@@ -311,3 +311,9 @@ body {
     }
 }
 
+@media (max-width:600px) {
+    .more-services-button {
+        margin-top: 1000px;
+    }
+}
+
