@@ -68,7 +68,7 @@
 @media (max-width: 980px) {
     .parallax-container {
         background-attachment: scroll;
-        height: 500px; /* Ajusta la altura en móviles */
+        height: 650px; /* Ajusta la altura en móviles */
     }
     .parallax-content h1 {
         font-size: 32px;
