@@ -11,15 +11,15 @@ const links = [
     href: "/",
   },
   {
-    key: "¿Quienes Somos?",
+    key: "¿Quiénes Somos?",
     href: "/about",
   },
   {
-    key: "Servicios",
+    key: "Nuestros servicios",
     href: "/services",
   },
   {
-    key: "Preguntas Frecuentes",
+    key: "FAQ",
     href: "/faq",
   },
   {
@@ -45,7 +45,7 @@ const NavBar = () => {
   };
 
   const handleButtonClick = () => {
-    window.location.href = 'https://wa.me/523143526003';
+    window.location.href = 'tel:+523146885645';
   };
 
   const handleLinkClick = () => {
@@ -67,7 +67,7 @@ const NavBar = () => {
         <div className="contacto">
           <div className="contacto-info">
             <p><a href="mailto:info@fastpass-visas.com"><MDBIcon fas icon="envelope" className='me-2' />info@fastpass-visas.com</a></p>
-            <p><a href="tel:+523146885645"><MDBIcon fas icon="phone" className='me-2' />+52 314 352 6003</a></p>
+            <p><a href="tel:+523143526003"><MDBIcon fas icon="phone" className='me-2' />+52 314 352 6003</a></p>
           </div>
           <div className="contacto-social">
             <span>

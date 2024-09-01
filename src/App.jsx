@@ -15,7 +15,7 @@ import Contact from './Screens/Contact';
 import CitaInfo from './Screens/Services/CitaInfo';
 
 import PolPrivacidad from './Screens/Politicas/PolPrivacidad';
-import PolEmpresa from './Screens/Politicas/PolEmpresa';
+import TyC from './Screens/Politicas/TyC';
 import AviPrivacidad from './Screens/Politicas/AviPrivacidad';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/politica-de-privacidad" element={<PolPrivacidad />} />
-          <Route path="/politica-de-empresa" element={<PolEmpresa />} />
+          <Route path="/tyc" element={<TyC />} />
           <Route path="/aviso-de-privacidad" element={<AviPrivacidad />} />
         </Routes>
         <Footer />

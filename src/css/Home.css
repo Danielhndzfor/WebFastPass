@@ -136,7 +136,7 @@ body {
 
 .more-services-button {
     position: relative; /* Permite que se posicione en el flujo natural, pero también puedes usar absolute si es necesario */
-    margin-top: 100px; /* Ajustar según sea necesario para estar visible */
+    margin-top: 160px; /* Ajustar según sea necesario para estar visible */
     text-align: center;
     display: inline-block;
     color: #0A1547;
@@ -200,17 +200,23 @@ body {
 .contact-form button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #0056b3;
+.contact-form .enabled:hover {
+    background-color: #004792;
 }
+
+.contact-form .disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+
 
 @keyframes fadeIn {
     from {
@@ -250,7 +256,7 @@ body {
 
     .services {
         padding: 30px 20px;
-        height: 990px;
+        height: 100%;
     }
 
     .positionS {
@@ -262,13 +268,16 @@ body {
     }
 
     .service-card1 {
-        width: 100%;
+        width: 90%;
         margin-left: 0px;
     }
 
+    .service-card1 p {
+        font-size: 13px;
+    }
+
     .more-services-button {
-        margin-top: 875px;
-        margin-bottom: 10px;
+        margin-top: 1010px;
     }
 
     .steps {

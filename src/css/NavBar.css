@@ -170,19 +170,29 @@ li .nav-link.active::after {
 .contacto-info {
     display: flex;
     padding: 0 10px;
+    
 }
 
 .contacto-info p {
     margin: 0 10px;
 }
 
-.contacto-social {
-    display: flex;
-    padding: 0 10px;
+.contacto-info p a {
+    
+    color: black;
+}
+
+.contacto-info p a:hover {
+    color: white;
 }
 
 .contacto-social a {
     margin: 0 10px;
+}
+
+.contacto-social {
+    display: flex;
+    padding: 0 10px;
 }
 
 .contacto-social span {

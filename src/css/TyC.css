@@ -1,0 +1,211 @@
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #0A1547;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero-container p {
+    display: block;
+    margin-top: 200px;
+    font-size: 1.5rem;
+    color: #f9f9f9;
+}
+
+.terms-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.terms-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.terms-header h1 {
+    font-size: 2rem;
+    color: #0A1547;
+}
+
+.update-date {
+    display: block;
+    font-size: 0.875rem;
+    color: #888;
+}
+
+.terms-content {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.terms-content h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #0A1547;
+    border-bottom: 2px solid #0A1547;
+    padding-bottom: 5px;
+}
+
+.terms-content h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.terms-content p {
+    margin-top: 10px;
+}
+
+.terms-content a {
+    color: #0A1547;
+    text-decoration: underline;
+}
+
+.service-list,
+.restriction-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.service-list li,
+.restriction-list li {
+    margin-bottom: 5px;
+}
+
+.restriction-list {
+    list-style-type: disc;
+}
+
+.subList {
+    list-style-type: circle;
+}
+
+.styled-table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    /* Centra la tabla horizontalmente */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #0A1547;
+    color: #ffffff;
+    text-align: center;
+    /* Centra horizontalmente el texto del encabezado */
+    font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+    vertical-align: middle;
+    /* Centra verticalmente el contenido de las celdas */
+}
+
+.tema-table {
+    text-align: center;
+}
+
+.styled-table tbody tr {
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #e9e9e9;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Remueve los estilos de lista */
+.table-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+/* Asegura que los <li> se muestren en forma vertical sin estilos adicionales */
+.table-list li {
+    padding: 0;
+    text-indent: 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 15px;
+    }
+
+    .terms-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .terms-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .terms-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .terms-content p,
+    ul {
+        font-size: 0.95rem;
+    }
+
+    .styled-table {
+        font-size: 0.85rem; /* Reduce el tamaño de la fuente */
+        max-width: 100%; /* Asegura que la tabla no exceda el ancho de la pantalla */
+        width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+        margin: 5px 0; /* Reduce el margen superior e inferior */
+    }
+
+    .styled-table th, .styled-table td {
+        padding: 8px 11.5px; /* Reduce el padding para ahorrar espacio */
+    }
+
+    .styled-table thead tr {
+        background-color: #0A1547;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.9rem; /* Ajusta el tamaño de la fuente del encabezado */
+    }
+
+    .styled-table tbody tr {
+        font-size: 0.85rem; /* Ajusta el tamaño de la fuente del cuerpo */
+    }
+
+    .styled-table .table-list {
+        padding-left: 10px; /* Reduce el padding en la lista */
+    }
+
+    .styled-table .table-list li {
+        font-size: 0.75rem; /* Ajusta el tamaño de la fuente de la lista */
+    }
+
+    
+}

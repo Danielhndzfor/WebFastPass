@@ -26,8 +26,8 @@ function Home() {
         <>
             <Parallax
                 backgroundImage={fondoH}
-                title="Uniendo Familias"
-                subtitle="Logrando que su visa sea aceptada"
+                title="¡Uniendo Familias!"
+                subtitle="Logrando que su visa sea aprobada"
                 linkText="Contáctanos" />
 
             <section className="services">
@@ -38,24 +38,27 @@ function Home() {
                             <i className="fas fa-headset"></i>
                         </div>
                         <h3>Asesoría</h3>
-                        <p>Ofrecemos asesoría personalizada para ayudarte a entender los requisitos y procesos necesarios.</p>
+                        <p>Le ofrecemos una asesoría personalizada para cada situación personal o familiar de manera entendible para todas las edades, efectiva y transparente ya que no utilizamos datos o correos de usuarios de terceros. Lo acompañamos en cada uno de los pasos durante el proceso de trámite de su visa.</p>
                     </div>
-                    <div className="service-card1">
-                        <div className="icon-container">
-                            {/* Aquí puedes colocar un ícono adecuado para "Gestión" */}
-                            <i className="fas fa-tasks"></i>
-                        </div>
-                        <h3>Gestión</h3>
-                        <p>Nos encargamos de gestionar todos los documentos y procesos necesarios para tu solicitud.</p>
-                    </div>
+
                     <div className="service-card1">
                         <div className="icon-container">
                             {/* Aquí puedes colocar un ícono adecuado para "Trámite" */}
                             <i className="fas fa-passport"></i>
                         </div>
                         <h3>Trámite</h3>
-                        <p>Facilitamos el trámite de pasaportes y visas, asegurando que todo se realice de manera eficiente y correcta.</p>
+                        <p>Facilitamos el proceso de su trámite, preparando previamente un perfil de solicitante adecuado de manera previa a la solicitud de visa, y posteriormente le enlistamos y sugerimos los documentos personales que deberá llevar con usted a su cita de entrevista.</p>
                     </div>
+
+                    <div className="service-card1">
+                        <div className="icon-container">
+                            {/* Aquí puedes colocar un ícono adecuado para "Gestión" */}
+                            <i className="fas fa-tasks"></i>
+                        </div>
+                        <h3>Preparación</h3>
+                        <p>Lo preparamos para el día de su cita con su solicitud traducida al español y un simulacro de entrevista con la finalidad de que vaya consciente de las preguntas que le realizarán el oficial consular. </p>
+                    </div>
+                    
                 </div>
                 <Link to="/services" className="more-services-button" onClick={scrollToTop}>{t('Explorar Servicios')}</Link>
             </section>
@@ -71,7 +74,13 @@ function Home() {
             </section>
 
             <section className="facebook">
-                <Facebook />
+                <div>
+                    <Facebook />
+                </div>
+
+                <div>
+                    
+                </div>
             </section>
 
             <section className="contadores">
@@ -81,21 +90,23 @@ function Home() {
                         duration={2000}
                         id="counter1"
                         texto="Años de Experiencia"
-                        icon="+"
+                        icon=""
+                        icon1="+"
                     />
                     <Contador
                         end={80}
                         duration={2000}
                         id="counter2"
                         texto="Tasa de Aprobación"
-                        icon="%+"
+                        icon="%"
+                        icon1="+"
                     />
                     <Contador
                         end={1000}
                         duration={2000}
                         id="counter3"
                         texto="Trámites Realizados"
-                        icon="+"
+                        icon1="+"
                     />
                 </div>
             </section>

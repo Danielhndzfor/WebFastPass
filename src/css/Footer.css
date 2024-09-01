@@ -4,6 +4,10 @@ a {
     cursor: pointer;
 }
 
+.politicas:hover {
+    color: #0056b3;
+}
+
 .btnPay {
     text-decoration: none; /* Elimina el subrayado del enlace */
 }

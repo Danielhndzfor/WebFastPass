@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-function Contador({ end, duration, id, texto, icon }) {
+function Contador({ end, duration, id, texto, icon, icon1 }) {
     const [count, setCount] = useState(0);
     const elementRef = useRef(null);
 
@@ -36,7 +36,7 @@ function Contador({ end, duration, id, texto, icon }) {
     return (
         <div className="contador" ref={elementRef}>
             <p className="contador-texto">{texto}</p>
-            <h3 id={id}>{count}{icon}</h3>
+            <h3 id={id}>{icon1}{count}{icon}</h3>
         </div>
     );
 }
