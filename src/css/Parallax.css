@@ -22,34 +22,32 @@
 }
 
 .parallax-content h1 {
-    font-size: 4vw; /* Escala en relación al ancho de la pantalla */
+    font-size: 3vw; /* Escala en relación al ancho de la pantalla */
     margin: 0;
 }
 
 .parallax-content p {
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     margin: 0;
 }
 
 .contactbtn {
     display: inline-block;
-    padding: 8px 16px; /* Reduce el padding */
-    font-size: 14px; /* Reduce el tamaño de fuente */
-    border: 2px solid white;
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
     margin-top: 20px; /* Espacio superior */
+    padding: 10px; /* Espaciado interno */
+    background-color: #239619; /* Color de fondo de PayPal */
+    border-radius: 8px; /* Esquinas redondeadas */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white; /* Color del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    cursor: pointer;
+    font-size: 18px;
+    border-style: none;
 }
 
 .contactbtn:hover {
-    background-color: #0A1547;; /* Azul en hover */
-    color: white; /* Asegura que el texto siga siendo blanco en hover */
-    border-color: #0A1547;; /* Cambia el borde a azul en hover */
+    background-color: #196b11; /* Color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de aumento en hover */
 }
 
 @keyframes fadeIn {

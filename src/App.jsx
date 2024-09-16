@@ -32,12 +32,15 @@ function App() {
           <TitleUpdater />
           <Routes>
             <Route path="/" element={<Home />} />
+            
             <Route path="/services" element={<Services />} />
             <Route path="/services/cita-informativa" element={<CitaInfo />} />
+
             <Route path="/about" element={<About />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/tyc" element={<TyC />} />
+
             <Route path="/politica-de-privacidad" element={<PolPrivacidad />} />
             <Route path="/aviso-de-privacidad" element={<AviPrivacidad />} />
             <Route path="/politica-de-devolucion" element={<PolDevolucion />} />

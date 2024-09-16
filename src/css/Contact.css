@@ -2,7 +2,6 @@
 
 .introC {
     padding: 40px 400px;
-    text-align: center;
 }
 
 .contact-container {
@@ -74,9 +73,20 @@
 }
 
 .enabled {
-    color: white;
-    background-color: #264efd;
+    padding: 10px; /* Espaciado interno */
+    background-color: #239619; /* Color de fondo de PayPal */
+    border-radius: 8px; /* Esquinas redondeadas */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white; /* Color del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
     cursor: pointer;
+    font-size: 18px;
+    border-style: none;
+}
+
+.enabled:hover {
+    background-color: #196b11; /* Color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de aumento en hover */
 }
 
 .disabled {

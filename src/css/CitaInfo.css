@@ -65,22 +65,23 @@
 .contact-button {
     display: block;
     width: 100%;
-    padding: 12px 20px;
     margin-top: 20px;
-    background-color: #0A1547;
-    color: #fff;
-    font-size: 1.2em;
     font-weight: bold;
     text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px; /* Espaciado interno */
+    background-color: #239619; /* Color de fondo de PayPal */
+    border-radius: 8px; /* Esquinas redondeadas */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white; /* Color del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    cursor: pointer;
+    font-size: 18px;
+    border-style: none;
 }
 
 .contact-button:hover {
-    background-color: #07113A;
-    transform: scale(1.05);
+    background-color: #196b11; /* Color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de aumento en hover */
 }
 
 /* Medios Responsivos */
