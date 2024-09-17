@@ -3,74 +3,61 @@ import '../../css/CitaInfo.css'; // Asegúrate de que la ruta sea correcta
 import Parallax from '../../components/Parallax'; // Asegúrate de que la ruta sea correcta
 import fondoPF from '/fondoPF.avif'; // Cambia por tu propia imagen
 
-function CitaInfo() {
+function ActasNacimiento() {
     return (
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Consulta Informativa"
-                subtitle="Brindamos asesoría personalizada para tu trámite de visa y pasaporte."
+                title="Actas de Nacimiento"
+                subtitle="Asesoramos en la gestión de Actas de Nacimiento tanto mexicanas como extranjeras."
                 linkText="Contáctanos"
             />
 
             <div className="cita-info-container">
                 {/* Título */}
                 <div className="cita-info-header">
-                    <h2>Consulta Informativa</h2>
+                    <h2>Actas de Nacimiento</h2>
                 </div>
 
                 {/* Descripción */}
                 <div className="cita-info-section">
                     <p>
-                        Nuestra cita informativa está diseñada para proporcionarte toda la información necesaria sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.
+                        Ofrecemos un servicio completo para la obtención de actas de nacimiento mexicanas y extranjeras. Nos encargamos de todos los trámites necesarios para asegurarnos de que tengas la documentación correcta y actualizada.
                     </p>
                 </div>
 
                 {/* Documentación Necesaria */}
                 <div className="cita-info-section">
-                    <h3>Requisitos</h3>
+                    <h3>Documentación Necesaria</h3>
                     {/* <ul>
-                        <li>Documento de identificación válido.</li>
-                        <li>Comprobante de domicilio.</li>
-                        <li>Documentos específicos según el servicio solicitado.</li>
+                        <li>Identificación oficial vigente.</li>
+                        <li>Comprobante de domicilio reciente.</li>
+                        <li>En algunos casos, documentos adicionales específicos según la entidad federativa.</li>
                     </ul> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
+                </div>
 
+                {/* Tiempo de Trámite */}
+                <div className="cita-info-section">
+                    <h3>Tiempo de Trámite</h3>
+                    {/* <p>
+                        El tiempo de entrega de las actas de nacimiento varía dependiendo de la entidad donde se realice el trámite. Generalmente, el proceso toma entre 3 a 7 días hábiles.
+                    </p> */}
+                    <p style={{ color: 'red' }}>PENDIENTE</p>
                 </div>
 
                 {/* Costos */}
                 <div className="cita-info-section">
-                    <h3>Tiempo de Trámite</h3>
+                    <h3>Costos</h3>
                     {/* <p>
-                        La cita informativa tiene un costo de $50, el cual puede ser pagado en efectivo o con tarjeta de crédito.
+                        Los costos por la gestión de actas de nacimiento incluyen derechos gubernamentales y honorarios por el servicio. Contáctanos para obtener una cotización personalizada según tu caso.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
-                </div>
-
-                {/* ¿Qué incluye el costo? */}
-                <div className="cita-info-section">
-                    <h3>Servicio Incluye</h3>
-                    {/* <p>
-                        El costo incluye una consulta personalizada con uno de nuestros expertos, asesoramiento detallado sobre tus opciones y un plan de acción para seguir adelante.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
-
-                </div>
-
-                {/* Tiempo de trámite */}
-                <div className="cita-info-section">
-                    <h3>Costo</h3>
-                    {/* <p>
-                        El tiempo estimado para completar la cita informativa es de entre 30 y 60 minutos, dependiendo de la complejidad de tus necesidades.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Botón de Contacto */}
                 <div className="cita-info-section contact">
-                    <p>Pregunte por nuestras promociones vigentes y cómo recibir consulta SIN COSTO</p>
+                    <p>Contacta a un asesor para recibir más información o resolver tus dudas.</p>
                     <button
                         className="contact-button"
                         onClick={() => window.location.href = '/contact#contactform'}
@@ -78,11 +65,9 @@ function CitaInfo() {
                         Contactar
                     </button>
                 </div>
-
-
             </div>
         </>
     );
 }
 
-export default CitaInfo;
+export default ActasNacimiento;

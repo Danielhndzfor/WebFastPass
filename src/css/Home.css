@@ -61,40 +61,24 @@ body {
     color: #ff8000; /* Cambia a un color más vibrante al hacer hover */
 }
 
-
-
-
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-    color: white;
-}
-
 .services {
     text-align: center;
-    padding: 80px 20px;
+    padding: 50px 20px;
     background-color: #f4f4f4;
 }
 
 .positionS {
-    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-    top: 70%;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    margin-top: -250px; /* Hace que las tarjetas floten sobre la sección anterior */
+    padding: 20px 20px;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden verticalmente si no caben en horizontal */
 }
 
+/* Estilo de cada tarjeta */
 .service-card1 {
     width: 30%;
     margin: 20px;
@@ -135,27 +119,25 @@ body {
 }
 
 .more-services-button {
-    position: relative; /* Permite que se posicione en el flujo natural, pero también puedes usar absolute si es necesario */
-    margin-top: 160px; /* Ajustar según sea necesario para estar visible */
     text-align: center;
     display: inline-block;
     color: #f8f9fa;
     font-weight: bold;
-    padding: 10px; /* Espaciado interno */
-    background-color: #239619; /* Color de fondo de PayPal */
-    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 20px;
+    background-color: #239619;
+    border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    color: white; /* Color del texto */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 18px;
     border-style: none;
-    z-index: 3; /* Asegura que esté por encima de las tarjetas */
+    z-index: 3;
 }
 
 .more-services-button:hover {
-    background-color: #196b11; /* Color más oscuro en hover */
-    transform: scale(1.05); /* Efecto de aumento en hover */
+    background-color: #196b11;
+    transform: scale(1.05);
     color: #f4f4f4;
 }
 
@@ -164,13 +146,6 @@ body {
     display: wrap;
     text-align: center;
     padding: 40px 20px;
-}
-
-
-.about-us {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f4f4f4;
 }
 
 .contact {
@@ -239,18 +214,27 @@ body {
     background-color: #f4f4f4;
 }
 
+@media (max-width: 1296px) {
+    .services {
+        padding: 30px 30px;
+        height: 100%;
+    }
 
-@media (min-width: 1101px) and (max-width: 1500px) {
+    .positionS {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -170px;
+    }
+
+    .service-card1 {
+        width: 90%;
+    }
+
     .more-services-button {
-        margin-top: 300px;
+        margin-top: 0;
     }
 }
 
-@media (min-width: 989px) and (max-width: 1100px) {
-    .more-services-button {
-        margin-top: 350px;
-    }
-}
 
 @media (max-width: 988px) {
     .contadores-grid {
@@ -266,21 +250,20 @@ body {
     }
 
     .services {
-        padding: 30px 20px;
+        padding: 30px 30px;
         height: 100%;
     }
 
     .positionS {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        top: 78%;
+        margin-top: -170px;
+        margin-bottom: 0;
     }
 
     .service-card1 {
-        width: 90%;
-        margin-left: 0px;
+        width: 90%; /* Ajustar el ancho de las tarjetas en pantallas pequeñas */
+        margin-bottom: 20px;
     }
 
     .service-card1 p {
@@ -288,7 +271,7 @@ body {
     }
 
     .more-services-button {
-        margin-top: 1100px;
+        margin-top: 5px; /* No uses márgenes grandes */
     }
 
     .steps {
@@ -312,10 +295,3 @@ body {
         padding: 30px 35px;
     }
 }
-
-@media (max-width:600px) {
-    .more-services-button {
-        margin-top: 1000px;
-    }
-}
-

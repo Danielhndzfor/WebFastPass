@@ -3,74 +3,73 @@ import '../../css/CitaInfo.css'; // Asegúrate de que la ruta sea correcta
 import Parallax from '../../components/Parallax'; // Asegúrate de que la ruta sea correcta
 import fondoPF from '/fondoPF.avif'; // Cambia por tu propia imagen
 
-function CitaInfo() {
+function VisaAmericana() {
     return (
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Consulta Informativa"
-                subtitle="Brindamos asesoría personalizada para tu trámite de visa y pasaporte."
+                title="Visa Americana"
+                subtitle="Te guiamos en todo el proceso para obtener tu visa americana de forma segura y eficaz."
                 linkText="Contáctanos"
             />
 
             <div className="cita-info-container">
                 {/* Título */}
                 <div className="cita-info-header">
-                    <h2>Consulta Informativa</h2>
+                    <h2>Visa Americana</h2>
                 </div>
 
                 {/* Descripción */}
                 <div className="cita-info-section">
                     <p>
-                        Nuestra cita informativa está diseñada para proporcionarte toda la información necesaria sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.
+                        Nuestra asesoría para la visa americana te ayudará a obtener toda la información y el apoyo necesario para que puedas realizar tu trámite de manera exitosa.
                     </p>
                 </div>
 
                 {/* Documentación Necesaria */}
                 <div className="cita-info-section">
-                    <h3>Requisitos</h3>
-                    {/* <ul>
-                        <li>Documento de identificación válido.</li>
-                        <li>Comprobante de domicilio.</li>
-                        <li>Documentos específicos según el servicio solicitado.</li>
-                    </ul> */}
+                    <h3>Documentación Necesaria</h3>
+                    {/* <p>
+                        Documento de identificación válido.
+                        Pasaporte vigente.
+                        Comprobante de domicilio.
+                        Formulario DS-160 completado.
+                    </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Costos */}
                 <div className="cita-info-section">
-                    <h3>Tiempo de Trámite</h3>
+                    <h3>Costos</h3>
                     {/* <p>
-                        La cita informativa tiene un costo de $50, el cual puede ser pagado en efectivo o con tarjeta de crédito.
+                        El costo del trámite de visa varía según el tipo de visa que solicites. Además, ofrecemos paquetes de asesoría personalizada.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* ¿Qué incluye el costo? */}
                 <div className="cita-info-section">
-                    <h3>Servicio Incluye</h3>
+                    <h3>¿Qué incluye el costo?</h3>
                     {/* <p>
-                        El costo incluye una consulta personalizada con uno de nuestros expertos, asesoramiento detallado sobre tus opciones y un plan de acción para seguir adelante.
+                        Asesoría personalizada, revisión de documentos, y preparación para la entrevista consular.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Tiempo de trámite */}
                 <div className="cita-info-section">
-                    <h3>Costo</h3>
+                    <h3>Tiempo de Trámite</h3>
                     {/* <p>
-                        El tiempo estimado para completar la cita informativa es de entre 30 y 60 minutos, dependiendo de la complejidad de tus necesidades.
+                        El tiempo de trámite puede variar según la disponibilidad de citas consulares, pero generalmente oscila entre 2 y 4 semanas.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Botón de Contacto */}
                 <div className="cita-info-section contact">
-                    <p>Pregunte por nuestras promociones vigentes y cómo recibir consulta SIN COSTO</p>
+                    <p>
+                        Si tienes alguna duda o deseas iniciar tu trámite de visa americana, contáctanos para recibir asesoría.
+                    </p>
                     <button
                         className="contact-button"
                         onClick={() => window.location.href = '/contact#contactform'}
@@ -78,11 +77,9 @@ function CitaInfo() {
                         Contactar
                     </button>
                 </div>
-
-
             </div>
         </>
     );
 }
 
-export default CitaInfo;
+export default VisaAmericana;

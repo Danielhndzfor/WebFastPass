@@ -3,74 +3,77 @@ import '../../css/CitaInfo.css'; // Asegúrate de que la ruta sea correcta
 import Parallax from '../../components/Parallax'; // Asegúrate de que la ruta sea correcta
 import fondoPF from '/fondoPF.avif'; // Cambia por tu propia imagen
 
-function CitaInfo() {
+function CitasEmergenciaVisa() {
     return (
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Consulta Informativa"
-                subtitle="Brindamos asesoría personalizada para tu trámite de visa y pasaporte."
+                title="Citas de Emergencia"
+                subtitle="Aceleramos tu trámite de visa en situaciones urgentes."
                 linkText="Contáctanos"
             />
 
             <div className="cita-info-container">
                 {/* Título */}
                 <div className="cita-info-header">
-                    <h2>Consulta Informativa</h2>
+                    <h2>Citas de Emergencia para Visa</h2>
                 </div>
 
                 {/* Descripción */}
                 <div className="cita-info-section">
                     <p>
-                        Nuestra cita informativa está diseñada para proporcionarte toda la información necesaria sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.
+                        Si necesitas una cita de emergencia para tu trámite de visa, te ofrecemos un servicio especializado que agiliza el proceso en caso de situaciones urgentes.
                     </p>
                 </div>
 
                 {/* Documentación Necesaria */}
                 <div className="cita-info-section">
-                    <h3>Requisitos</h3>
-                    {/* <ul>
-                        <li>Documento de identificación válido.</li>
-                        <li>Comprobante de domicilio.</li>
-                        <li>Documentos específicos según el servicio solicitado.</li>
-                    </ul> */}
+                    <h3>Documentación Necesaria</h3>
+                    {/* <p>
+                        Pruebas de la emergencia (por ejemplo, citas médicas, viajes urgentes, entre otros).
+                    </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Costos */}
                 <div className="cita-info-section">
-                    <h3>Tiempo de Trámite</h3>
+                    <h3>Costos</h3>
                     {/* <p>
-                        La cita informativa tiene un costo de $50, el cual puede ser pagado en efectivo o con tarjeta de crédito.
+                        El costo de la cita de emergencia varía según el tipo de trámite y la urgencia del caso.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
-                {/* ¿Qué incluye el costo? */}
+                {/* Servicio Incluye */}
                 <div className="cita-info-section">
                     <h3>Servicio Incluye</h3>
                     {/* <p>
-                        El costo incluye una consulta personalizada con uno de nuestros expertos, asesoramiento detallado sobre tus opciones y un plan de acción para seguir adelante.
+                        Nuestro servicio incluye la gestión completa para conseguir una cita de emergencia lo más pronto posible.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
-                {/* Tiempo de trámite */}
+                {/* Costo de Derechos */}
                 <div className="cita-info-section">
-                    <h3>Costo</h3>
+                    <h3>Costo de Derechos</h3>
                     {/* <p>
-                        El tiempo estimado para completar la cita informativa es de entre 30 y 60 minutos, dependiendo de la complejidad de tus necesidades.
+                        Consulta con uno de nuestros asesores para conocer los costos por derechos de trámite de emergencia.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
+                </div>
 
+                {/* Costo de Honorarios */}
+                <div className="cita-info-section">
+                    <h3>Costo de Honorarios</h3>
+                    {/* <p>
+                        El costo de los honorarios depende del tipo de trámite y la urgencia de la cita.
+                    </p> */}
+                    <p style={{ color: 'red' }}>PENDIENTE</p>
                 </div>
 
                 {/* Botón de Contacto */}
                 <div className="cita-info-section contact">
-                    <p>Pregunte por nuestras promociones vigentes y cómo recibir consulta SIN COSTO</p>
+                    <p>Contacte un asesor para conocer los costos de honorarios vigentes</p>
                     <button
                         className="contact-button"
                         onClick={() => window.location.href = '/contact#contactform'}
@@ -78,11 +81,9 @@ function CitaInfo() {
                         Contactar
                     </button>
                 </div>
-
-
             </div>
         </>
     );
 }
 
-export default CitaInfo;
+export default CitasEmergenciaVisa;

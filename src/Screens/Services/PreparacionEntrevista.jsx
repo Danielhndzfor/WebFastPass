@@ -3,74 +3,73 @@ import '../../css/CitaInfo.css'; // Asegúrate de que la ruta sea correcta
 import Parallax from '../../components/Parallax'; // Asegúrate de que la ruta sea correcta
 import fondoPF from '/fondoPF.avif'; // Cambia por tu propia imagen
 
-function CitaInfo() {
+function PreparacionEntrevista() {
     return (
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Consulta Informativa"
-                subtitle="Brindamos asesoría personalizada para tu trámite de visa y pasaporte."
+                title="Preparación para Entrevista"
+                subtitle="Te ayudamos a prepararte para tu entrevista de visa con asesoría experta."
                 linkText="Contáctanos"
             />
 
             <div className="cita-info-container">
                 {/* Título */}
                 <div className="cita-info-header">
-                    <h2>Consulta Informativa</h2>
+                    <h2>Preparación para Entrevista</h2>
                 </div>
 
                 {/* Descripción */}
                 <div className="cita-info-section">
                     <p>
-                        Nuestra cita informativa está diseñada para proporcionarte toda la información necesaria sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.
+                        Nuestra preparación para entrevista está diseñada para ayudarte a maximizar tus posibilidades de éxito. Te proporcionamos consejos prácticos y una simulación de entrevista para que te sientas seguro y bien preparado.
                     </p>
                 </div>
 
                 {/* Documentación Necesaria */}
                 <div className="cita-info-section">
-                    <h3>Requisitos</h3>
-                    {/* <ul>
-                        <li>Documento de identificación válido.</li>
-                        <li>Comprobante de domicilio.</li>
-                        <li>Documentos específicos según el servicio solicitado.</li>
-                    </ul> */}
+                    <h3>Documentación Necesaria</h3>
+                    {/* <p>
+                        Documento de identificación válido.
+                        Comprobante de domicilio.
+                        Documentación relacionada con el propósito de tu viaje.
+                        Historial de entrevistas previas (si aplica).
+                    </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Costos */}
                 <div className="cita-info-section">
-                    <h3>Tiempo de Trámite</h3>
+                    <h3>Costos</h3>
                     {/* <p>
-                        La cita informativa tiene un costo de $50, el cual puede ser pagado en efectivo o con tarjeta de crédito.
+                        El costo para la preparación de la entrevista es de $100, que incluye una sesión de simulación de entrevista y asesoramiento personalizado.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* ¿Qué incluye el costo? */}
                 <div className="cita-info-section">
-                    <h3>Servicio Incluye</h3>
+                    <h3>¿Qué incluye el costo?</h3>
                     {/* <p>
-                        El costo incluye una consulta personalizada con uno de nuestros expertos, asesoramiento detallado sobre tus opciones y un plan de acción para seguir adelante.
+                        El costo incluye una sesión de preparación personalizada, simulación de entrevista, y revisión de tus documentos y respuestas.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Tiempo de trámite */}
                 <div className="cita-info-section">
-                    <h3>Costo</h3>
+                    <h3>Tiempo de Trámite</h3>
                     {/* <p>
-                        El tiempo estimado para completar la cita informativa es de entre 30 y 60 minutos, dependiendo de la complejidad de tus necesidades.
+                        La preparación para la entrevista suele durar entre 1 y 2 horas, y se puede programar de acuerdo a tu disponibilidad.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Botón de Contacto */}
                 <div className="cita-info-section contact">
-                    <p>Pregunte por nuestras promociones vigentes y cómo recibir consulta SIN COSTO</p>
+                    <p>
+                        Contacta con nosotros para obtener más información y programar tu sesión de preparación para la entrevista.
+                    </p>
                     <button
                         className="contact-button"
                         onClick={() => window.location.href = '/contact#contactform'}
@@ -78,11 +77,9 @@ function CitaInfo() {
                         Contactar
                     </button>
                 </div>
-
-
             </div>
         </>
     );
 }
 
-export default CitaInfo;
+export default PreparacionEntrevista;

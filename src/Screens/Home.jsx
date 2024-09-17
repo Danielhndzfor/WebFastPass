@@ -18,7 +18,7 @@ function Home() {
     };
     
     const handleButtonClick = () => {
-        window.location.href = 'tel:+523131313131'; // Cambia por tu número de teléfono
+        window.location.href = '/contact'; // Cambia por tu número de teléfono
     };
 
 
@@ -28,7 +28,7 @@ function Home() {
                 backgroundImage={fondoH}
                 title="¡Uniendo Familias!"
                 subtitle="Logrando que su visa sea aprobada"
-                linkText="Contáctanos" />
+                linkText="Contactar" />
 
             <section className="services">
                 <div className="positionS">
@@ -68,7 +68,7 @@ function Home() {
                     <img src={Steps} alt="Pasos para Tramite" className='imgSteps' />
                 </div>
                 <button onClick={handleButtonClick} className='appointment-button'>
-                    <MDBIcon fas icon="calendar-check" className='me-2' />
+                    <MDBIcon fas icon="calendar-check" className='me-2 ' />
                     {t('Quiero cita')}
                 </button>
             </section>
@@ -76,10 +76,6 @@ function Home() {
             <section className="facebook">
                 <div>
                     <Facebook />
-                </div>
-
-                <div>
-                    
                 </div>
             </section>
 

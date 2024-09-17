@@ -18,7 +18,7 @@ function Parallax({ backgroundImage, title, subtitle, linkText }) {
                 <h1>{t(title)}</h1>
                 <p>{t(subtitle)}</p>
                 <button 
-                    onClick={() => navigate('/contact')} 
+                    onClick={() => navigate('/contact#contactform')} 
                     className="contactbtn" 
                     aria-label={t(linkText)}
                 >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../css/Contact.css'; // Asegúrate de que la ruta sea correcta
 import Parallax from '../components/Parallax'; // Asegúrate de que la ruta sea correcta
@@ -7,6 +7,19 @@ import ContactForm from '../components/ContactForm'; // Asegúrate de que la rut
 
 function Contact() {
     const { t } = useTranslation();
+
+    useEffect(() => {
+        // Verifica si el hash en la URL es #contactform
+        if (window.location.hash === '#contactform') {
+            // Espera a que la página cargue por completo antes de hacer el scroll
+            setTimeout(() => {
+                const element = document.getElementById('contactform');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100); // Ajusta el tiempo si es necesario
+        }
+    }, []);
 
     return (
         <>
@@ -25,7 +38,9 @@ function Contact() {
                 Puede comunicarse con nosotros a través de Facebook, Messenger, Instagram, WhatsApp, o mediante el formulario que se encuentra a continuación.
                 </p>
             </div>
+            <div id='contactform'>
             <ContactForm />
+            </div>
             <div className="aviso">
                 <h4>AVISO</h4>
                 <p>

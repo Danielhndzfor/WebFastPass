@@ -34,7 +34,7 @@
 .contactbtn {
     display: inline-block;
     margin-top: 20px; /* Espacio superior */
-    padding: 10px; /* Espaciado interno */
+    padding: 15px; /* Espaciado interno */
     background-color: #239619; /* Color de fondo de PayPal */
     border-radius: 8px; /* Esquinas redondeadas */
     transition: background-color 0.3s ease, transform 0.3s ease;

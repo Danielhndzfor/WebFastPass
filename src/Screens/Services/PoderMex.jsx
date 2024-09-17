@@ -3,74 +3,73 @@ import '../../css/CitaInfo.css'; // Asegúrate de que la ruta sea correcta
 import Parallax from '../../components/Parallax'; // Asegúrate de que la ruta sea correcta
 import fondoPF from '/fondoPF.avif'; // Cambia por tu propia imagen
 
-function CitaInfo() {
+function PoderNotarialMenoresMexico() {
     return (
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Consulta Informativa"
-                subtitle="Brindamos asesoría personalizada para tu trámite de visa y pasaporte."
+                title="Pasaporte Mexicano"
+                subtitle="Asesoría sobre el poder notarial necesario para menores de 18 años."
                 linkText="Contáctanos"
             />
 
             <div className="cita-info-container">
                 {/* Título */}
                 <div className="cita-info-header">
-                    <h2>Consulta Informativa</h2>
+                    <h2>Pasaporte Mexicano: Poder Notarial para menores de 18 años (Consentimiento padres)</h2>
                 </div>
 
                 {/* Descripción */}
                 <div className="cita-info-section">
                     <p>
-                        Nuestra cita informativa está diseñada para proporcionarte toda la información necesaria sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.
+                        Ofrecemos asesoría completa para tramitar el poder notarial que permite a los padres dar consentimiento para que menores de 18 años obtengan su pasaporte mexicano.
                     </p>
                 </div>
 
                 {/* Documentación Necesaria */}
                 <div className="cita-info-section">
-                    <h3>Requisitos</h3>
-                    {/* <ul>
-                        <li>Documento de identificación válido.</li>
-                        <li>Comprobante de domicilio.</li>
-                        <li>Documentos específicos según el servicio solicitado.</li>
-                    </ul> */}
+                    <h3>Documentación Necesaria</h3>
+                    {/* <p>
+                        Acta de nacimiento del menor.
+                        Identificación oficial de los padres.
+                        Comprobante de domicilio.
+                        Poder notarial que autorice el trámite.
+                    </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Costos */}
                 <div className="cita-info-section">
-                    <h3>Tiempo de Trámite</h3>
+                    <h3>Costos</h3>
                     {/* <p>
-                        La cita informativa tiene un costo de $50, el cual puede ser pagado en efectivo o con tarjeta de crédito.
+                        El costo del trámite varía dependiendo del notario y la ubicación, con precios estimados entre $500 y $1,500 MXN.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* ¿Qué incluye el costo? */}
                 <div className="cita-info-section">
-                    <h3>Servicio Incluye</h3>
+                    <h3>¿Qué incluye el costo?</h3>
                     {/* <p>
-                        El costo incluye una consulta personalizada con uno de nuestros expertos, asesoramiento detallado sobre tus opciones y un plan de acción para seguir adelante.
+                        El costo incluye la redacción del poder notarial y la validación del consentimiento ante notario público.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Tiempo de trámite */}
                 <div className="cita-info-section">
-                    <h3>Costo</h3>
+                    <h3>Tiempo de Trámite</h3>
                     {/* <p>
-                        El tiempo estimado para completar la cita informativa es de entre 30 y 60 minutos, dependiendo de la complejidad de tus necesidades.
+                        El trámite del poder notarial puede completarse en un plazo de 1 a 2 días hábiles, dependiendo del notario.
                     </p> */}
                     <p style={{ color: 'red' }}>PENDIENTE</p>
-
                 </div>
 
                 {/* Botón de Contacto */}
                 <div className="cita-info-section contact">
-                    <p>Pregunte por nuestras promociones vigentes y cómo recibir consulta SIN COSTO</p>
+                    <p>
+                        Si necesitas ayuda con el poder notarial para menores de 18 años, contáctanos para más información.
+                    </p>
                     <button
                         className="contact-button"
                         onClick={() => window.location.href = '/contact#contactform'}
@@ -78,11 +77,9 @@ function CitaInfo() {
                         Contactar
                     </button>
                 </div>
-
-
             </div>
         </>
     );
 }
 
-export default CitaInfo;
+export default PoderNotarialMenoresMexico;

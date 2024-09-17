@@ -99,7 +99,7 @@ function ContactForm() {
                             onChange={handleCheckboxChange}
                             required
                         />
-                        <label>{t('Acepto')} <a href="">Términos y Condiciones de Uso</a></label>
+                        <label>{t('Acepto')} <a href="/tyc">Términos y Condiciones de Uso</a></label>
                     </div>
                     <button type="submit" className={isChecked ? 'enabled' : 'disabled'} disabled={!isChecked}>{t('Enviar')}</button>
                 </form>

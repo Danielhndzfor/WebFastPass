@@ -62,12 +62,17 @@
 }
 
 /* Botón de Contacto */
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .contact-button {
     display: block;
-    width: 100%;
-    margin-top: 20px;
+    width: 50%;
     font-weight: bold;
-    text-align: center;
     padding: 10px; /* Espaciado interno */
     background-color: #239619; /* Color de fondo de PayPal */
     border-radius: 8px; /* Esquinas redondeadas */
@@ -82,6 +87,10 @@
 .contact-button:hover {
     background-color: #196b11; /* Color más oscuro en hover */
     transform: scale(1.05); /* Efecto de aumento en hover */
+}
+
+.hidden {
+    display: none;
 }
 
 /* Medios Responsivos */

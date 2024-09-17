@@ -9,7 +9,7 @@ import fondoS from '/fondoS.jpg';
 const servicesData = [
     {
         image: '/cita.webp', // Cambia por tus propias imágenes
-        title: 'Cita Informativa',
+        title: 'Consulta Informativa',
         description: 'Brindamos asesoría personalizada para tu trámite de visa y pasaporte.',
         link: '/services/cita-informativa'
     },
@@ -71,7 +71,7 @@ const servicesData = [
         image: '/poder-notarial.jpg',
         title: 'Poder Notarial para mexicanos menores de 18 años (Consentimiento padres)',
         description: 'Trámite de poder notarial para menores de 18 años.',
-        link: '/services/poder-notarial'
+        link: '/services/poder-notarial-mexicano'
     },
     {
         image: '/DS3053.png',
@@ -83,7 +83,7 @@ const servicesData = [
         image: '/SAM.png',
         title: 'Formato SAM para Menores Mexicanos que viajan solos o con un familiar a EU.',
         description: 'Trámite de formato SAM para menores mexicanos.',
-        link: '/services/formato-sam'
+        link: '/services/formato-sam-menores-mexico'
     }
     
 ];
