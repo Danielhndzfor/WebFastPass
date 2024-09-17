@@ -25,8 +25,8 @@ function Contact() {
         <>
             <Parallax
                 backgroundImage={fondoC}
-                title="Contactanos"
-                subtitle="Estamos aquí para ayudarte con tus trámites de visa y pasaporte."
+                title="Contáctanos"
+                subtitle="Te apoyamos en el proceso de trámite de visa y pasaporte."
                 linkText={t('Contactar')}
             />
             <div className='introC fade-in'>

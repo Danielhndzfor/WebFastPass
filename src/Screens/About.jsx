@@ -24,7 +24,7 @@ const About = () => {
                 height="700px"
                 backgroundImage={fondoQ}
                 title="Nuestra Historia"
-                subtitle="Somos una consultoria con mas de 10 años de experiencia"
+                subtitle="Somos una empresa de consultoría con más de 10 años de experiencia."
                 linkText={t('Contactar')}
             />
             <div className="about-container">
