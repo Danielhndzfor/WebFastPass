@@ -25,32 +25,10 @@ function FAQ() {
     const topics = [
         // Preguntas Generales
         { title: 'General', icon: 'question-circle' },
-        // Preguntas sobre Consulta Informativa
-        { title: 'Consulta Informativa', icon: 'calendar-alt' },
         // Preguntas sobre Visas
         { title: 'Visa Americana', icon: 'passport' },
-        // Preguntas sobre Pasaportes Mexicano
-        { title: 'Pasaporte Mexicano', icon: 'id-card' },
-        // Preguntas sobre Pasaporte Americano
-        { title: 'Pasaporte Americano', icon: 'passport' },
-        // Preguntas sobre Actas de Nacimiento
-        { title: 'Actas de Nacimiento', icon: 'file-alt' },
-        // Preguntas sobre Visas Rechazadas/Canceladas
-        { title: 'Visas Rechazadas/Canceladas', icon: 'ban' },
-        // Preguntas sobre Citas de Emergencia
-        { title: 'Citas de Emergencia', icon: 'calendar-alt' },
-        // Preguntas sobre Adelantar Cita
-        { title: 'Adelantar Cita', icon: 'calendar-alt' },
-        // Preguntas sobre Preparación para Entrevista
-        { title: 'Preparación para Entrevista', icon: 'user-tie' },
-        // Preguntas sobre Traduccion de Documentos
-        { title: 'Traducción de Documentos', icon: 'file-signature' },
-        // Preguntas sobre Poder Notarial para mexicanos
-        { title: 'Poder Notarial para mexicanos', icon: 'file-signature' },
-        // Preguntas sobre Poder Notarial para americanos
-        { title: 'Poder Notarial para americanos', icon: 'file-signature' },
-        // Preguntas sonre Formato SAM
-        { title: 'Formato SAM', icon: 'file-alt' },
+        // Preguntas sobre Pasaportes
+        { title: 'Pasaporte', icon: 'id-card' },
     ];
 
     const questions = {
@@ -61,11 +39,6 @@ function FAQ() {
             { question: '¿Cuál es el correo de contacto?', answer: 'Puedes escribirnos a info@fastpass-visas.com' },
             { question: '¿Puedo pagar con efectivo o con tarjeta?', answer: 'De momento solo pagos en efectivo o transferencia, pronto tendremos disponible pago con terminal para tarjetas de débito y crédito (MSI).' },
         ],
-        'Consulta Informativa': [
-            { question: '¿Qué costo tiene la primer cita?', answer: 'El costo es...' },
-            { question: '¿Puedo pedir una cita con ustedes para informarme acerca del proceso de trámite de visa?', answer: 'Claro, con gusto le atenderemos para proporcionarle información inicial y valoración de perfil para que conozca las oportunidades que tiene de aprobación, circunstancias personales o familiares y los tiempos adecuados para poder llevar a cabo su trámite.' },
-            { question: '¿A mi cita informativa puedo llevar más gente conmigo?', answer: 'Por supuesto, pueden asistir de manera individual, pareja o familia. Incluso mas miembros de familia que deseen realizar sus trámites. Nuestra intención siempre será mantener informados de manera clara e incluyente.' },
-        ],
         'Visa Americana': [
             { question: '¿Qué es una visa?', answer: 'Los ciudadanos estadounidenses y los residentes permanentes legales no necesitan obtener una visa para entrar en los Estados Unidos. En general, un ciudadano de un país extranjero que pretenda entrar en los Estados Unidos debe obtener primero una visa estadounidense. Algunos viajeros internacionales pueden entrar en los Estados Unidos sin visa, siempre que cumplan los requisitos del Programa de Exención de Visa de los EE. UU.' },
             { question: '¿Qué necesito para iniciar mi trámite de visa con ustedes?', answer: 'Principalmente requiere su pasaporte vigente, datos personales, familiares y laborales. Así como un domicilio en EU y una razón clara de motivo de su viaje, entre otros.' },
@@ -74,52 +47,10 @@ function FAQ() {
             { question: '¿Deberia hacer las reservaciones para mi viaje antes de la entrevista?', answer: 'Se recomienda a los solicitantes no hacer reservaciones para viajar hasta recibir su pasaporte y su visa.' },
             { question: 'Mi nombre cambio. ¿Sigue siendo válido mi visado de los EE.UU donde figura mi nombre anterior?', answer: 'Si su cambio de nombre obedece a un motivo legal como casamiento, divorcio u orden judicial, tendrá que sacar un pasaporte nuevo. Una vez que tenga un pasaporte nuevo, el Departamento de Estado recomienda que solicite un nuevo visado estadounidense para que le resulte más fácil viajar hacia y desde los Estados Unidos.' },
             { question: 'Después de obtener mi visa, ¿podré ingresar a los Estados Unidos?', answer: 'Un visado no garantiza el ingreso a los Estados Unidos, pero permite a un ciudadano extranjero viajar hasta un puerto de entrada a los EE.UU. y pedir permiso para entrar a los Estados Unidos. Los funcionarios de Aduana y Protección de Fronteras (CBP) de EE.UU. del Departamento de Seguridad Interior están autorizados a permitir o denegar la entrada a los Estados Unidos.' },
-
-            
         ],
-        'Pasaporte Mexicano': [
+        'Pasaporte': [
             { question: '¿Cómo tramitarlo?', answer: 'Para tramitarlo necesitas...' },
             { question: '¿Qué documentos son necesarios?', answer: 'Necesitarás...' },
-        ],
-        'Pasaporte Americano': [
-            { question: '¿Qué se necesita para tramitarlo?', answer: 'Para tramitarlo...' },
-            { question: '¿Dónde puedo solicitarlo?', answer: 'Puedes solicitarlo en...' },
-        ],
-        'Actas de Nacimiento': [
-            { question: '¿Qué se necesita para tramitarla?', answer: 'Para tramitarla...' },
-            { question: '¿Dónde puedo solicitarla?', answer: 'Puedes solicitarla en...' },
-        ],
-        'Visas Rechazadas/Canceladas': [
-            { question: '¿Si me negaron mi visa, puedo tramitar nuevamente?', answer: 'Por supuesto, es importante analizar su situación y conocer las circunstancias de su negación para ofrecerle las mejores opciones o alternativas que le permitan tener un mejor proceso y mayores probabilidades de aprobación.' },
-            { question: '¿Qué documentos necesito?', answer: 'Necesitarás...' },
-        ],
-        'Citas de Emergencia': [
-            { question: '¿Cómo puedo agendar una cita de emergencia?', answer: 'Para agendar una cita de emergencia...' },
-            { question: '¿Cuál es el costo de la cita de emergencia?', answer: 'El costo es...' },
-        ],
-        'Adelantar Cita': [
-            { question: '¿Es posible adelantar mi cita?', answer: 'Sí, puedes adelantar tu cita...' },
-            { question: '¿Qué requisitos se necesitan?', answer: 'Los requisitos son...' },
-        ],
-        'Preparación para Entrevista': [
-            { question: '¿Cómo me preparo para la entrevista?', answer: 'Para prepararte...' },
-            { question: '¿Qué preguntas me harán?', answer: 'Durante la entrevista...' },
-        ],
-        'Traducción de Documentos': [
-            { question: '¿Qué tipo de documentos traducen?', answer: 'Traducimos...' },
-            { question: '¿Cuál es el tiempo de entrega?', answer: 'El tiempo de entrega es...' },   
-        ],
-        'Poder Notarial para mexicanos': [
-            { question: '¿Qué es un poder notarial?', answer: 'Un poder notarial es...' },
-            { question: '¿Cómo puedo obtener un poder notarial?', answer: 'Para obtener un poder notarial...' },
-        ],
-        'Poder Notarial para americanos': [
-            { question: '¿Qué es un poder notarial?', answer: 'Un poder notarial es...' },
-            { question: '¿Cómo puedo obtener un poder notarial?', answer: 'Para obtener un poder notarial...' },
-        ],
-        'Formato SAM': [
-            { question: '¿Qué es el Formato SAM?', answer: 'El Formato SAM es...' },
-            { question: '¿Dónde puedo obtenerlo?', answer: 'Puedes obtenerlo...' },
         ],
     };
 
