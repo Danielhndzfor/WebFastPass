@@ -55,7 +55,7 @@ function FAQ() {
 
     const questions = {
         'General': [
-            { question: '¿Cuál es el horario de atención?', answer: 'Nuestro horario de atención es...' },
+            { question: '¿Cuál es el horario de atención?', answer: 'Nuestro horario de atención son Lunes - Martes : 9 a.m - 7 p.m  Miércoles - Jueves : 2 p.m - 7 p.m   Viernes : 9 a.m - 2 p.m  Sabado : 9 a.m - 2 p.m' },
             { question: '¿Cuál es la dirección de la oficina?', answer: 'Nuestra única ubicación esta en el municipio de Manzanillo, Colima. Av. Paseo de las Garzas #274, Local 13 (Segundo piso), Barrio 5, Valle de las Garzas C.P. 28219.' },
             { question: '¿Cuál es el teléfono de contacto?', answer: 'Puedes comunicarte al teléfono...' },
             { question: '¿Cuál es el correo de contacto?', answer: 'Puedes escribirnos a...' },
@@ -307,7 +307,7 @@ function FAQ() {
             </section>
 
             {/* Vista móvil */}
-            <section className="panel-movil">
+            <section className="panel-movil fade-in">
                 <h3 className='tit'>Preguntas Frecuentes</h3>
                 <section className="temas">
                     <div className="temas-lista">

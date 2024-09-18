@@ -218,11 +218,12 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #162E84;
+    background-color: #646464;
     border-bottom: 1px solid #ccc;
     max-height: 200px;
     overflow-y: auto;
     z-index: 1000;
+    border-radius: 10px;
 }
 
 .search-result-item {
@@ -232,7 +233,7 @@
 }
 
 .search-result-item:hover {
-    background-color: #4231f9;
+    background-color: #8e8e8e;
 }
 
 
@@ -314,9 +315,15 @@
         right: 0;
         max-height: 200px; /* Ajustado para que se vea mejor en pantallas pequeñas */
         z-index: 1000; /* Asegura que esté sobre otros elementos */
-        background-color: #162E84; /* Ajustado para que se vea sobre todo */
+        background-color: #646464; /* Ajustado para que se vea sobre todo */
         border-bottom: 1px solid #ccc;
         overflow-y: auto;
+    }
+    .answer {
+        font-size: 0.9em;
+        color: #ffffff;
+        padding-left: 1.5em;
+        margin-top: 5px;
     }
 
     .principales {
