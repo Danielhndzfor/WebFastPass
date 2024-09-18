@@ -11,7 +11,7 @@ const normalizeText = (text) => {
 };
 
 function FAQ() {
-    const [selectedTopic, setSelectedTopic] = useState('Visa Americana');
+    const [selectedTopic, setSelectedTopic] = useState('General');
     const [expandedQuestions, setExpandedQuestions] = useState({});
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredResults, setFilteredResults] = useState([]);
@@ -23,28 +23,96 @@ function FAQ() {
     const searchResultsRef = useRef(null);
 
     const topics = [
+        // Preguntas Generales
+        { title: 'General', icon: 'question-circle' },
+        // Preguntas sobre Consulta Informativa
+        { title: 'Consulta Informativa', icon: 'calendar-alt' },
+        // Preguntas sobre Visas
         { title: 'Visa Americana', icon: 'passport' },
+        // Preguntas sobre Pasaportes Mexicano
         { title: 'Pasaporte Mexicano', icon: 'id-card' },
-        { title: 'Cita Informativa', icon: 'calendar-alt' },
+        // Preguntas sobre Pasaporte Americano
+        { title: 'Pasaporte Americano', icon: 'passport' },
+        // Preguntas sobre Actas de Nacimiento
         { title: 'Actas de Nacimiento', icon: 'file-alt' },
+        // Preguntas sobre Visas Rechazadas/Canceladas
+        { title: 'Visas Rechazadas/Canceladas', icon: 'ban' },
+        // Preguntas sobre Citas de Emergencia
+        { title: 'Citas de Emergencia', icon: 'calendar-alt' },
+        // Preguntas sobre Adelantar Cita
+        { title: 'Adelantar Cita', icon: 'calendar-alt' },
+        // Preguntas sobre Preparación para Entrevista
+        { title: 'Preparación para Entrevista', icon: 'user-tie' },
+        // Preguntas sobre Traduccion de Documentos
+        { title: 'Traducción de Documentos', icon: 'file-signature' },
+        // Preguntas sobre Poder Notarial para mexicanos
+        { title: 'Poder Notarial para mexicanos', icon: 'file-signature' },
+        // Preguntas sobre Poder Notarial para americanos
+        { title: 'Poder Notarial para americanos', icon: 'file-signature' },
+        // Preguntas sonre Formato SAM
+        { title: 'Formato SAM', icon: 'file-alt' },
     ];
 
     const questions = {
+        'General': [
+            { question: '¿Cuál es el horario de atención?', answer: 'Nuestro horario de atención es...' },
+            { question: '¿Cuál es la dirección de la oficina?', answer: 'Nuestra única ubicación esta en el municipio de Manzanillo, Colima. Av. Paseo de las Garzas #274, Local 13 (Segundo piso), Barrio 5, Valle de las Garzas C.P. 28219.' },
+            { question: '¿Cuál es el teléfono de contacto?', answer: 'Puedes comunicarte al teléfono...' },
+            { question: '¿Cuál es el correo de contacto?', answer: 'Puedes escribirnos a...' },
+            { question: '¿Puedo pagar con efectivo o con tarjeta?', answer: 'De momento solo pagos en efectivo o transferencia, pronto tendremos disponible pago con terminal para tarjetas de débito y crédito (MSI).' },
+        ],
+        'Consulta Informativa': [
+            { question: '¿Qué costo tiene la primer cita?', answer: 'El costo es...' },
+            { question: '¿Puedo pedir una cita con ustedes para informarme acerca del proceso de trámite de visa?', answer: 'Claro, con gusto le atenderemos para proporcionarle información inicial y valoración de perfil para que conozca las oportunidades que tiene de aprobación, circunstancias personales o familiares y los tiempos adecuados para poder llevar a cabo su trámite.' },
+            { question: '¿A mi cita informativa puedo llevar más gente conmigo?', answer: 'Por supuesto, pueden asistir de manera individual, pareja o familia. Incluso mas miembros de familia que deseen realizar sus trámites. Nuestra intención siempre será mantener informados de manera clara e incluyente.' },
+        ],
         'Visa Americana': [
-            { question: '¿Qué requisitos se necesitan para tramitarla?', answer: 'Los requisitos son...' },
-            { question: '¿Cuánto tiempo tarda el trámite?', answer: 'El trámite tarda...' },
+            { question: '¿Qué necesito para iniciar mi trámite de visa con ustedes?', answer: 'Principalmente requiere su pasaporte vigente, datos personales, familiares y laborales. Así como un domicilio en EU y una razón clara de motivo de su viaje, entre otros.' },
+            { question: '¿Con ustedes es más fácil que me aprueben mi visa?', answer: 'Siempre le atenderemos de manera que agilicemos los procesos de solicitud, y facilitemos la comunicación para que tenga noción de lo que esta realizando. De igual manera le daremos todas las facilidades y recursos argumentativos y de evidencias para poder presentar o contestar correctamente en su entrevista. Sin embargo, la decisión final siempre será del oficial consular.' },
         ],
         'Pasaporte Mexicano': [
             { question: '¿Cómo tramitarlo?', answer: 'Para tramitarlo necesitas...' },
             { question: '¿Qué documentos son necesarios?', answer: 'Necesitarás...' },
         ],
-        'Cita Informativa': [
-            { question: '¿Qué costo tiene la primer cita?', answer: 'El costo es...' },
-            { question: '¿Qué incluye la cita informativa?', answer: 'La cita incluye...' },
+        'Pasaporte Americano': [
+            { question: '¿Qué se necesita para tramitarlo?', answer: 'Para tramitarlo...' },
+            { question: '¿Dónde puedo solicitarlo?', answer: 'Puedes solicitarlo en...' },
         ],
         'Actas de Nacimiento': [
             { question: '¿Qué se necesita para tramitarla?', answer: 'Para tramitarla...' },
             { question: '¿Dónde puedo solicitarla?', answer: 'Puedes solicitarla en...' },
+        ],
+        'Visas Rechazadas/Canceladas': [
+            { question: '¿Si me negaron mi visa, puedo tramitar nuevamente?', answer: 'Por supuesto, es importante analizar su situación y conocer las circunstancias de su negación para ofrecerle las mejores opciones o alternativas que le permitan tener un mejor proceso y mayores probabilidades de aprobación.' },
+            { question: '¿Qué documentos necesito?', answer: 'Necesitarás...' },
+        ],
+        'Citas de Emergencia': [
+            { question: '¿Cómo puedo agendar una cita de emergencia?', answer: 'Para agendar una cita de emergencia...' },
+            { question: '¿Cuál es el costo de la cita de emergencia?', answer: 'El costo es...' },
+        ],
+        'Adelantar Cita': [
+            { question: '¿Es posible adelantar mi cita?', answer: 'Sí, puedes adelantar tu cita...' },
+            { question: '¿Qué requisitos se necesitan?', answer: 'Los requisitos son...' },
+        ],
+        'Preparación para Entrevista': [
+            { question: '¿Cómo me preparo para la entrevista?', answer: 'Para prepararte...' },
+            { question: '¿Qué preguntas me harán?', answer: 'Durante la entrevista...' },
+        ],
+        'Traducción de Documentos': [
+            { question: '¿Qué tipo de documentos traducen?', answer: 'Traducimos...' },
+            { question: '¿Cuál es el tiempo de entrega?', answer: 'El tiempo de entrega es...' },   
+        ],
+        'Poder Notarial para mexicanos': [
+            { question: '¿Qué es un poder notarial?', answer: 'Un poder notarial es...' },
+            { question: '¿Cómo puedo obtener un poder notarial?', answer: 'Para obtener un poder notarial...' },
+        ],
+        'Poder Notarial para americanos': [
+            { question: '¿Qué es un poder notarial?', answer: 'Un poder notarial es...' },
+            { question: '¿Cómo puedo obtener un poder notarial?', answer: 'Para obtener un poder notarial...' },
+        ],
+        'Formato SAM': [
+            { question: '¿Qué es el Formato SAM?', answer: 'El Formato SAM es...' },
+            { question: '¿Dónde puedo obtenerlo?', answer: 'Puedes obtenerlo...' },
         ],
     };
 
