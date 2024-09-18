@@ -57,8 +57,8 @@ function FAQ() {
         'General': [
             { question: '¿Cuál es el horario de atención?', answer: 'Nuestro horario de atención son Lunes - Martes : 9 a.m - 7 p.m  Miércoles - Jueves : 2 p.m - 7 p.m   Viernes : 9 a.m - 2 p.m  Sabado : 9 a.m - 2 p.m' },
             { question: '¿Cuál es la dirección de la oficina?', answer: 'Nuestra única ubicación esta en el municipio de Manzanillo, Colima. Av. Paseo de las Garzas #274, Local 13 (Segundo piso), Barrio 5, Valle de las Garzas C.P. 28219.' },
-            { question: '¿Cuál es el teléfono de contacto?', answer: 'Puedes comunicarte al teléfono...' },
-            { question: '¿Cuál es el correo de contacto?', answer: 'Puedes escribirnos a...' },
+            { question: '¿Cuál es el teléfono de contacto?', answer: 'Puedes comunicarte al teléfono +52 314 688 5645' },
+            { question: '¿Cuál es el correo de contacto?', answer: 'Puedes escribirnos a info@fastpass-visas.com' },
             { question: '¿Puedo pagar con efectivo o con tarjeta?', answer: 'De momento solo pagos en efectivo o transferencia, pronto tendremos disponible pago con terminal para tarjetas de débito y crédito (MSI).' },
         ],
         'Consulta Informativa': [
@@ -67,8 +67,15 @@ function FAQ() {
             { question: '¿A mi cita informativa puedo llevar más gente conmigo?', answer: 'Por supuesto, pueden asistir de manera individual, pareja o familia. Incluso mas miembros de familia que deseen realizar sus trámites. Nuestra intención siempre será mantener informados de manera clara e incluyente.' },
         ],
         'Visa Americana': [
+            { question: '¿Qué es una visa?', answer: 'Los ciudadanos estadounidenses y los residentes permanentes legales no necesitan obtener una visa para entrar en los Estados Unidos. En general, un ciudadano de un país extranjero que pretenda entrar en los Estados Unidos debe obtener primero una visa estadounidense. Algunos viajeros internacionales pueden entrar en los Estados Unidos sin visa, siempre que cumplan los requisitos del Programa de Exención de Visa de los EE. UU.' },
             { question: '¿Qué necesito para iniciar mi trámite de visa con ustedes?', answer: 'Principalmente requiere su pasaporte vigente, datos personales, familiares y laborales. Así como un domicilio en EU y una razón clara de motivo de su viaje, entre otros.' },
+            { question: '¿Qué tipos de visas existen?', answer: 'Existen varios tipos de visas para no inmigrantes que permiten viajes temporales a los Estados Unidos. El tipo de visa que necesita depende del propósito de su viaje.' },
             { question: '¿Con ustedes es más fácil que me aprueben mi visa?', answer: 'Siempre le atenderemos de manera que agilicemos los procesos de solicitud, y facilitemos la comunicación para que tenga noción de lo que esta realizando. De igual manera le daremos todas las facilidades y recursos argumentativos y de evidencias para poder presentar o contestar correctamente en su entrevista. Sin embargo, la decisión final siempre será del oficial consular.' },
+            { question: '¿Deberia hacer las reservaciones para mi viaje antes de la entrevista?', answer: 'Se recomienda a los solicitantes no hacer reservaciones para viajar hasta recibir su pasaporte y su visa.' },
+            { question: 'Mi nombre cambio. ¿Sigue siendo válido mi visado de los EE.UU donde figura mi nombre anterior?', answer: 'Si su cambio de nombre obedece a un motivo legal como casamiento, divorcio u orden judicial, tendrá que sacar un pasaporte nuevo. Una vez que tenga un pasaporte nuevo, el Departamento de Estado recomienda que solicite un nuevo visado estadounidense para que le resulte más fácil viajar hacia y desde los Estados Unidos.' },
+            { question: 'Después de obtener mi visa, ¿podré ingresar a los Estados Unidos?', answer: 'Un visado no garantiza el ingreso a los Estados Unidos, pero permite a un ciudadano extranjero viajar hasta un puerto de entrada a los EE.UU. y pedir permiso para entrar a los Estados Unidos. Los funcionarios de Aduana y Protección de Fronteras (CBP) de EE.UU. del Departamento de Seguridad Interior están autorizados a permitir o denegar la entrada a los Estados Unidos.' },
+
+            
         ],
         'Pasaporte Mexicano': [
             { question: '¿Cómo tramitarlo?', answer: 'Para tramitarlo necesitas...' },

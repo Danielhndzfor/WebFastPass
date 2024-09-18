@@ -277,6 +277,11 @@
     }
 }
 
+/* pregunta-item se adapte al width de temas-content */
+.pregunta-item {
+    width: 100%;
+}
+
 
 /* Responsividad */
 /* Mostrar el panel móvil en vista móvil */
