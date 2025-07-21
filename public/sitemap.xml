@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Página Principal -->
+  <url>
+    <loc>https://www.fastpass-visas.com/</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Servicios Principales -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Visa Americana -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/visa-americana</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pasaporte Mexicano -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/pasaporte-mexicano</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Pasaporte Americano -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/pasaporte-americano</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Citas de Emergencia -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/citas-emergencia</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cita Informativa -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/cita-informativa</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Actas de Nacimiento -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/actas-nacimiento</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Visa Rechazada -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/visa-rechazada</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Adelantar Cita -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/adelantar-cita</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Preparación de Entrevista -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/preparacion-entrevista</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Poder Notarial Mexicano -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/poder-notarial-mexicano</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Poder Notarial Americano -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/poder-notarial-americano</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Formato SAM -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/formato-sam-menores-mexico</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Traducción de Documentos -->
+  <url>
+    <loc>https://www.fastpass-visas.com/services/traduccion-documentos</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Páginas Institucionales -->
+  <url>
+    <loc>https://www.fastpass-visas.com/about</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastpass-visas.com/contact</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastpass-visas.com/faq</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Páginas Legales -->
+  <url>
+    <loc>https://www.fastpass-visas.com/tyc</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastpass-visas.com/politica-de-privacidad</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastpass-visas.com/aviso-de-privacidad</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastpass-visas.com/politica-de-devolucion</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastpass-visas.com/aviso-legal</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastpass-visas.com/politica-de-cookies</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

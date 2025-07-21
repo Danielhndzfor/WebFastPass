@@ -8,72 +8,94 @@ function TraduccionDocumentos() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Traducción de Documentos"
-                subtitle="Servicios de traducción oficial de documentos para trámites migratorios."
-                linkText="Contáctanos"
+                title="Traducciones Certificadas Español ⇄ Inglés"
+                subtitle="¿Tienes documentos que necesitas traducir para tu trámite de visa, pasaporte, ciudadanía o cualquier proceso legal o migratorio?"
+                linkText="¡Solicita Asesoría!"
             />
 
             <div className="cita-info-container">
                 {/* Título */}
                 <div className="cita-info-header">
-                    <h2>Traducción de Documentos</h2>
+                    <h2>Traducciones Certificadas Español ⇄ Inglés</h2>
                 </div>
 
                 {/* Descripción */}
                 <div className="cita-info-section">
                     <p>
-                        Proporcionamos traducción oficial de documentos para todo tipo de trámites migratorios, asegurando que cumplan con los requisitos de las autoridades correspondientes.
+                        ¿Tienes documentos que necesitas traducir para tu trámite de visa, pasaporte, ciudadanía o cualquier proceso legal o migratorio? 
+                        Realizamos traducciones de documentos personales y legales, aceptadas por consulados, embajadas, USCIS y otras autoridades.
+                    </p>
+                    <p style={{ marginTop: '15px', color: '#239619', fontWeight: 'bold' }}>
+                        📩 Contáctanos ahora para una cotización.
                     </p>
                 </div>
 
-                {/* Documentación Necesaria */}
+                {/* Requisitos */}
                 <div className="cita-info-section">
-                    <h3>Documentación Necesaria</h3>
-                    {/* <p>
-                        Original y copia del documento a traducir.
-                        Información adicional o contexto para asegurar precisión en la traducción.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
+                    <h3>Requisitos</h3>
+                    <ul>
+                        <li>Documento original escaneado o fotocopia clara del documento a traducir</li>
+                        <li>Indicar si se requiere traducción de español a inglés o de inglés a español</li>
+                        <li>En caso de ser para trámite oficial (visa, pasaporte, USCIS, etc.), especificar si necesitas firma certificada y/o hoja membretada</li>
+                    </ul>
+                </div>
+
+                {/* Tiempo de Trámite */}
+                <div className="cita-info-section">
+                    <h3>Tiempo de Trámite</h3>
+                    <p>
+                        <strong>Traducción básica:</strong> 24 a 48 horas<br/>
+                        <strong>Traducción oficial certificada:</strong> 2 a 4 días hábiles (puede variar según cantidad de hojas)
+                    </p>
+                </div>
+
+                {/* Servicio Incluye */}
+                <div className="cita-info-section">
+                    <h3>Servicio Incluye</h3>
+                    <ol>
+                        <li>Revisión y análisis del documento original</li>
+                        <li>Traducción por profesional bilingüe con experiencia en temas migratorios y legales</li>
+                        <li>Revisión orto tipográfica final</li>
+                        <li>Entrega en PDF listo para impresión o presentación digital</li>
+                        <li>Si se requiere: hoja membretada y firma del traductor para validez oficial</li>
+                    </ol>
+                    
+                    <div style={{ backgroundColor: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px', padding: '20px', marginTop: '20px' }}>
+                        <h4 style={{ color: '#856404', margin: '0 0 10px 0' }}>Importante</h4>
+                        <ul style={{ color: '#856404', margin: '0' }}>
+                            <li>El costo base es por hoja estándar. Documentos largos o técnicos pueden generar costo adicional</li>
+                            <li>Solo se aceptan documentos claros, completos y legibles</li>
+                            <li>No se traducen documentos alterados, ilegibles o con tachaduras</li>
+                            <li>El servicio es confidencial y se entrega en formato digital o impreso según se requiera</li>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* Costos */}
                 <div className="cita-info-section">
                     <h3>Costos</h3>
-                    {/* <p>
-                        El costo de la traducción varía según la cantidad de documentos y la urgencia del trámite. Precios desde $300 MXN por página.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
-                </div>
-
-                {/* ¿Qué incluye el costo? */}
-                <div className="cita-info-section">
-                    <h3>¿Qué incluye el costo?</h3>
-                    {/* <p>
-                        El costo incluye la traducción certificada por un traductor oficial, con validez ante las autoridades.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
-                </div>
-
-                {/* Tiempo de trámite */}
-                <div className="cita-info-section">
-                    <h3>Tiempo de Trámite</h3>
-                    {/* <p>
-                        El tiempo estimado de traducción depende del volumen de documentos, pero generalmente es de 3 a 5 días hábiles.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
+                    <div style={{ backgroundColor: '#d4edda', border: '1px solid #c3e6cb', borderRadius: '8px', padding: '20px', textAlign: 'center', marginTop: '15px' }}>
+                        <h2 style={{ color: '#155724', margin: '0', fontSize: '2em' }}>Desde $500 MXN</h2>
+                        <p style={{ color: '#155724', margin: '10px 0 0 0' }}>
+                            por hoja
+                        </p>
+                    </div>
+                    <p style={{ marginTop: '15px', fontStyle: 'italic' }}>
+                        (El precio final puede variar según tipo de documento, número de hojas, complejidad del texto y requisitos de certificación)
+                    </p>
                 </div>
 
                 {/* Botón de Contacto */}
                 <div className="cita-info-section contact">
-                    <p>
-                        Si necesitas traducir documentos para tu trámite migratorio, contáctanos para más detalles sobre nuestros servicios.
-                    </p>
                     <button
                         className="contact-button"
                         onClick={() => window.location.href = '/contact#contactform'}
                     >
-                        Contactar
+                        ¡SOLICITA TU TRADUCCIÓN!
                     </button>
+                    <p style={{ marginTop: '10px', fontSize: '14px' }}>
+                        📤 Solicitar una cotización previa
+                    </p>
                 </div>
             </div>
         </>

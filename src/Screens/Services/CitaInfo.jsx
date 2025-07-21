@@ -9,8 +9,8 @@ function CitaInfo() {
             <Parallax
                 backgroundImage={fondoPF}
                 title="Consulta Informativa"
-                subtitle="Brindamos asesoría personalizada para tu trámite de visa y pasaporte."
-                linkText="Contáctanos"
+                subtitle="Analizamos detalladamente su perfil, incluyendo su situación familiar, laboral y profesional, para ofrecerle recomendaciones específicas que aumenten sus probabilidades de éxito en la obtención de una visa americana o canadiense."
+                linkText="¡SOLICITA ASESORÍA!"
             />
 
             <div className="cita-info-container">
@@ -22,60 +22,81 @@ function CitaInfo() {
                 {/* Descripción */}
                 <div className="cita-info-section">
                     <p>
-                        Nuestra cita informativa está diseñada para proporcionarte toda la información necesaria sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.
+                        Analizamos detalladamente su perfil, incluyendo su situación familiar, laboral y profesional, para ofrecerle recomendaciones específicas que aumenten sus probabilidades de éxito en la obtención de una visa americana o canadiense. Además, le proporcionamos la información y el apoyo necesarios para facilitar la obtención de su pasaporte mexicano o americano, asegurándonos de que cada etapa del proceso sea clara, eficiente y sin contratiempos.
+                    </p>
+                    <p style={{ marginTop: '15px', color: '#239619', fontWeight: 'bold' }}>
+                        📩 Contáctanos ahora para una evaluación inicial sin costo.
                     </p>
                 </div>
 
                 {/* Documentación Necesaria */}
                 <div className="cita-info-section">
                     <h3>Requisitos</h3>
-                    {/* <ul>
-                        <li>Documento de identificación válido.</li>
-                        <li>Comprobante de domicilio.</li>
-                        <li>Documentos específicos según el servicio solicitado.</li>
-                    </ul> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
+                    <p style={{ marginBottom: '20px' }}>Para la consulta informativa necesitará proporcionar la siguiente información:</p>
+                    
+                    <div style={{ marginBottom: '15px' }}>
+                        <h4 style={{ color: '#0A1547', marginBottom: '8px' }}>Documentos básicos:</h4>
+                        <ul>
+                            <li><strong>Identificación oficial y/o Pasaporte vigente:</strong> Documento válido y legible.</li>
+                        </ul>
+                    </div>
 
+                    <div style={{ marginBottom: '15px' }}>
+                        <h4 style={{ color: '#0A1547', marginBottom: '8px' }}>Información del trámite:</h4>
+                        <ul>
+                            <li><strong>Tipo de trámite requerido:</strong> Especificar si es visa de turismo, negocios, estudios, trabajo u otros.</li>
+                            <li><strong>Tipo de solicitante:</strong> Indicar si el trámite es para un adulto o menor de edad.</li>
+                            <li><strong>Información adicional:</strong> Detallar si es una solicitud por primera vez, renovación o recuperación de visa.</li>
+                        </ul>
+                    </div>
+
+                    <div style={{ marginBottom: '15px' }}>
+                        <h4 style={{ color: '#0A1547', marginBottom: '8px' }}>Documentación específica:</h4>
+                        <ul>
+                            <li><strong>Documentación adicional:</strong> Dependiendo de su situación o caso en particular, como comprobantes de ingresos, estados de cuenta, carta laboral, constancias de estudios, etc. Nuestro equipo le indicará exactamente qué documentos necesita para su trámite.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* Costos */}
                 <div className="cita-info-section">
                     <h3>Tiempo de Trámite</h3>
-                    {/* <p>
-                        La cita informativa tiene un costo de $50, el cual puede ser pagado en efectivo o con tarjeta de crédito.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
-
+                    <p>
+                        La consulta inicial tiene una duración aproximada de 15 a 30 minutos, para analizar su caso, responder sus preguntas y explicarle el proceso completo.
+                    </p>
                 </div>
 
                 {/* ¿Qué incluye el costo? */}
                 <div className="cita-info-section">
                     <h3>Servicio Incluye</h3>
-                    {/* <p>
-                        El costo incluye una consulta personalizada con uno de nuestros expertos, asesoramiento detallado sobre tus opciones y un plan de acción para seguir adelante.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
-
+                    <ul>
+                        <li><strong>Análisis personalizado de su caso:</strong> Evaluamos su situación familiar, laboral y profesional para determinar las mejores opciones disponibles para su trámite de visa.</li>
+                        <li><strong>Explicación detallada del proceso:</strong> Le proporcionamos información clara sobre los pasos a seguir, requisitos específicos, tiempos estimados y costos involucrados (incluyendo honorarios y tarifas consulares).</li>
+                        <li><strong>Recomendaciones inmediatas:</strong> Le ofrecemos posibles soluciones adaptadas a sus necesidades y objetivos, para aumentar sus probabilidades de éxito.</li>
+                        <li><strong>Orientación sobre requisitos específicos:</strong> Detallamos qué documentos son indispensables para su caso particular y cómo debe presentarlos.</li>
+                        <li><strong>Agenda estratégica:</strong> Le explicamos los tiempos para gestionar sus citas en el CAS (Centro de Atención al Solicitante) y el Consulado, asegurándonos de que pueda avanzar rápidamente hacia la preparación de su entrevista.</li>
+                    </ul>
                 </div>
 
                 {/* Tiempo de trámite */}
                 <div className="cita-info-section">
                     <h3>Costo</h3>
-                    {/* <p>
-                        El tiempo estimado para completar la cita informativa es de entre 30 y 60 minutos, dependiendo de la complejidad de tus necesidades.
-                    </p> */}
-                    <p style={{ color: 'red' }}>PENDIENTE</p>
-
+                    <ul>
+                        <li><strong>Individual:</strong> $300 MXN por persona.</li>
+                        <li><strong>En grupo familiar o parejas:</strong> $400 MXN.</li>
+                    </ul>
+                    <p style={{ marginTop: '15px', fontStyle: 'italic' }}>
+                        Pregunte por nuestras promociones vigentes y descubra cómo puede recibir una consulta inicial sin costo.
+                    </p>
                 </div>
 
                 {/* Botón de Contacto */}
                 <div className="cita-info-section contact">
-                    <p>Pregunte por nuestras promociones vigentes y cómo recibir consulta SIN COSTO</p>
                     <button
                         className="contact-button"
                         onClick={() => window.location.href = '/contact#contactform'}
                     >
-                        Contactar
+                        ¡SOLICITA ASESORÍA!
                     </button>
                 </div>
 

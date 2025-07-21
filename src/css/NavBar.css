@@ -178,8 +178,7 @@ li .nav-link.active::after {
 }
 
 .contacto-info p a {
-    
-    color: black;
+    color: white;
 }
 
 .contacto-info p a:hover {

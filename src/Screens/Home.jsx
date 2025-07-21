@@ -8,10 +8,32 @@ import fondoH from '/r1.png';
 import Contador from '../components/Contador';
 import Steps from '/Pasos.png';
 import { MDBIcon } from 'mdb-react-ui-kit';
-import Facebook from '../components/Facebook';
 
 function Home() {
     const { t } = useTranslation();
+
+    const testimonials = [
+        {
+            text: t("Gracias a FastPass obtuve mi visa sin problemas. Su asesoría fue excelente y me guiaron paso a paso."),
+            author: t("María González"),
+            image: "/testimonio1.svg"
+        },
+        {
+            text: t("Proceso rápido y eficiente. Recomiendo sus servicios al 100%. Personal muy profesional."),
+            author: t("Carlos Rodríguez"),
+            image: "/testimonio2.svg"
+        },
+        {
+            text: t("La preparación para la entrevista fue clave para mi aprobación. Excelente servicio personalizado."),
+            author: t("Ana López"),
+            image: "/testimonio3.svg"
+        },
+        {
+            text: t("Excelente atención y acompañamiento durante todo el proceso. Muy recomendable para todos."),
+            author: t("Roberto Martín"),
+            image: "/testimonio4.svg"
+        }
+    ];
 
     const scrollToTop = () => {
         window.scrollTo(0, 0);
@@ -26,9 +48,9 @@ function Home() {
         <>
             <Parallax
                 backgroundImage={fondoH}
-                title="¡Uniendo Familias!"
-                subtitle="Logrando que su visa sea aprobada"
-                linkText="Contactar" />
+                title={t("¡Uniendo Familias!")}
+                subtitle={t("Logrando que su visa sea aprobada")}
+                linkText={t("Contactar Ahora")} />
 
             <section className="services">
                 <div className="positionS">
@@ -37,8 +59,8 @@ function Home() {
                             {/* Aquí puedes colocar un ícono adecuado para "Asesoría" */}
                             <i className="fas fa-headset"></i>
                         </div>
-                        <h3>Asesoría</h3>
-                        <p>Le ofrecemos una asesoría personalizada para cada situación personal o familiar de manera entendible para todas las edades, efectiva y transparente ya que no utilizamos datos o correos de usuarios de terceros. Lo acompañamos en cada uno de los pasos durante el proceso de trámite de su visa.</p>
+                        <h3>{t("Asesoría")}</h3>
+                        <p>{t("Proporcionamos una asesoría personalizada, adaptada a su situación personal, familiar o laboral. Utilizamos un lenguaje claro y accesible para todas las edades, priorizando la transparencia y la entrega de información precisa para guiarlo de manera efectiva en cada paso del proceso.")}</p>
                     </div>
 
                     <div className="service-card1 fade-in">
@@ -46,8 +68,8 @@ function Home() {
                             {/* Aquí puedes colocar un ícono adecuado para "Trámite" */}
                             <i className="fas fa-passport"></i>
                         </div>
-                        <h3>Trámite</h3>
-                        <p>Facilitamos el proceso de su trámite, preparando previamente un perfil de solicitante adecuado de manera previa a la solicitud de visa, y posteriormente le enlistamos y sugerimos los documentos personales que deberá llevar con usted a su cita de entrevista.</p>
+                        <h3>{t("Trámite")}</h3>
+                        <p>{t("Simplificamos y agilizamos su proceso de trámite. Diseñamos un perfil de solicitante adaptado a sus necesidades, preparamos y verificamos la documentación requerida, y nos aseguramos de que todo esté en orden antes de sus citas, garantizando un proceso eficiente y sin contratiempos.")}</p>
                     </div>
 
                     <div className="service-card1 fade-in" >
@@ -55,12 +77,30 @@ function Home() {
                             {/* Aquí puedes colocar un ícono adecuado para "Gestión" */}
                             <i className="fas fa-tasks"></i>
                         </div>
-                        <h3>Preparación</h3>
-                        <p>Lo preparamos para el día de su cita con su solicitud traducida al español y un simulacro de entrevista con la finalidad de que vaya consciente de las preguntas que le realizarán el oficial consular. </p>
+                        <h3>{t("Preparación")}</h3>
+                        <p>{t("Le brindamos una preparación completa para su entrevista consular, incluyendo la traducción de su solicitud al español y un simulacro de preguntas y respuestas con el fin de que asista a su cita con seguridad y confianza, aumentando sus posibilidades de aprobación y obtener la visa que necesita.")}</p>
                     </div>
+
+                    <div className="service-card1 fade-in">
+                        <div className="icon-container">
+                            <i className="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>{t("Acompañamiento")}</h3>
+                        <p>{t("Le guiamos y apoyamos en cada etapa del proceso, desde el inicio hasta la conclusión. Contamos con disponibilidad para resolver sus dudas, ofrecer soporte personalizado y asegurarnos de que esté preparado y tranquilo en cada paso.")}</p>
+                    </div>
+
+                    <div className="service-card1 fade-in">
+                        <div className="icon-container">
+                            <i className="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>{t("Seguridad")}</h3>
+                        <p>{t("Protegemos su información personal con los más altos estándares de confidencialidad y ética. No retenemos documentos, datos de usuario ni contraseñas, asegurándonos de que usted mantenga el control total de su información en todo momento.")}</p>
+                    </div>
+
+                    
                     
                 </div>
-                <Link to="/services" className="more-services-button" onClick={scrollToTop}>{t('Explorar Servicios')}</Link>
+                <Link to="/services" className="more-services-button" onClick={scrollToTop}>{t('Conocer nuestros Servicios')}</Link>
             </section>
 
             <section className="steps">
@@ -69,23 +109,67 @@ function Home() {
                 </div>
                 <button onClick={handleButtonClick} className='appointment-button'>
                     <MDBIcon fas icon="calendar-check" className='me-2 ' />
-                    {t('Quiero cita')}
+                    {t('Agendar Cita')}
                 </button>
             </section>
 
-            <section className="facebook">
-                <div>
-                    <Facebook />
+            <section className="testimonials">
+                <div className="testimonials-container">
+                    <h2>{t("Testimonios")}</h2>
+                    <div className="testimonials-scroll-container">
+                        <div className="testimonials-track">
+                            {/* Primera serie de testimonios */}
+                            {testimonials.map((testimonial, index) => (
+                                <div key={`first-${index}`} className="testimonial-card">
+                                    <div className="testimonial-image">
+                                        <img src={testimonial.image} alt="Cliente satisfecho" />
+                                    </div>
+                                    <div className="testimonial-content">
+                                        <div className="testimonial-rating">
+                                            <span className="star">★</span>
+                                            <span className="star">★</span>
+                                            <span className="star">★</span>
+                                            <span className="star">★</span>
+                                            <span className="star">★</span>
+                                        </div>
+                                        <p>{testimonial.text}</p>
+                                        <span>{testimonial.author}</span>
+                                    </div>
+                                </div>
+                            ))}
+                            
+                            {/* Segunda serie de testimonios (duplicada para efecto scroll infinito) */}
+                            {testimonials.map((testimonial, index) => (
+                                <div key={`second-${index}`} className="testimonial-card">
+                                    <div className="testimonial-image">
+                                        <img src={testimonial.image} alt="Cliente satisfecho" />
+                                    </div>
+                                    <div className="testimonial-content">
+                                        <div className="testimonial-rating">
+                                            <span className="star">★</span>
+                                            <span className="star">★</span>
+                                            <span className="star">★</span>
+                                            <span className="star">★</span>
+                                            <span className="star">★</span>
+                                        </div>
+                                        <p>{testimonial.text}</p>
+                                        <span>{testimonial.author}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
 
+            
             <section className="contadores">
                 <div className="contadores-grid">
                     <Contador
                         end={10}
                         duration={2000}
                         id="counter1"
-                        texto="Años de Experiencia"
+                        texto={t("Años de Experiencia")}
                         icon=""
                         icon1="+"
                     />
@@ -93,7 +177,7 @@ function Home() {
                         end={80}
                         duration={2000}
                         id="counter2"
-                        texto="Tasa de Aprobación"
+                        texto={t("Tasa de Aprobación")}
                         icon="%"
                         icon1="+"
                     />
@@ -101,7 +185,7 @@ function Home() {
                         end={1000}
                         duration={2000}
                         id="counter3"
-                        texto="Trámites Realizados"
+                        texto={t("Trámites Realizados")}
                         icon1="+"
                     />
                 </div>

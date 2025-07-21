@@ -20,16 +20,32 @@
 }
 
 .container-search {
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    padding: 8px;
     cursor: pointer;
     margin-bottom: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.container-search:hover {
+    border-color: #4CAF50;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .icon {
-    margin-left: 10px;
+    margin-left: 15px;
     font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+.container-search:hover .icon {
+    color: #4CAF50;
 }
 
 .container-search input {
@@ -42,10 +58,12 @@
     outline: none;
     background: none;
     color: white;
+    font-weight: 500;
 }
 
 .container-search input::placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
 }
 
 .principales {
@@ -58,6 +76,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.principales .columna:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .principales h2 {
@@ -120,10 +147,12 @@
 
 .pregunta-item {
     margin-bottom: 20px;
-    background-color: #f0f4f8;
-    padding: 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(10, 21, 71, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .pregunta-item h3 {
@@ -133,10 +162,39 @@
     justify-content: space-between;
     align-items: center;
     color: #0A1547;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .pregunta-item:hover {
-    background-color: #e2e8f0;
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pregunta-item:hover h3 {
+    color: #143687;
+}
+
+.pregunta-item.highlighted {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 2px solid #4CAF50;
+    animation: highlight 0.5s ease-in-out;
+}
+
+@keyframes highlight {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .toggle-icon {
@@ -145,10 +203,15 @@
 }
 
 .answer {
-    margin-top: 10px;
-    padding-left: 20px;
+    margin-top: 15px;
+    padding: 15px 20px;
     font-size: 16px;
-    color: #333;
+    color: #4a5568;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+    white-space: pre-line;
 }
 
 
@@ -218,30 +281,42 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #646464;
-    border-bottom: 1px solid #ccc;
-    max-height: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    max-height: 250px;
     overflow-y: auto;
     z-index: 1000;
-    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .search-result-item {
-    padding: 10px;
+    padding: 15px 20px;
     cursor: pointer;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .search-result-item:hover {
-    background-color: #8e8e8e;
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    transform: translateX(5px);
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
 }
 
 
 
 .search-results-full {
-    padding: 100px;
-    background-color: aliceblue;
-
+    padding: 80px;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-top: 3px solid #4CAF50;
 }
 
 .positionr {
@@ -249,32 +324,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .positionr h2 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    color: #0A1547;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-align: center;
 }
 
-.resultados {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #000000;
-    color: white;
-}
-
-.pregunta-item {
-    width: 900px;
+.resultados-container {
+    width: 100%;
+    max-width: 1000px;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
 }
 
 /* pregunta-item se adapte al width de temas-content */
@@ -302,9 +392,11 @@
     }
 
     .container-search {
-        width: 90%; /* Ajustado para ocupar el 100% del ancho disponible */
-        margin-bottom: 20px; /* Ajustado para mejorar el espaciado en pantallas más pequeñas */
-        position: relative; /* Necesario para que el z-index funcione en .search-results */
+        width: 90%;
+        margin-bottom: 20px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
     }
 
     .container-search input {
@@ -318,16 +410,29 @@
         top: 100%;
         left: 0;
         right: 0;
-        max-height: 200px; /* Ajustado para que se vea mejor en pantallas pequeñas */
-        z-index: 1000; /* Asegura que esté sobre otros elementos */
-        background-color: #646464; /* Ajustado para que se vea sobre todo */
-        border-bottom: 1px solid #ccc;
+        max-height: 200px;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         overflow-y: auto;
     }
+    
+    .search-result-item {
+        color: #333;
+    }
+    
     .answer {
         font-size: 0.9em;
-        color: #ffffff;
-        padding-left: 1.5em;
+        color: #4a5568;
+        padding: 10px 15px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 6px;
+        border-left: 3px solid #4CAF50;
+        margin-top: 10px;
+        line-height: 1.5;
+        white-space: pre-line;
         margin-top: 5px;
     }
 
@@ -372,7 +477,13 @@
     }
 
     .search-results-full {
-        padding: 20px; /* Ajustado para mejorar el espaciado en pantallas más pequeñas */
+        padding: 30px 20px;
+        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    }
+    
+    .positionr h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
     }
 }
 

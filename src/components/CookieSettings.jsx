@@ -7,7 +7,6 @@ const CookieSettings = ({ isOpen, onClose }) => {
     const { cookies, updateCookies } = useCookies();
     const [preferences, setPreferences] = useState({
         analytics: cookies.analytics,
-        marketing: cookies.marketing,
         functional: cookies.functional,
     });
 
@@ -37,16 +36,6 @@ const CookieSettings = ({ isOpen, onClose }) => {
                             onChange={() => handleToggle('analytics')}
                         />
                         Cookies de Analíticas
-                    </label>
-                </div>
-                <div className="cookie-option">
-                    <label>
-                        <input
-                            type="checkbox"
-                            checked={preferences.marketing}
-                            onChange={() => handleToggle('marketing')}
-                        />
-                        Cookies de Marketing
                     </label>
                 </div>
                 <div className="cookie-option">

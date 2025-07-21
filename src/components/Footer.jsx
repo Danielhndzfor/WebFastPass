@@ -15,7 +15,6 @@ function Footer() {
 
     const handleCloseSettings = () => {
         setShowSettings(false);
-        setShowBanner(false);
     };
 
 
@@ -25,7 +24,7 @@ function Footer() {
             <MDBFooter style={{ backgroundColor: '#0A1547', color: 'white' }} className='text-center text-lg-start text-muted'>
                 <section style={{ color: 'white' }} className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                     <div className='me-5 d-none d-lg-block'>
-                        <span>{t('Síguenos en nuestras redes sociales: ')}</span>
+                        <span>{t('Síguenos en:')}</span>
                     </div>
 
                     <div>
@@ -52,7 +51,7 @@ function Footer() {
                                         <div className='btn-paypal'>
                                             <MDBIcon fas icon='calendar-alt' />
                                         </div>
-                                        <p>Agendar Cita</p>
+                                        <p>{t('Agendar Cita')}</p>
                                     </div>
                                 </a>
                             </MDBCol>
@@ -93,7 +92,10 @@ function Footer() {
                                 <p>
                                     <a href="https://maps.app.goo.gl/tostpFRhyjGWeZLr6">
                                         <MDBIcon icon="home" className="me-3" />
-                                        Av. Paseo de las Garzas #274, Local 13 (planta alta), Barrio 5, Valle de las Garzas C.P. 28219 Manzanillo, Colima                                    </a>
+                                        Av. Paseo de las Garzas #274, Local 13 (2do piso)
+                                        <br />Barrio 5, Valle de las Garzas
+                                        <br />Manzanillo, Colima, México C.P. 28219
+                                    </a>
                                 </p>
                                 <p>
                                     <a href="mailto:info@fastpass-visas.com">
@@ -107,14 +109,19 @@ function Footer() {
                                         +52 314 688 5645
                                     </a>
                                 </p>
+                                <p>
+                                    <a href="tel:+523143526003">
+                                        <MDBIcon icon="mobile-alt" className="me-3" />
+                                        +52 314 352 6003
+                                    </a>
+                                </p>
                             </MDBCol>
 
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto  mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>{t('Horario')}</h6>
-                                <p>Lun-Mar: 9 a.m. - 7 p.m.</p>
-                                <p>Mié-Jue: 2 p.m. - 7 p.m.</p>
-                                <p>Vie: 9 a.m. - 2 p.m.</p>
-                                <p>Sáb: 9 a.m. - 2 p.m.</p>
+                                <p>Lun-Vie: 9:00-14:00</p>
+                                <p style={{marginLeft: '50px'}}>16:00-19:00</p>
+                                <p>Sáb: 9:00-14:00</p>
                                 <p>Dom: Cerrado</p>
                             </MDBCol>
 
@@ -158,7 +165,7 @@ function Footer() {
                 <div className='text-center p-4 border-top' style={{ color: 'white' }}>
                     © 2024 Copyright | FastPass Visas
                     <div>
-                        <a className='settings' onClick={handleCustomize}>Cambiar Preferencias</a>
+                        <a className='settings' onClick={handleCustomize}>{t('Cambiar Preferencias')}</a>
                     </div>
                 </div>
             </MDBFooter>

@@ -1,0 +1,22 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="face3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffeaa7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fab1a0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg3)"/>
+  <circle cx="100" cy="85" r="35" fill="url(#face3)"/>
+  <circle cx="88" cy="78" r="3" fill="#2d3436"/>
+  <circle cx="112" cy="78" r="3" fill="#2d3436"/>
+  <ellipse cx="100" cy="88" rx="2" ry="4" fill="#e17055"/>
+  <path d="M 85 95 Q 100 105 115 95" stroke="#e17055" stroke-width="2" fill="none"/>
+  <path d="M 75 125 Q 100 140 125 125 Q 115 155 100 160 Q 85 155 75 125" fill="url(#face3)"/>
+  <path d="M 75 65 Q 85 55 95 65 Q 105 55 115 65 Q 125 70 125 85 Q 115 95 100 95 Q 85 95 75 85 Q 75 70 75 65" fill="#a29bfe"/>
+  <circle cx="85" cy="135" r="3" fill="#fd79a8"/>
+  <circle cx="115" cy="135" r="3" fill="#fd79a8"/>
+</svg>

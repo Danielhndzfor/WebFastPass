@@ -67,6 +67,86 @@
     color: #ddd;
 }
 
+/* Botón para servicios en construcción */
+.construction-btn {
+    background-color: #ff9800 !important; /* Color naranja para indicar construcción */
+    border: none;
+    cursor: pointer;
+}
+
+.construction-btn:hover {
+    background-color: #f57c00 !important; /* Color más oscuro en hover */
+}
+
+/* Estilos del Toast */
+.construction-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    animation: slideInFromRight 0.3s ease-out;
+}
+
+.toast-content {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 350px;
+    min-width: 280px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toast-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.toast-message {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.toast-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Animación del toast */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 988px) {
     .service-card {
@@ -80,5 +160,23 @@
     .overlay {
         opacity: 1; /* Always show the overlay on mobile */
         background: rgba(0, 0, 0, 0.7); /* Increase the opacity of the overlay */
+    }
+
+    /* Responsive para el toast en móviles */
+    .construction-toast {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .toast-content {
+        max-width: none;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .toast-message {
+        font-size: 13px;
     }
 }

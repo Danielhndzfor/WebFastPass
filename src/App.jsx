@@ -2,6 +2,11 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import { CookieProvider } from './CookieContext';
 import CookieBanner from './components/CookieBanner';
+import { useTracking, trackPageView } from './hooks/useTracking';
+import { usePageAnalytics } from './hooks/usePageAnalytics';
+import { useSEO } from './hooks/useSEO';
+import { getSEOData } from './utils/seoData';
+// import LiveStats from './components/LiveStats'; // Descomenta para ver stats en vivo
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -77,6 +82,7 @@ function App() {
           <Footer />
         </Router>
         <CookieBanner />
+        {/* <LiveStats /> */} {/* Descomenta para ver estadísticas en desarrollo */}
       </CookieProvider>
     </div>
   );
@@ -85,46 +91,23 @@ function App() {
 // Componente para actualizar el título según la ruta
 function TitleUpdater() {
   const location = useLocation();
+  
+  // Obtener datos SEO para la ruta actual
+  const seoData = getSEOData(location.pathname);
+  
+  // Aplicar SEO dinámico
+  useSEO(seoData);
+  
+  // Inicializar tracking
+  useTracking();
+  
+  // Inicializar analytics automático de página
+  usePageAnalytics();
 
   useEffect(() => {
-    switch (location.pathname) {
-      case '/':
-        document.title = 'Inicio'; // Cambia este texto al título deseado
-        break;
-      case '/services':
-        document.title = 'Servicios'; // Cambia este texto al título deseado
-        break;
-      case '/about':
-        document.title = 'Acerca de'; // Cambia este texto al título deseado
-        break;
-      case '/faq':
-        document.title = 'Preguntas frecuentes'; // Cambia este texto al título deseado
-        break;
-      case '/contact':
-        document.title = 'Contacto'; // Cambia este texto al título deseado
-        break;
-      case '/tyc':
-        document.title = 'Términos y condiciones'; // Cambia este texto al título deseado
-        break;
-      case '/politica-de-privacidad':
-        document.title = 'Política de privacidad'; // Cambia este texto al título deseado
-        break;
-      case '/aviso-de-privacidad':
-        document.title = 'Aviso de privacidad'; // Cambia este texto al título deseado
-        break;
-      case '/politica-de-devolucion':
-        document.title = 'Política de devolución'; // Cambia este texto al título deseado
-        break;
-      case '/aviso-legal':
-        document.title = 'Aviso legal'; // Cambia este texto al título deseado
-        break;
-      case '/politica-de-cookies':
-        document.title = 'Política de cookies'; // Cambia este texto al título deseado
-        break
-      default:
-        document.title = 'Inicio'; // Título por defecto
-    }
-  }, [location]);
+    // Hacer tracking de la página visitada
+    trackPageView(location.pathname);
+  }, [location.pathname]);
 
   return null; // Este componente no necesita renderizar nada
 }

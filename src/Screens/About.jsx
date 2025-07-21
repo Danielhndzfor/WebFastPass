@@ -8,14 +8,14 @@ import { MDBIcon } from 'mdb-react-ui-kit';
 const About = () => {
     const { t } = useTranslation();
     const values = [
-        { img: '/integridad.jpg', title: 'Integridad', description: 'Nos comprometemos a actuar con honestidad y transparencia en todas nuestras actividades. La confianza es la base de nuestra relación con los clientes y colaboradores.' },
-        { img: '/excelencia.jpg', title: 'Excelencia en el servicio', description: 'Nos esforzamos por ofrecer un servicio de alta calidad, superando las expectativas de nuestros clientes en cada interacción.' },
-        { img: '/confidencial.png', title: 'Confidencialidad', description: 'Protegemos la información personal y sensible de nuestros clientes, asegurando que todos los datos se manejen con el máximo nivel de seguridad y privacidad.' },
-        { img: '/responsabilidad.jpg', title: 'Responsabilidad', description: 'Asumimos la responsabilidad de nuestras acciones y decisiones, garantizando que todos nuestros procesos se realicen con profesionalismo y ética.' },
-        { img: '/compromiso.jpg', title: 'Compromiso', description: 'Estamos dedicados a cumplir con nuestros compromisos y a brindar un apoyo constante a nuestros clientes durante todo el proceso de obtención de visas y pasaportes.' },
-        { img: '/respeto.png', title: 'Respeto', description: 'Tratamos a todos nuestros clientes y colaboradores con respeto, promoviendo un ambiente inclusivo y diverso donde todos se sientan valorados.' },
-        { img: '/orientacion.webp', title: 'Orientación al cliente', description: 'Colocamos las necesidades y expectativas de nuestros clientes en el centro de todas nuestras decisiones, proporcionando un servicio personalizado y atento.' },
-        { img: '/calidad.png', title: 'Calidad', description: 'Nos esforzamos por mantener altos estándares de calidad en todos los aspectos de nuestro negocio, desde la atención al cliente hasta la gestión de trámites.' },
+        { img: '/integridad.jpg', title: t('Integridad'), description: t('Nos comprometemos a actuar con honestidad y transparencia en todas nuestras actividades. La confianza es la base de nuestra relación con los clientes y colaboradores.') },
+        { img: '/excelencia.jpg', title: t('Excelencia en el servicio'), description: t('Nos esforzamos por ofrecer un servicio de alta calidad, superando las expectativas de nuestros clientes en cada interacción.') },
+        { img: '/confidencial.png', title: t('Confidencialidad'), description: t('Protegemos la información personal y sensible de nuestros clientes, asegurando que todos los datos se manejen con el máximo nivel de seguridad y privacidad.') },
+        { img: '/responsabilidad.jpg', title: t('Responsabilidad'), description: t('Asumimos la responsabilidad de nuestras acciones y decisiones, garantizando que todos nuestros procesos se realicen con profesionalismo y ética.') },
+        { img: '/compromiso.jpg', title: t('Compromiso'), description: t('Estamos dedicados a cumplir con nuestros compromisos y a brindar un apoyo constante a nuestros clientes durante todo el proceso de obtención de visas y pasaportes.') },
+        { img: '/respeto.png', title: t('Respeto'), description: t('Tratamos a todos nuestros clientes y colaboradores con respeto, promoviendo un ambiente inclusivo y diverso donde todos se sientan valorados.') },
+        { img: '/orientacion.webp', title: t('Orientación al cliente'), description: t('Colocamos las necesidades y expectativas de nuestros clientes en el centro de todas nuestras decisiones, proporcionando un servicio personalizado y atento.') },
+        { img: '/calidad.png', title: t('Calidad'), description: t('Nos esforzamos por mantener altos estándares de calidad en todos los aspectos de nuestro negocio, desde la atención al cliente hasta la gestión de trámites.') },
     ];
 
     return (
@@ -23,8 +23,8 @@ const About = () => {
             <Parallax
                 height="700px"
                 backgroundImage={fondoQ}
-                title="Nuestra Historia"
-                subtitle="Somos una empresa de consultoría con más de 10 años de experiencia."
+                title={t('Nuestra Historia')}
+                subtitle={t('Somos una empresa de consultoría con más de 10 años de experiencia.')}
                 linkText={t('Contactar')}
             />
             <div className="about-container">
@@ -88,8 +88,8 @@ const About = () => {
                         {values.map((value, index) => (
                             <div className="values-card" key={index}>
                                 <img src={value.img} alt={value.title} />
-                                <h3>{t(value.title)}</h3>
-                                <p>{t(value.description)}</p>
+                                <h3>{value.title}</h3>
+                                <p>{value.description}</p>
                             </div>
                         ))}
                     </div>

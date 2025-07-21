@@ -19,7 +19,6 @@ const CookieBanner = () => {
     const handleAcceptAll = () => {
         const allAccepted = {
             analytics: true,
-            marketing: true,
             functional: true,
         };
         updateCookies(allAccepted);

@@ -1,6 +1,6 @@
 /* Estilos Generales */
 .cita-info-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
     background: linear-gradient(135deg, #e8ebf3, #f7f9fc);
@@ -8,6 +8,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
     color: #333;
+    width: 95%;
 }
 
 .cita-info-header h2 {
@@ -109,5 +110,329 @@
 
     .contact-button {
         font-size: 1.1em;
+    }
+}
+
+/* Estilos para las pestañas de visa */
+.visa-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    gap: 0;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    width: 100%;
+}
+
+.tab-button {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border: 2px solid #dee2e6;
+    border-radius: 0;
+    border-right: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #495057;
+    text-align: center;
+    flex: 1;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tab-button:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.tab-button:last-child {
+    border-radius: 0 8px 8px 0;
+    border-right: 2px solid #dee2e6;
+}
+
+.tab-button:hover {
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    border-color: #239619;
+    color: #239619;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(35, 150, 25, 0.15);
+    z-index: 2;
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #239619, #1e7e15);
+    border-color: #239619;
+    color: white;
+    box-shadow: 0 4px 12px rgba(35, 150, 25, 0.3);
+    transform: translateY(-1px);
+    z-index: 3;
+}
+
+.tab-button.active:hover {
+    background: linear-gradient(135deg, #1e7e15, #239619);
+    transform: translateY(-2px);
+}
+
+.tab-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design para las pestañas */
+@media (min-width: 1200px) {
+    .tab-button {
+        font-size: 15px;
+        padding: 18px 15px;
+        min-height: 75px;
+    }
+    
+    .visa-tabs {
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .visa-tabs {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .tab-button {
+        width: 100%;
+        border-radius: 0;
+        border-right: 2px solid #dee2e6;
+        border-bottom: none;
+        min-height: 50px;
+        font-size: 13px;
+        padding: 12px 10px;
+        white-space: normal;
+    }
+    
+    .tab-button:first-child {
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .tab-button:last-child {
+        border-radius: 0 0 8px 8px;
+        border-bottom: 2px solid #dee2e6;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-button {
+        font-size: 11px;
+        padding: 10px 8px;
+        min-height: 45px;
+    }
+    
+    .visa-tabs {
+        padding: 15px 0;
+    }
+}
+
+/* Botones de CTA */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.primary-cta-button {
+    background: linear-gradient(135deg, #239619, #1e7d15);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(35, 150, 25, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.primary-cta-button:hover {
+    background: linear-gradient(135deg, #1e7d15, #239619);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(35, 150, 25, 0.4);
+}
+
+.secondary-cta-button {
+    background: transparent;
+    color: #239619;
+    padding: 15px 30px;
+    border: 2px solid #239619;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-cta-button:hover {
+    background: #239619;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Sección ideal para */
+.service-ideal {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-left: 4px solid #239619;
+    border-radius: 8px;
+}
+
+.service-ideal h4 {
+    color: #239619;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.service-ideal p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive para botones CTA */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .primary-cta-button,
+    .secondary-cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Estilos para tiempos especiales */
+.special-time .time-label {
+    color: #239619;
+    font-weight: bold;
+}
+
+.special-time .time-value {
+    color: #239619;
+    font-weight: bold;
+}
+
+/* Tabla de precios */
+.pricing-table {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 0;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.pricing-row {
+    display: contents;
+}
+
+.pricing-cell {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+}
+
+.header-row .pricing-cell {
+    background: linear-gradient(135deg, #239619, #1e7d15);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+.service-col {
+    border-right: 1px solid #dee2e6;
+    background: #f8f9fa;
+}
+
+.cost-col {
+    border-right: 1px solid #dee2e6;
+    justify-content: center;
+    background: white;
+}
+
+.description-col {
+    background: #f8f9fa;
+}
+
+.price-highlight {
+    font-size: 18px;
+    font-weight: bold;
+    color: #239619;
+}
+
+.special-row .pricing-cell {
+    background: #fff3cd;
+}
+
+.special-row .service-col,
+.special-row .description-col {
+    background: #fff3cd;
+}
+
+/* Responsive para tabla de precios */
+@media (max-width: 768px) {
+    .pricing-table {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .pricing-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    
+    .header-row {
+        display: none;
+    }
+    
+    .pricing-cell {
+        border-bottom: none;
+        border-right: none;
+        text-align: center;
+    }
+    
+    .service-col {
+        border-bottom: 1px solid #dee2e6;
+        font-weight: bold;
+    }
+    
+    .cost-col {
+        border-bottom: 1px solid #dee2e6;
+        font-size: 20px;
     }
 }

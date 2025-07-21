@@ -52,3 +52,20 @@ a {
     font-size: 0.8rem;
 }
 
+/* Estilos para mejor presentación del horario */
+.horario-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.horario-dia {
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.horario-horas {
+    text-align: right;
+}
+

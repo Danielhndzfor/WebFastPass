@@ -17,13 +17,15 @@ function Parallax({ backgroundImage, title, subtitle, linkText }) {
             <div className="parallax-content">
                 <h1>{t(title)}</h1>
                 <p>{t(subtitle)}</p>
-                <button 
-                    onClick={() => navigate('/contact#contactform')} 
-                    className="contactbtn" 
-                    aria-label={t(linkText)}
-                >
-                    {t(linkText)}
-                </button>
+                {linkText && (
+                    <button 
+                        onClick={() => navigate('/contact#contactform')} 
+                        className="contactbtn" 
+                        aria-label={t(linkText)}
+                    >
+                        {t(linkText)}
+                    </button>
+                )}
             </div>
         </div>
     );

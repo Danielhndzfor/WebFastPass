@@ -10,6 +10,19 @@
     height: 800px;
 }
 
+/* Overlay oscuro para hacer la imagen más oscura */
+.parallax-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Ajusta el último valor (0.4) para más o menos oscuridad */
+    z-index: 1;
+    pointer-events: none; /* Permite que los clics pasen a través del overlay */
+}
+
 /* Contenido dentro del contenedor parallax */
 .parallax-content {
     position: absolute;
@@ -19,6 +32,7 @@
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Asegura que el contenido esté encima del overlay */
 }
 
 .parallax-content h1 {

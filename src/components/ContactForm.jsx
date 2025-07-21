@@ -39,7 +39,7 @@ function ContactForm() {
             <div className="contact-container fade-in">
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <h2>{t('¡Contáctanos!')}</h2>
-                    <p>{t('Por favor rellene el formulario para contactarse con nosotros')}</p>
+                    <p>{t('Rellene el formulario y envíenos su solicitud o inquietud. Nos pondremos en contacto tan pronto como sea posible. Todos los campos marcados son obligatorios.')}</p>
                     <input
                         type="text"
                         name="nombre"
@@ -72,17 +72,21 @@ function ContactForm() {
                         required
                     >
                         <option value="" disabled>{t('Seleccione un servicio')}</option>
-                        <option value="cita-informativa">{t('Consulta Informativa')}</option>
+                        <option value="cita-informativa">{t('Solicitar cita informativa')}</option>
                         <option value="pasaporte-mexicano">{t('Pasaporte Mexicano (Primera Vez o Renovación)')}</option>
                         <option value="pasaporte-americano">{t('Pasaporte Americano (Primera Vez o Renovación)')}</option>
                         <option value="visa-americana">{t('Visa Americana (Primera Vez o Renovación)')}</option>
                         <option value="visa-rechazada">{t('Visas Rechazadas o Canceladas')}</option>
-                        <option value="citas-emergencia">{t('Adelanto Cita / Cita Emergencia')}</option>
+                        <option value="adelanto-citas">{t('Adelanto de citas')}</option>
+                        <option value="cita-emergencia">{t('Cita de emergencia')}</option>
                         <option value="traduccion-documentos">{t('Traducciones (IN-ES) (ES-IN)')}</option>
                         <option value="actas-nacimiento">{t('Acta Nacimiento (cualquier estado)')}</option>
                         <option value="poder-notarial-pasmenores">{t('Poder Notarial (para pasaporte menores)')}</option>
                         <option value="poder-notarial-sam">{t('Poder Notarial o Formato SAM (para salir del país)')}</option>
+                        <option value="eta-canada">{t('Autorización electrónica de viaje Canadá (eTA)')}</option>
+                        <option value="visa-canada">{t('Visa Visitante Canadá (residente temporal)')}</option>
                         <option value="seguimiento-tramites">{t('Seguimiento a trámites iniciados')}</option>
+                        <option value="otros-servicios">{t('Otros servicios')}</option>
                     </select>
                     <textarea
                         name="mensaje"
@@ -99,7 +103,7 @@ function ContactForm() {
                             onChange={handleCheckboxChange}
                             required
                         />
-                        <label>{t('Acepto')} <a href="/tyc">Términos y Condiciones de Uso</a></label>
+                        <label>{t('Acepto')} <a href="/tyc">{t('Términos y Condiciones de Uso')}</a></label>
                     </div>
                     <button type="submit" className={isChecked ? 'enabled' : 'disabled'} disabled={!isChecked}>{t('Enviar')}</button>
                 </form>

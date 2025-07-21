@@ -8,7 +8,6 @@ export const useCookies = () => useContext(CookieContext);
 export const CookieProvider = ({ children }) => {
     const [cookies, setCookies] = useState({
         analytics: false,
-        marketing: false,
         functional: true,
     });
 

@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.fastpass-visas.com/sitemap.xml
+
+# Páginas importantes para indexar
+Allow: /services/
+Allow: /services/visa-americana
+Allow: /services/pasaporte-mexicano
+Allow: /services/pasaporte-americano
+Allow: /services/citas-emergencia
+Allow: /about
+Allow: /contact
+Allow: /faq
+
+# Directivas específicas para bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay para evitar sobrecargar el servidor
+Crawl-delay: 1
+
+# Notas importantes:
+# - Este sitio ofrece servicios de consultoría migratoria en Manzanillo, Colima
+# - Especialistas en trámites de visas americanas y pasaportes
+# - Horarios: Lunes a Viernes 9:00-18:00, Sábados 9:00-14:00
