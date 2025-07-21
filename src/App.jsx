@@ -12,12 +12,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import Layout from './components/Layout';
 
 import Home from './Screens/Home';
 import Services from './Screens/Services';
 import About from './Screens/About';
 import FAQ from './Screens/FAQ';
 import Contact from './Screens/Contact';
+import CardPresentation from './Screens/CardPresentation';
 
 import CitaInfo from './Screens/Services/CitaInfo';
 import ActasNacimiento from './Screens/Services/ActasNacimiento';
@@ -46,40 +48,41 @@ function App() {
     <div className="">
       <CookieProvider>
         <Router>
-          <NavBar />
           <TitleUpdater />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/cita-informativa" element={<CitaInfo />} />
-            <Route path="/services/actas-nacimiento" element={<ActasNacimiento />} />
-            <Route path="/services/pasaporte-americano" element={<PasaporteAmericano />} />
-            <Route path="/services/pasaporte-mexicano" element={<PasaporteMexicano />} />
-            <Route path="/services/visa-americana" element={<VisaAmericana />} />
-            <Route path="/services/visa-rechazada" element={<VisaRechazada />} />
-            <Route path="/services/citas-emergencia" element={<CitaEmergenciaVisa />} />
-            <Route path="/services/adelantar-cita" element={<AdelantarCitas />} />
-            <Route path="/services/preparacion-entrevista" element={<PreparacionEntrevistas />} />
-            <Route path="/services/poder-notarial-mexicano" element={<PoderNotarialMenoresMexico />} />
-            <Route path="/services/poder-notarial-americano" element={<PoderNotarialMenoresUSA />} />
-            <Route path="/services/formato-sam-menores-mexico" element={<FormatoSAMMenoresMexico />} />
-            <Route path="/services/traduccion-documentos" element={<TraduccionDocumentos />} />
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/cita-informativa" element={<CitaInfo />} />
+              <Route path="/services/actas-nacimiento" element={<ActasNacimiento />} />
+              <Route path="/services/pasaporte-americano" element={<PasaporteAmericano />} />
+              <Route path="/services/pasaporte-mexicano" element={<PasaporteMexicano />} />
+              <Route path="/services/visa-americana" element={<VisaAmericana />} />
+              <Route path="/services/visa-rechazada" element={<VisaRechazada />} />
+              <Route path="/services/citas-emergencia" element={<CitaEmergenciaVisa />} />
+              <Route path="/services/adelantar-cita" element={<AdelantarCitas />} />
+              <Route path="/services/preparacion-entrevista" element={<PreparacionEntrevistas />} />
+              <Route path="/services/poder-notarial-mexicano" element={<PoderNotarialMenoresMexico />} />
+              <Route path="/services/poder-notarial-americano" element={<PoderNotarialMenoresUSA />} />
+              <Route path="/services/formato-sam-menores-mexico" element={<FormatoSAMMenoresMexico />} />
+              <Route path="/services/traduccion-documentos" element={<TraduccionDocumentos />} />
 
 
 
-            <Route path="/about" element={<About />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/tyc" element={<TyC />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/card" element={<CardPresentation />} />
+              <Route path="/tyc" element={<TyC />} />
 
-            <Route path="/politica-de-privacidad" element={<PolPrivacidad />} />
-            <Route path="/aviso-de-privacidad" element={<AviPrivacidad />} />
-            <Route path="/politica-de-devolucion" element={<PolDevolucion />} />
-            <Route path="/aviso-legal" element={<AviLegal />} />
-            <Route path="/politica-de-cookies" element={<PolCookies />} />
-          </Routes>
-          <Footer />
+              <Route path="/politica-de-privacidad" element={<PolPrivacidad />} />
+              <Route path="/aviso-de-privacidad" element={<AviPrivacidad />} />
+              <Route path="/politica-de-devolucion" element={<PolDevolucion />} />
+              <Route path="/aviso-legal" element={<AviLegal />} />
+              <Route path="/politica-de-cookies" element={<PolCookies />} />
+            </Routes>
+          </Layout>
         </Router>
         <CookieBanner />
         {/* <LiveStats /> */} {/* Descomenta para ver estadísticas en desarrollo */}

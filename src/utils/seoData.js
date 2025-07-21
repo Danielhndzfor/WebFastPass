@@ -86,6 +86,24 @@ export const seoPages = {
         structuredData: {
             "@type": "FAQPage"
         }
+    },
+
+    card: {
+        title: 'Angel I. López Rivera - Asesor de Pasaportes y Visa Americana | FastPass Visa',
+        description: 'Tarjeta digital de Angel I. López Rivera, asesor especializado en trámites de pasaportes y visas americanas. Contacto directo para consultoría migratoria.',
+        keywords: 'Angel López Rivera, asesor migratorio, visa americana, pasaporte, consultor, Manzanillo, Colima, tarjeta digital',
+        url: 'https://www.fastpass-visas.com/card',
+        image: '/logoP.webp',
+        type: 'profile',
+        structuredData: {
+            "@type": "Person",
+            "name": "Angel I. López Rivera",
+            "jobTitle": "Asesor pasaportes y visa americana",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "FastPass Visa"
+            }
+        }
     }
 };
 
@@ -100,7 +118,8 @@ export const getSEOData = (pathname) => {
         '/services/citas-emergencia': 'citasEmergencia',
         '/about': 'about',
         '/contact': 'contact',
-        '/faq': 'faq'
+        '/faq': 'faq',
+        '/card': 'card'
     };
 
     const key = routeMap[pathname] || 'home';
