@@ -8,8 +8,8 @@ function PreparacionEntrevista() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Análisis de Estatus y/o Preparación para Entrevista"
-                subtitle="¿Ya comenzaste tu trámite? Te ayudamos a analizar tu caso y prepararte estratégicamente para tu entrevista consular."
+                title="Preparación para Entrevista"
+                subtitle="Analizamos tu caso y te preparamos estratégicamente para tu entrevista."
                 linkText="¡Solicita Asesoría!"
             />
 

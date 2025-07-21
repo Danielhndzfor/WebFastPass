@@ -9,7 +9,7 @@ function PasaporteMexicano() {
             <Parallax
                 backgroundImage={fondoPF}
                 title="Pasaporte Mexicano"
-                subtitle="Ofrecemos asistencia especializada para la tramitación de pasaporte mexicano, ya sea por primera vez, renovación o casos específicos para reemplazo por robo o extravío."
+                subtitle="Asistencia especializada para tramitación por primera vez, renovación o reemplazo."
                 linkText="¡SOLICITA ASESORÍA!"
             />
 

@@ -8,8 +8,8 @@ function PoderNotarialMenoresUSA() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Formulario DS-3053 – Consentimiento de Padre/Madre Ausente"
-                subtitle="Documento oficial del Departamento de Estado de EE.UU. cuando uno de los padres no puede asistir personalmente a la cita de trámite de pasaporte americano para un menor."
+                title="Formulario DS-3053"
+                subtitle="Consentimiento oficial cuando un padre no puede asistir al trámite."
                 linkText="¡Solicita Asesoría!"
             />
 

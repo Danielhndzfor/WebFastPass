@@ -8,8 +8,8 @@ function CitasEmergenciaVisa() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="CITA DE EMERGENCIA"
-                subtitle="Las citas de emergencia están disponibles únicamente para situaciones calificadas como urgentes o imprevistas, que no pueden esperar al turno regular."
+                title="Cita de Emergencia"
+                subtitle="Para situaciones urgentes que no pueden esperar al turno regular."
                 linkText="¡SOLICITA ASESORÍA!"
             />
 

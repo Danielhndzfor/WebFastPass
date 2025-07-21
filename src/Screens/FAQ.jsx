@@ -373,15 +373,15 @@ function FAQ() {
                                     <div className="tema-content">
                                         {questions[topic.title].map((q, qIndex) => (
                                             <div key={qIndex} className="pregunta-item-movil">
-                                                <h3 onClick={() => toggleQuestion(qIndex)}>
+                                                <h3 onClick={() => toggleQuestion(normalizeText(q.question))}>
                                                     {q.question}
                                                     <MDBIcon
                                                         fas
-                                                        icon={expandedQuestions[qIndex] ? 'chevron-up' : 'chevron-down'}
+                                                        icon={expandedQuestions[normalizeText(q.question)] ? 'chevron-up' : 'chevron-down'}
                                                         className="toggle-icon"
                                                     />
                                                 </h3>
-                                                {expandedQuestions[qIndex] && (
+                                                {expandedQuestions[normalizeText(q.question)] && (
                                                     <p className="answer">
                                                         {q.answer}
                                                     </p>

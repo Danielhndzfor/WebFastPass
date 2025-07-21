@@ -8,8 +8,8 @@ function TraduccionDocumentos() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Traducciones Certificadas Español ⇄ Inglés"
-                subtitle="¿Tienes documentos que necesitas traducir para tu trámite de visa, pasaporte, ciudadanía o cualquier proceso legal o migratorio?"
+                title="Traducciones Certificadas"
+                subtitle="Traducción profesional para trámites de visa, pasaporte y ciudadanía."
                 linkText="¡Solicita Asesoría!"
             />
 

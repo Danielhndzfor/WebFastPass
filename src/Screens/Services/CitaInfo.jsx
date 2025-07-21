@@ -9,7 +9,7 @@ function CitaInfo() {
             <Parallax
                 backgroundImage={fondoPF}
                 title="Consulta Informativa"
-                subtitle="Analizamos detalladamente su perfil, incluyendo su situación familiar, laboral y profesional, para ofrecerle recomendaciones específicas que aumenten sus probabilidades de éxito en la obtención de una visa americana o canadiense."
+                subtitle="Análisis detallado de su perfil para aumentar sus probabilidades de éxito."
                 linkText="¡SOLICITA ASESORÍA!"
             />
 

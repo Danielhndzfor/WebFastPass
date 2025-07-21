@@ -34,6 +34,9 @@ function Footer() {
                         <a href='https://www.instagram.com/fastpass_visa/' className='me-4 text-reset'>
                             <MDBIcon fab icon="instagram" />
                         </a>
+                        <a href='https://fastpass-visas.com/card' className='me-4 text-reset'>
+                            <MDBIcon fas icon="id-card" />
+                        </a>
                     </div>
                 </section>
 
@@ -51,7 +54,7 @@ function Footer() {
                                         <div className='btn-paypal'>
                                             <MDBIcon fas icon='calendar-alt' />
                                         </div>
-                                        <p>{t('Agendar Cita')}</p>
+                                        <p>{t('AGENDAR CITA')}</p>
                                     </div>
                                 </a>
                             </MDBCol>

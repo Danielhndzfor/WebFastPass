@@ -211,8 +211,8 @@ function VisaAmericana() {
             <Parallax
                 backgroundImage={fondoPF}
                 title="Visa Americana"
-                subtitle="Te guiamos en todo el proceso para obtener tu visa americana de forma segura y eficaz con asesoría especializada para cada tipo de visa."
-                linkText="¡SOLICITA ASESORÍA PERSONALIZADA!"
+                subtitle="Asesoría especializada para obtener tu visa de forma segura y eficaz."
+                linkText="¡SOLICITA ASESORÍA!"
             />
 
             <div className="cita-info-container">

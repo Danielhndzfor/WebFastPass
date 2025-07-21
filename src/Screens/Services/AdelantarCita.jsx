@@ -8,8 +8,8 @@ function AdelantarCita() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Solicitud para Adelantar Cita a Consulado"
-                subtitle="¿Tu cita está programada dentro de varios meses y necesitas viajar antes? Podemos ayudarte a solicitar un adelanto de cita ante el consulado, siempre que cumplas con los criterios establecidos por el Departamento de Estado de EE.UU."
+                title="Adelantar Cita"
+                subtitle="Te ayudamos a solicitar un adelanto de cita ante el consulado."
                 linkText="¡SOLICITA ASESORÍA!"
             />
 

@@ -1,18 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useCallback, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import Parallax from '../components/Parallax';
 import { Link } from 'react-router-dom';
 import '../css/Home.css'; // Asegúrate de crear y ajustar el archivo CSS
-import ContactForm from '../components/ContactForm';
-import fondoH from '/r1.png';
-import Contador from '../components/Contador';
+import fondoH from '/r1.webp'; // Cambiado a WebP para mejor rendimiento
 import Steps from '/Pasos.png';
 import { MDBIcon } from 'mdb-react-ui-kit';
+
+// Lazy loading de componentes pesados
+const ContactForm = lazy(() => import('../components/ContactForm'));
+const Contador = lazy(() => import('../components/Contador'));
 
 function Home() {
     const { t } = useTranslation();
 
-    const testimonials = [
+    // Memoizar testimoniales para evitar recrearlos en cada render
+    const testimonials = useMemo(() => [
         {
             text: t("Gracias a FastPass obtuve mi visa sin problemas. Su asesoría fue excelente y me guiaron paso a paso."),
             author: t("María González"),
@@ -33,15 +36,16 @@ function Home() {
             author: t("Roberto Martín"),
             image: "/testimonio4.svg"
         }
-    ];
+    ], [t]); // Solo se recreará cuando cambie el idioma
 
-    const scrollToTop = () => {
+    // Memoizar funciones para evitar re-renders
+    const scrollToTop = useCallback(() => {
         window.scrollTo(0, 0);
-    };
+    }, []);
     
-    const handleButtonClick = () => {
-        window.location.href = '/contact'; // Cambia por tu número de teléfono
-    };
+    const handleButtonClick = useCallback(() => {
+        window.location.href = '/contact';
+    }, []);
 
 
     return (
@@ -165,34 +169,38 @@ function Home() {
             
             <section className="contadores">
                 <div className="contadores-grid">
-                    <Contador
-                        end={10}
-                        duration={2000}
-                        id="counter1"
-                        texto={t("Años de Experiencia")}
-                        icon=""
-                        icon1="+"
-                    />
-                    <Contador
-                        end={80}
-                        duration={2000}
-                        id="counter2"
-                        texto={t("Tasa de Aprobación")}
-                        icon="%"
-                        icon1="+"
-                    />
-                    <Contador
-                        end={1000}
-                        duration={2000}
-                        id="counter3"
-                        texto={t("Trámites Realizados")}
-                        icon1="+"
-                    />
+                    <Suspense fallback={<div className="loading-spinner">Cargando...</div>}>
+                        <Contador
+                            end={10}
+                            duration={2000}
+                            id="counter1"
+                            texto={t("Años de Experiencia")}
+                            icon=""
+                            icon1="+"
+                        />
+                        <Contador
+                            end={80}
+                            duration={2000}
+                            id="counter2"
+                            texto={t("Tasa de Aprobación")}
+                            icon="%"
+                            icon1="+"
+                        />
+                        <Contador
+                            end={1000}
+                            duration={2000}
+                            id="counter3"
+                            texto={t("Trámites Realizados")}
+                            icon1="+"
+                        />
+                    </Suspense>
                 </div>
             </section>
 
             <section className="contact">
-                <ContactForm />
+                <Suspense fallback={<div className="loading-spinner">Cargando formulario...</div>}>
+                    <ContactForm />
+                </Suspense>
             </section>
 
             <div className="map">
@@ -200,10 +208,11 @@ function Home() {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d942.490087641858!2d-104.32026687148569!3d19.109395266080426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8424d7d8f40f55d9%3A0x651936aa4f7f27f!2sFastpass%20Visa%20(Tramite%20de%20Pasaportes%20y%20Visas)!5e0!3m2!1ses!2smx!4v1722233066712!5m2!1ses!2smx"
                     width="100%"
                     height="400"
-                    style={{ border: 0 }} // Cambiado a objeto
+                    style={{ border: 0 }}
                     allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade">
+                    loading="lazy" // Esto es clave para cargar el mapa solo cuando sea visible
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Ubicación de FastPass Visa">
                 </iframe>
             </div>
         </>

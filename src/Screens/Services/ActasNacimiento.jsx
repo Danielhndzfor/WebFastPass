@@ -8,8 +8,8 @@ function ActasNacimiento() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Actas de Nacimiento Mexicanas"
-                subtitle="¿Necesitas tu acta de nacimiento mexicana? Te ayudamos a gestionarla desde cualquier parte de México o del extranjero."
+                title="Actas de Nacimiento"
+                subtitle="Gestión rápida y confiable desde México o el extranjero."
                 linkText="¡Solicita Asesoría!"
             />
 

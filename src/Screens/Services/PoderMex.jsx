@@ -8,8 +8,8 @@ function PoderNotarialMenoresMexico() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Poder Notarial para Pasaporte Mexicano de un Menor"
-                subtitle="El poder notarial es una alternativa válida y legal al formato OP-7 cuando uno o ambos padres no pueden presentarse personalmente al trámite."
+                title="Poder Notarial Mexicano"
+                subtitle="Alternativa legal cuando uno o ambos padres no pueden presentarse al trámite."
                 linkText="¡Solicita Asesoría!"
             />
 

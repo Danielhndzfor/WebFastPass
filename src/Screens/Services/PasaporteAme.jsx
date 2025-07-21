@@ -9,7 +9,7 @@ function PasaporteAmericano() {
             <Parallax
                 backgroundImage={fondoPF}
                 title="Pasaporte Americano"
-                subtitle="Ofrecemos servicios especializados para la tramitación de pasaportes estadounidenses, ya sea por primera vez o renovación."
+                subtitle="Servicios especializados para tramitación por primera vez o renovación."
                 linkText="¡SOLICITA ASESORÍA!"
             />
 

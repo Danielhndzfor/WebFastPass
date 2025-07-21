@@ -248,28 +248,56 @@
 }
 
 .tema-content {
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .pregunta-item-movil {
-    border-top: 1px solid #ccc;
-    padding: 10px 0;
-    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    margin: 0;
 }
 
 .pregunta-item-movil h3 {
     font-size: 1.1em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     margin: 0;
+    padding: 10px 0;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.pregunta-item-movil h3:hover {
+    color: #4CAF50;
+}
+
+.pregunta-item-movil .answer {
+    font-size: 0.95em;
+    color: #e0e0e0;
+    padding: 15px 20px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    line-height: 1.6;
+    white-space: pre-line;
+    animation: fadeInDown 0.3s ease-in-out;
 }
 
 .answer {
-    font-size: 0.9em;
-    color: #474747;
-    padding-left: 1.5em;
-    margin-top: 5px;
+    font-size: 0.95em;
+    color: #555;
+    padding: 15px 20px;
+    margin-top: 10px;
+    line-height: 1.6;
+    white-space: pre-line;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+    animation: fadeInDown 0.3s ease-in-out;
 }
 
 .container-search {
@@ -363,6 +391,17 @@
     }
 }
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .fade-in {
     animation: fadeIn 0.6s ease-out;
 }
@@ -425,15 +464,21 @@
     
     .answer {
         font-size: 0.9em;
-        color: #4a5568;
-        padding: 10px 15px;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 6px;
+        color: #e0e0e0;
+        padding: 15px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
         border-left: 3px solid #4CAF50;
         margin-top: 10px;
-        line-height: 1.5;
+        line-height: 1.6;
         white-space: pre-line;
-        margin-top: 5px;
+        animation: fadeInDown 0.3s ease-in-out;
+    }
+
+    /* Específico para respuestas dentro de pregunta-item-movil */
+    .pregunta-item-movil .answer {
+        color: #e0e0e0;
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .principales {

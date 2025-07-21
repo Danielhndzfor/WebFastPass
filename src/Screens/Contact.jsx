@@ -26,15 +26,12 @@ function Contact() {
             <Parallax
                 backgroundImage={fondoC}
                 title={t("¡Contáctanos!")}
-                subtitle={t("¿Tienes dudas o necesitas más información sobre nuestros servicios? Estamos aquí para ayudarte en cada paso del proceso. Por favor, completa el siguiente formulario con tus datos, el tipo de trámite que necesitas y cualquier mensaje adicional. Nuestro equipo se pondrá en contacto contigo lo más pronto posible para brindarte la atención personalizada que mereces.")}
+                subtitle={t("Estamos aquí para ayudarte en cada paso del proceso.")}
             />
             <div className='introC fade-in'>
                 <h2 className="contact-title">{t("¡Contáctanos!")}</h2>
                 <p>
-                {t("Para mas información o mas detalles acerca de nuestros servicios, trámites en proceso o solicitudes por llevar a cabo, favor de contactar a un asesor a través de nuestros medios de difusión oficiales. Las consultas son personalizadas solamente despues de haber solicitado algún servicio de atención por este medio o en nuestros teléfonos, correos o redes sociales.")}
-                </p>
-                <p>
-                {t("Puede comunicarse con nosotros a través de Facebook, Messenger, Instagram, WhatsApp, o mediante el formulario que se encuentra a continuación.")}
+                {t("Para mas información o mas detalles acerca de nuestros servicios, trámites en proceso o solicitudes por llevar a cabo, favor de contactar a un asesor a través de nuestros medios de difusión oficiales. ")}
                 </p>
             </div>
             <div id='contactform'>

@@ -8,8 +8,8 @@ function VisaRechazadaCancelada() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="¿Tu visa fue rechazada o cancelada? Nosotros te ayudamos."
-                subtitle="En FastPass Visa brindamos asesoría especializada para personas que han recibido un rechazo consular o enfrentan la cancelación de su visa americana B1/B2."
+                title="Visa Rechazada o Cancelada"
+                subtitle="Asesoría especializada para casos de rechazo o cancelación de visa."
                 linkText="¡SOLICITA ASESORÍA!"
             />
 

@@ -24,6 +24,7 @@ const resources = {
             
             // Contact
             "¡Contáctanos!": "Contact Us!",
+            "Estamos aquí para ayudarte en cada paso del proceso.": "We are here to help you every step of the way.",
             "¿Tienes dudas o necesitas más información sobre nuestros servicios? Estamos aquí para ayudarte en cada paso del proceso. Por favor, completa el siguiente formulario con tus datos, el tipo de trámite que necesitas y cualquier mensaje adicional. Nuestro equipo se pondrá en contacto contigo lo más pronto posible para brindarte la atención personalizada que mereces.": "Do you have questions or need more information about our services? We are here to help you every step of the way. Please complete the following form with your details, the type of procedure you need, and any additional message. Our team will contact you as soon as possible to provide you with the personalized attention you deserve.",
             "Para mas información o mas detalles acerca de nuestros servicios, trámites en proceso o solicitudes por llevar a cabo, favor de contactar a un asesor a través de nuestros medios de difusión oficiales. Las consultas son personalizadas solamente despues de haber solicitado algún servicio de atención por este medio o en nuestros teléfonos, correos o redes sociales.": "For more information or details about our services, processes in progress, or requests to be carried out, please contact an advisor through our official communication channels. Consultations are personalized only after having requested some service through this means or through our phones, emails, or social networks.",
             "Puede comunicarse con nosotros a través de Facebook, Messenger, Instagram, WhatsApp, o mediante el formulario que se encuentra a continuación.": "You can contact us through Facebook, Messenger, Instagram, WhatsApp, or through the form below.",
@@ -138,6 +139,7 @@ const resources = {
             "Protegemos su información personal con los más altos estándares de confidencialidad y ética. No retenemos documentos, datos de usuario ni contraseñas, asegurándonos de que usted mantenga el control total de su información en todo momento.": "We protect your personal information with the highest standards of confidentiality and ethics. We do not retain documents, user data or passwords, ensuring you maintain complete control of your information at all times.",
             "Conocer nuestros Servicios": "Learn about our Services",
             "Agendar Cita": "Schedule Appointment",
+            "AGENDAR CITA": "SCHEDULE APPOINTMENT",
             "Testimonios": "Testimonials",
             "Años de Experiencia": "Years of Experience",
             "Tasa de Aprobación": "Approval Rate",
@@ -376,6 +378,7 @@ const resources = {
             
             // Contact
             "¡Contáctanos!": "¡Contáctanos!",
+            "Estamos aquí para ayudarte en cada paso del proceso.": "Estamos aquí para ayudarte en cada paso del proceso.",
             "¿Tienes dudas o necesitas más información sobre nuestros servicios? Estamos aquí para ayudarte en cada paso del proceso. Por favor, completa el siguiente formulario con tus datos, el tipo de trámite que necesitas y cualquier mensaje adicional. Nuestro equipo se pondrá en contacto contigo lo más pronto posible para brindarte la atención personalizada que mereces.": "¿Tienes dudas o necesitas más información sobre nuestros servicios? Estamos aquí para ayudarte en cada paso del proceso. Por favor, completa el siguiente formulario con tus datos, el tipo de trámite que necesitas y cualquier mensaje adicional. Nuestro equipo se pondrá en contacto contigo lo más pronto posible para brindarte la atención personalizada que mereces.",
             "Para mas información o mas detalles acerca de nuestros servicios, trámites en proceso o solicitudes por llevar a cabo, favor de contactar a un asesor a través de nuestros medios de difusión oficiales. Las consultas son personalizadas solamente despues de haber solicitado algún servicio de atención por este medio o en nuestros teléfonos, correos o redes sociales.": "Para mas información o mas detalles acerca de nuestros servicios, trámites en proceso o solicitudes por llevar a cabo, favor de contactar a un asesor a través de nuestros medios de difusión oficiales. Las consultas son personalizadas solamente despues de haber solicitado algún servicio de atención por este medio o en nuestros teléfonos, correos o redes sociales.",
             "Puede comunicarse con nosotros a través de Facebook, Messenger, Instagram, WhatsApp, o mediante el formulario que se encuentra a continuación.": "Puede comunicarse con nosotros a través de Facebook, Messenger, Instagram, WhatsApp, o mediante el formulario que se encuentra a continuación.",
@@ -491,6 +494,7 @@ const resources = {
             "Protegemos su información personal con los más altos estándares de confidencialidad y ética. No retenemos documentos, datos de usuario ni contraseñas, asegurándonos de que usted mantenga el control total de su información en todo momento.": "Protegemos su información personal con los más altos estándares de confidencialidad y ética. No retenemos documentos, datos de usuario ni contraseñas, asegurándonos de que usted mantenga el control total de su información en todo momento.",
             "Conocer nuestros Servicios": "Conocer nuestros Servicios",
             "Agendar Cita": "Agendar Cita",
+            "AGENDAR CITA": "AGENDAR CITA",
             "Testimonios": "Testimonios",
             "Años de Experiencia": "Años de Experiencia",
             "Tasa de Aprobación": "Tasa de Aprobación",

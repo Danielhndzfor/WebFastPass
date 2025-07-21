@@ -8,8 +8,8 @@ function FormatoSAMMenoresMexico() {
         <>
             <Parallax
                 backgroundImage={fondoPF}
-                title="Autorización de Viaje para Menores (Formato SAM – INM)"
-                subtitle="Para menores mexicanos con pasaporte y visa que viajan solos o acompañados de un tercero a Estados Unidos y no desea solicitar un poder notarial."
+                title="Formato SAM"
+                subtitle="Autorización de viaje para menores mexicanos que viajan solos o con terceros."
                 linkText="¡Solicita Asesoría!"
             />
 
