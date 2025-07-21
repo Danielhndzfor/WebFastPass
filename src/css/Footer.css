@@ -52,6 +52,24 @@ a {
     font-size: 0.8rem;
 }
 
+/* Estilos para la sección de contacto */
+.mx-auto.mb-md-0.mb-4 a {
+    color: white !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+.mx-auto.mb-md-0.mb-4 a:hover {
+    color: #00d4ff !important;
+    cursor: pointer;
+}
+
+.mx-auto.mb-md-0.mb-4 a:focus {
+    color: #00a8cc !important;
+    outline: none;
+}
+
 /* Estilos para mejor presentación del horario */
 .horario-item {
     display: flex;

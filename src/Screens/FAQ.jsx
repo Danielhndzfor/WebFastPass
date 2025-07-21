@@ -161,7 +161,7 @@ function FAQ() {
 
     const handleTopicChange = (topicTitle) => {
         setSelectedTopic(topicTitle);
-        setExpandedQuestions({}); // Colapsar todas las preguntas
+        // No resetear expandedQuestions para que las preguntas mantengan su estado
         setHighlightedQuestion(''); // Quitar cualquier resaltado
         setShowSearchResults(false); // Ocultar resultados de búsqueda
     };
@@ -382,9 +382,9 @@ function FAQ() {
                                                     />
                                                 </h3>
                                                 {expandedQuestions[normalizeText(q.question)] && (
-                                                    <p className="answer">
+                                                    <div className="answer">
                                                         {q.answer}
-                                                    </p>
+                                                    </div>
                                                 )}
                                             </div>
                                         ))}

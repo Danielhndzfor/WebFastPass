@@ -276,15 +276,17 @@
 }
 
 .pregunta-item-movil .answer {
-    font-size: 0.95em;
-    color: #e0e0e0;
-    padding: 15px 20px;
-    margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    line-height: 1.6;
-    white-space: pre-line;
-    animation: fadeInDown 0.3s ease-in-out;
+    font-size: 0.95em !important;
+    color: #e0e0e0 !important;
+    padding: 15px 20px !important;
+    margin-top: 10px !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    line-height: 1.6 !important;
+    white-space: pre-line !important;
+    animation: fadeInDown 0.3s ease-in-out !important;
+    display: block !important;
+    border-left: 4px solid #4CAF50 !important;
 }
 
 .answer {
@@ -477,8 +479,10 @@
 
     /* Específico para respuestas dentro de pregunta-item-movil */
     .pregunta-item-movil .answer {
-        color: #e0e0e0;
-        background-color: rgba(255, 255, 255, 0.1);
+        color: #e0e0e0 !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        display: block !important;
+        border-left: 4px solid #4CAF50 !important;
     }
 
     .principales {
