@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 import '../css/Home.css'; // Asegúrate de crear y ajustar el archivo CSS
 import fondoH from '/r1.webp'; // Cambiado a WebP para mejor rendimiento
 import Steps from '/Pasos.png';
+import testimonio1 from '/testimonio1.svg';
+import testimonio2 from '/testimonio2.svg';
+import testimonio3 from '/testimonio3.svg';
+import testimonio4 from '/testimonio4.svg';
 import { MDBIcon } from 'mdb-react-ui-kit';
 
 // Lazy loading de componentes pesados
@@ -19,22 +23,22 @@ function Home() {
         {
             text: t("Gracias a FastPass obtuve mi visa sin problemas. Su asesoría fue excelente y me guiaron paso a paso."),
             author: t("María González"),
-            image: "/testimonio1.svg"
+            image: testimonio1
         },
         {
             text: t("Proceso rápido y eficiente. Recomiendo sus servicios al 100%. Personal muy profesional."),
             author: t("Carlos Rodríguez"),
-            image: "/testimonio2.svg"
+            image: testimonio2
         },
         {
             text: t("La preparación para la entrevista fue clave para mi aprobación. Excelente servicio personalizado."),
             author: t("Ana López"),
-            image: "/testimonio3.svg"
+            image: testimonio3
         },
         {
             text: t("Excelente atención y acompañamiento durante todo el proceso. Muy recomendable para todos."),
             author: t("Roberto Martín"),
-            image: "/testimonio4.svg"
+            image: testimonio4
         }
     ], [t]); // Solo se recreará cuando cambie el idioma
 

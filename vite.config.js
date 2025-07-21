@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './', // Importante para rutas relativas en producción
   build: {
     // Optimizaciones para mejorar el rendimiento
     rollupOptions: {
@@ -13,6 +14,17 @@ export default defineConfig({
           router: ['react-router-dom'],
           i18n: ['react-i18next', 'i18next'],
           ui: ['mdb-react-ui-kit']
+        },
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const extType = info[info.length - 1];
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico|webp|avif)$/i.test(assetInfo.name)) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          if (/\.(css)$/i.test(assetInfo.name)) {
+            return `assets/css/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
         }
       }
     },
@@ -26,11 +38,10 @@ export default defineConfig({
     }
   },
   // Optimización de imágenes
-  assetsInclude: ['**/*.webp', '**/*.avif'],
-  // Preload de recursos críticos
-  experimental: {
-    renderBuiltUrl(filename) {
-      return filename
-    }
+  assetsInclude: ['**/*.webp', '**/*.avif', '**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg'],
+  // Configuración de servidor para desarrollo
+  server: {
+    host: true,
+    port: 3000
   }
 })

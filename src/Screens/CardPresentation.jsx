@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../css/CardPresentation.css';
+import logoP from '/logoP.webp';
 
 function CardPresentation() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -25,65 +26,101 @@ function CardPresentation() {
 
     return (
         <div className={`card-presentation ${isLoaded ? 'loaded' : ''}`}>
-            <header>
-                <img src="/logoP.webp" alt="FastPass Visa" />
-            </header>
-            
-            <h1>Angel I. López Rivera</h1>
-            <h2>Asesor en pasaportes y visa americana</h2>
-            
-            <div className="contact-info">
-                <p><i className="fa-solid fa-phone"></i> +52 314 352 6003</p>
-                <p><i className="fa-solid fa-envelope"></i> info@fastpass-visas.com</p>
+            {/* Background decoration */}
+            <div className="bg-decoration">
+                <div className="circle circle-1"></div>
+                <div className="circle circle-2"></div>
+                <div className="circle circle-3"></div>
             </div>
-            
-            <div className="buttons">
-                <button 
-                    className="whatsapp-button"
-                    onClick={() => handleButtonClick('whatsapp', 'https://wa.me/523143526003')}
-                >
-                    <i className="fa-brands fa-whatsapp"></i>
-                    WhatsApp
-                </button>
-                
-                <button 
-                    className="facebook-button"
-                    onClick={() => handleButtonClick('facebook', 'https://www.facebook.com/visasmanzanillo?mibextid=dGKdO6')}
-                >
-                    <i className="fa-brands fa-square-facebook"></i>
-                    Facebook
-                </button>
-                
-                <button 
-                    className="instagram-button"
-                    onClick={() => handleButtonClick('instagram', 'https://www.instagram.com/fastpass_visa/')}
-                >
-                    <i className="fa-brands fa-instagram"></i>
-                    Instagram
-                </button>
-                
-                <button 
-                    className="location-button"
-                    onClick={() => handleButtonClick('location', 'https://maps.app.goo.gl/4VwsNwR3GQ7nhRyw8')}
-                >
-                    <i className="fa-solid fa-location-dot"></i>
-                    Ubicación
-                </button>
-                
-                <button 
-                    className="services-button"
-                    onClick={() => handleButtonClick('website', 'https://fastpass-visas.com/')}
-                >
-                    <i className="fa-solid fa-globe"></i>
-                    Sitio Web
-                </button>
-            </div>
-            
-            <footer>
-                <div>
-                    <p>FastPass Visa &copy; 2024</p>
+
+            {/* Profile section */}
+            <div className="profile-section">
+                <div className="avatar-container">
+                    <img src={logoP} alt="FastPass Visa" className="avatar" />
+                    <div className="status-indicator"></div>
                 </div>
-            </footer>
+                
+                <div className="profile-info">
+                    <h1>Angel I. López Rivera</h1>
+                    <span className="badge">Asesor Migratorio</span>
+                    <p className="specialty">Especialista en visas y pasaportes</p>
+                </div>
+            </div>
+
+            {/* Contact info */}
+            <div className="contact-section">
+                <div className="contact-item">
+                    <div className="contact-icon phone">
+                        <i className="fa-solid fa-phone"></i>
+                    </div>
+                    <span>+52 314 352 6003</span>
+                </div>
+                <div className="contact-item">
+                    <div className="contact-icon email">
+                        <i className="fa-solid fa-envelope"></i>
+                    </div>
+                    <span>info@fastpass-visas.com</span>
+                </div>
+            </div>
+
+            {/* Action buttons */}
+            <div className="actions-section">
+                <div className="primary-actions">
+                    <button 
+                        className="action-btn primary whatsapp"
+                        onClick={() => handleButtonClick('whatsapp', 'https://wa.me/523143526003')}
+                    >
+                        <i className="fa-brands fa-whatsapp"></i>
+                        <span>Contactar por WhatsApp</span>
+                    </button>
+                    
+                    <button 
+                        className="action-btn primary website"
+                        onClick={() => handleButtonClick('website', 'https://fastpass-visas.com/')}
+                    >
+                        <i className="fa-solid fa-globe"></i>
+                        <span>Visitar Sitio Web</span>
+                    </button>
+                </div>
+
+                <div className="secondary-actions">
+                    <button 
+                        className="social-btn facebook"
+                        onClick={() => handleButtonClick('facebook', 'https://www.facebook.com/visasmanzanillo?mibextid=dGKdO6')}
+                        aria-label="Facebook"
+                    >
+                        <i className="fa-brands fa-facebook-f"></i>
+                    </button>
+                    
+                    <button 
+                        className="social-btn instagram"
+                        onClick={() => handleButtonClick('instagram', 'https://www.instagram.com/fastpass_visa/')}
+                        aria-label="Instagram"
+                    >
+                        <i className="fa-brands fa-instagram"></i>
+                    </button>
+                    
+                    <button 
+                        className="social-btn location"
+                        onClick={() => handleButtonClick('location', 'https://maps.app.goo.gl/4VwsNwR3GQ7nhRyw8')}
+                        aria-label="Ubicación"
+                    >
+                        <i className="fa-solid fa-location-dot"></i>
+                    </button>
+                </div>
+            </div>
+
+            {/* Footer */}
+            <div className="footer-section">
+                <div className="company-info">
+                    <span className="company">FastPass Visa</span>
+                    <span className="year">© 2024</span>
+                </div>
+                <div className="save-contact">
+                    <i className="fa-solid fa-bookmark"></i>
+                    <span>Guardar contacto</span>
+                </div>
+            </div>
         </div>
     );
 }

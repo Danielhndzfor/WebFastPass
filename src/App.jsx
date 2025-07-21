@@ -7,8 +7,6 @@ import { usePageAnalytics } from './hooks/usePageAnalytics';
 import { useSEO } from './hooks/useSEO';
 import { getSEOData } from './utils/seoData';
 // import LiveStats from './components/LiveStats'; // Descomenta para ver stats en vivo
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
