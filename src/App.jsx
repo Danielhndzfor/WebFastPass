@@ -17,7 +17,7 @@ import Services from './Screens/Services';
 import About from './Screens/About';
 import FAQ from './Screens/FAQ';
 import Contact from './Screens/Contact';
-import CardPresentation from './Screens/CardPresentation';
+import DigitalCard from './Screens/DigitalCard/index.jsx';
 
 import CitaInfo from './Screens/Services/CitaInfo';
 import ActasNacimiento from './Screens/Services/ActasNacimiento';
@@ -71,7 +71,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/card" element={<CardPresentation />} />
+              <Route path="/card" element={<DigitalCard />} />
               <Route path="/tyc" element={<TyC />} />
 
               <Route path="/politica-de-privacidad" element={<PolPrivacidad />} />

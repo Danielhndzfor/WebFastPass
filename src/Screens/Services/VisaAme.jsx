@@ -44,21 +44,55 @@ function VisaAmericana() {
                 'Seguimiento para recolección de documentos en paqueteria.'
             ],
             costoDerechos: {
-                mayores: '$185 USD (De 15 años en adelante)',
-                menores: '$16 USD (De 0 a 14 años)'
+                mayores: '$185 USD (mayores de 15 años)',
+                menores: '$16 USD (menores de 15 años)'
             },
             costos: {
                 mayores: {
                     primeraVez: '$6,200',
                     renovacion: '$6,000',
-                    vigencia: '10 años (120 meses)'
+                    vigencia: '120 meses (10 años)'
                 },
-                menores: {
+                menores_6_14: {
                     primeraVez: '$2,800',
                     renovacion: '$2,600',
-                    vigencia: '10 años (120 meses) o los meses restantes a los 15 años de edad.'
+                    vigencia: '120 meses (10 años). La visa vencerá al cumplir 15 años de edad, salvo que pague cuota regular.'
+                },
+                menores_0_5: {
+                    primeraVez: '$2,800',
+                    renovacion: '$2,600',
+                    vigencia: '120 meses (10 años)'
+                },
+                paqueteria: {
+                    cas: '$0 Entrega en CAS',
+                    ocurre: '$320 entrega a Ocurre',
+                    domicilio: '$400 entrega a domicilio'
                 }
             },
+            pagoIncluye: [
+                'Pago $185 USD (mayores de 15 años)',
+                'Pago $16 USD (menores de 15 años)',
+                'Honorarios (asesoría, trámite, gestión y preparación para entrevista)'
+            ],
+            adicional: [
+                'Paquetería DHL (si requiere envío)'
+            ],
+            descripcionHonorarios: [
+                'Asesoría inicial o análisis de caso.',
+                'Recabar datos para declaración.',
+                'Llenado de formato DS-160 en línea.',
+                'Formularios de plataforma.',
+                'Selección de cita CAS y/o Consulado (más cercano).',
+                'Gestión y pago de derechos de visa.',
+                'Programación de cita inicial (consulado, fecha y hora).',
+                'Revisión de documentos generados y por presentar.',
+                'Entrega de documentos.',
+                'Preparación (simulacro) para cita CAS y entrevista Consulado.',
+                'Asesoría durante el proceso para entrega o recolección de visa.'
+            ],
+            noIncluye: [
+                'Traslados a CAS/Consulados.'
+            ],
             buttonText: '¡SOLICITA ASESORÍA AHORA!'
         },
         empleada: {
@@ -322,37 +356,67 @@ function VisaAmericana() {
 
                     {/* Costos */}
                     <div className="cita-info-section">
-                        <h3>Costos</h3>
-                        {currentVisa.costos.mayores ? (
-                            <>
-                                <h4 style={{ color: '#0A1547', marginTop: '15px' }}>Mayores de 15 años (Incluye tarifa MRV regular $185 USD y honorarios):</h4>
-                                <p><strong>Vigencia:</strong> {currentVisa.costos.mayores.vigencia}</p>
+                        <h3>Costos 2025 (Primera vez, Renovación y Reposición)</h3>
+                        <ul>
+                            <li><strong>Mayores de 15 años y adultos:</strong>
                                 <ul>
-                                    <li><strong>Primera Vez:</strong> {currentVisa.costos.mayores.primeraVez}</li>
-                                    <li><strong>Renovación:</strong> {currentVisa.costos.mayores.renovacion}</li>
+                                    <li>Primera vez: $6,200</li>
+                                    <li>Renovación/reposición: $6,000</li>
+                                    <li>Vigencia: 120 meses (10 años)</li>
                                 </ul>
-                                <h4 style={{ color: '#0A1547', marginTop: '15px' }}>Menores de 15 años (Incluye tarifa MRV reducida $16 USD y honorarios):</h4>
-                                <p><strong>Vigencia:</strong> {currentVisa.costos.menores.vigencia}</p>
+                            </li>
+                            <li><strong>Menores de edad (6 a 14 años):</strong>
                                 <ul>
-                                    <li><strong>Primera Vez:</strong> {currentVisa.costos.menores.primeraVez}</li>
-                                    <li><strong>Renovación:</strong> {currentVisa.costos.menores.renovacion}</li>
+                                    <li>Primera vez: $2,800</li>
+                                    <li>Renovación/reposición: $2,600</li>
+                                    <li>Vigencia: 120 meses (10 años). La visa vencerá al cumplir 15 años de edad, salvo que pague cuota regular.</li>
                                 </ul>
-                                <p style={{ marginTop: '15px', fontStyle: 'italic' }}>
-                                    Vigencia sujeta a aprobación por el oficial consular.
-                                </p>
-                            </>
-                        ) : (
-                            <>
-                                <p><strong>Trámite completo:</strong> {currentVisa.costos.general.tramite}</p>
-                                <p style={{ fontStyle: 'italic' }}>{currentVisa.costos.general.nota}</p>
-                                {currentVisa.costos.general.grupal && (
-                                    <p style={{ marginTop: '10px', color: '#239619' }}>{currentVisa.costos.general.grupal}</p>
-                                )}
-                                <p style={{ marginTop: '15px', fontStyle: 'italic' }}>
-                                    Vigencia sujeta a aprobación por el oficial consular.
-                                </p>
-                            </>
-                        )}
+                            </li>
+                            <li><strong>Menores de edad (0 a 5 años):</strong>
+                                <ul>
+                                    <li>Primera vez: $2,800</li>
+                                    <li>Renovación/reposición: $2,600</li>
+                                    <li>Vigencia: 120 meses (10 años)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h4 style={{ color: '#0A1547', marginTop: '15px' }}>Entrega y Paquetería DHL:</h4>
+                        <ul>
+                            <li>$0 Entrega en CAS</li>
+                            <li>$320 entrega a Ocurre</li>
+                            <li>$400 entrega a domicilio</li>
+                        </ul>
+                        <h4 style={{ color: '#0A1547', marginTop: '15px' }}>Pago incluye:</h4>
+                        <ul>
+                            <li>Pago $185 USD (mayores de 15 años)</li>
+                            <li>Pago $16 USD (menores de 15 años)</li>
+                            <li>Honorarios (asesoría, trámite, gestión y preparación para entrevista)</li>
+                        </ul>
+                        <h4 style={{ color: '#0A1547', marginTop: '15px' }}>Adicional:</h4>
+                        <ul>
+                            <li>Paquetería DHL (si requiere envío)</li>
+                        </ul>
+                        <h4 style={{ color: '#0A1547', marginTop: '15px' }}>Descripción de honorarios:</h4>
+                        <ul>
+                            <li>Asesoría inicial o análisis de caso.</li>
+                            <li>Recabar datos para declaración.</li>
+                            <li>Llenado de formato DS-160 en línea.</li>
+                            <li>Formularios de plataforma.</li>
+                            <li>Selección de cita CAS y/o Consulado (más cercano).</li>
+                            <li>Gestión y pago de derechos de visa.</li>
+                            <li>Programación de cita inicial (consulado, fecha y hora).</li>
+                            <li>Revisión de documentos generados y por presentar.</li>
+                            <li>Entrega de documentos.</li>
+                            <li>Preparación (simulacro) para cita CAS y entrevista Consulado.</li>
+                            <li>Asesoría durante el proceso para entrega o recolección de visa.</li>
+                        </ul>
+                        <h4 style={{ color: '#0A1547', marginTop: '15px' }}>No incluye:</h4>
+                        <ul>
+                            <li>Traslados a CAS/Consulados.</li>
+                        </ul>
+                        <p style={{ marginTop: '15px', fontStyle: 'italic' }}>
+                            Vigencia sujeta a aprobación por el oficial consular.
+                        </p>
                     </div>
 
                     {/* Botón de Contacto */}

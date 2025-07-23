@@ -9,7 +9,7 @@ function Layout({ children }) {
     // Rutas donde no se debe mostrar la navegación ni el footer
     const hideNavigationRoutes = ['/card'];
     
-    const shouldHideNavigation = hideNavigationRoutes.includes(location.pathname);
+    const shouldHideNavigation = location.pathname.startsWith('/card');
     
     if (shouldHideNavigation) {
         return <>{children}</>;

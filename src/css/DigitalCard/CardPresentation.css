@@ -1,8 +1,13 @@
 /* Reset y variables CSS */
-.card-presentation * {
+.card-presentation *, .digital-card-container * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.digital-card-container {
+    width: 100%;
+    min-height: 100vh;
 }
 
 :root {
@@ -122,12 +127,8 @@
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--white);
-    box-shadow: 0 8px 32px var(--shadow-medium);
+    width: 200px;
+    height: 200px;
     transition: all 0.3s ease;
 }
 
@@ -136,17 +137,6 @@
     box-shadow: 0 12px 40px var(--shadow-heavy);
 }
 
-.status-indicator {
-    position: absolute;
-    bottom: 4px;
-    right: 4px;
-    width: 24px;
-    height: 24px;
-    background: var(--primary-green);
-    border: 3px solid var(--white);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
 
 @keyframes pulse {
     0% {
@@ -191,8 +181,8 @@
 .contact-section {
     background: var(--white);
     border-radius: var(--border-radius);
-    padding: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     box-shadow: 0 4px 20px var(--shadow-light);
     animation: fadeInUp 0.8s ease-out 0.4s both;
     position: relative;
@@ -203,12 +193,30 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-xs) 0;
     border-bottom: 1px solid #f1f3f4;
+    transition: all 0.3s ease;
 }
 
 .contact-item:last-child {
     border-bottom: none;
+}
+
+.contact-item.clickable {
+    cursor: pointer;
+    border-radius: var(--border-radius-small);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin: 2px 0;
+}
+
+.contact-item.clickable:hover {
+    background-color: #f8fafc;
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.contact-item.clickable:active {
+    transform: translateX(2px);
 }
 
 .contact-icon {
@@ -221,6 +229,12 @@
     font-size: 16px;
     color: var(--white);
     flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-item.clickable:hover .contact-icon {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .contact-icon.phone {
@@ -235,11 +249,17 @@
     color: var(--text-dark);
     font-size: 14px;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item.clickable:hover span {
+    color: var(--primary-blue);
+    font-weight: 600;
 }
 
 /* Sección de acciones */
 .actions-section {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
     animation: fadeInUp 0.8s ease-out 0.6s both;
     position: relative;
     z-index: 1;
@@ -256,7 +276,7 @@
     background: var(--white);
     border: none;
     border-radius: var(--border-radius);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
@@ -310,6 +330,11 @@
     color: var(--white);
 }
 
+.action-btn.services {
+    background: linear-gradient(135deg, #c03f3f, #e74c3c);
+    color: var(--white);
+}
+
 /* Acciones secundarias (redes sociales) */
 .secondary-actions {
     display: flex;
@@ -318,8 +343,8 @@
 }
 
 .social-btn {
-    width: 56px;
-    height: 56px;
+    width: 36px;
+    height: 36px;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -355,11 +380,11 @@
 
 /* Footer */
 .footer-section {
-    margin-top: auto;
+    margin-top: 0;
+    padding-top: var(--spacing-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: var(--spacing-lg);
     border-top: 1px solid #e1e8ed;
     animation: fadeIn 1s ease-out 0.8s both;
     position: relative;

@@ -20,14 +20,16 @@
     width: 70%;
 }
 
-.services-grid {
+.services-main-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     width: 100%;
-    max-width: 1200px; /* Limita el ancho máximo de la grilla */
-    margin: 0 auto; /* Centra la grilla */
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+
 
 @keyframes fadeIn {
     from {

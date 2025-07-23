@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../css/Contact.css'; // Asegúrate de que la ruta sea correcta
 import Parallax from '../components/Parallax'; // Asegúrate de que la ruta sea correcta
 import fondoC from '/fondoC.png'; // Cambia por tu propia imagen
-import ContactForm from '../components/ContactForm'; // Asegúrate de que la ruta sea correcta
+const ContactForm = lazy(() => import('../components/ContactForm')); // Asegúrate de que la ruta sea correcta
 
 function Contact() {
     const { t } = useTranslation();
@@ -35,7 +35,9 @@ function Contact() {
                 </p>
             </div>
             <div id='contactform'>
-            <ContactForm />
+            <Suspense fallback={<div>Cargando...</div>}>
+              <ContactForm />
+            </Suspense>
             </div>
             <div className="aviso">
                 <h4>{t("AVISO")}</h4>

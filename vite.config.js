@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // Importante para rutas relativas en producción
+  base: '/', // Rutas absolutas para máxima compatibilidad en Hostinger
   build: {
     // Optimizaciones para mejorar el rendimiento
     rollupOptions: {

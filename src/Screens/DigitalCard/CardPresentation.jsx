@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import '../css/CardPresentation.css';
+import '../../css/DigitalCard/CardPresentation.css';
 import logoP from '/logoP.webp';
 
-function CardPresentation() {
+function CardPresentation({ onShowServices }) {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
@@ -24,21 +24,29 @@ function CardPresentation() {
         window.open(url, '_blank', 'noopener,noreferrer');
     };
 
+    const handleContactClick = (type, value) => {
+        // Analytics tracking (opcional)
+        if (window.gtag) {
+            window.gtag('event', 'click', {
+                event_category: 'contact',
+                event_label: type,
+                value: 1
+            });
+        }
+
+        if (type === 'phone') {
+            window.location.href = `tel:${value}`;
+        } else if (type === 'email') {
+            window.location.href = `mailto:${value}`;
+        }
+    };
+
     return (
         <div className={`card-presentation ${isLoaded ? 'loaded' : ''}`}>
-            {/* Background decoration */}
-            <div className="bg-decoration">
-                <div className="circle circle-1"></div>
-                <div className="circle circle-2"></div>
-                <div className="circle circle-3"></div>
-            </div>
-
+            
             {/* Profile section */}
             <div className="profile-section">
-                <div className="avatar-container">
-                    <img src={logoP} alt="FastPass Visa" className="avatar" />
-                    <div className="status-indicator"></div>
-                </div>
+                <img src={logoP} alt="FastPass Visa" className="avatar" />
                 
                 <div className="profile-info">
                     <h1>Angel I. López Rivera</h1>
@@ -49,13 +57,19 @@ function CardPresentation() {
 
             {/* Contact info */}
             <div className="contact-section">
-                <div className="contact-item">
+                <div 
+                    className="contact-item clickable"
+                    onClick={() => handleContactClick('phone', '+523143526003')}
+                >
                     <div className="contact-icon phone">
                         <i className="fa-solid fa-phone"></i>
                     </div>
                     <span>+52 314 352 6003</span>
                 </div>
-                <div className="contact-item">
+                <div 
+                    className="contact-item clickable"
+                    onClick={() => handleContactClick('email', 'info@fastpass-visas.com')}
+                >
                     <div className="contact-icon email">
                         <i className="fa-solid fa-envelope"></i>
                     </div>
@@ -80,6 +94,14 @@ function CardPresentation() {
                     >
                         <i className="fa-solid fa-globe"></i>
                         <span>Visitar Sitio Web</span>
+                    </button>
+
+                    <button 
+                        className="action-btn primary services"
+                        onClick={onShowServices}
+                    >
+                        <i className="fa-solid fa-list"></i>
+                        <span>Ver Servicios</span>
                     </button>
                 </div>
 
