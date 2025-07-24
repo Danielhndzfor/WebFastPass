@@ -166,7 +166,7 @@ function Footer() {
                 </section>
 
                 <div className='text-center p-4 border-top' style={{ color: 'white' }}>
-                    © 2024 Copyright | FastPass Visas
+                    © 2025 Copyright | FastPass Visas
                     <div>
                         <a className='settings' onClick={handleCustomize}>{t('Cambiar Preferencias')}</a>
                     </div>

@@ -19,7 +19,7 @@ function CardPresentation({ onShowServices }) {
                 value: 1
             });
         }
-        
+
         // Abrir enlace
         window.open(url, '_blank', 'noopener,noreferrer');
     };
@@ -43,30 +43,38 @@ function CardPresentation({ onShowServices }) {
 
     return (
         <div className={`card-presentation ${isLoaded ? 'loaded' : ''}`}>
-            
+
             {/* Profile section */}
             <div className="profile-section">
                 <img src={logoP} alt="FastPass Visa" className="avatar" />
-                
+
                 <div className="profile-info">
                     <h1>Angel I. López Rivera</h1>
-                    <span className="badge">Asesor Migratorio</span>
                     <p className="specialty">Especialista en visas y pasaportes</p>
                 </div>
             </div>
 
             {/* Contact info */}
             <div className="contact-section">
-                <div 
+                <div
                     className="contact-item clickable"
-                    onClick={() => handleContactClick('phone', '+523143526003')}
+                    onClick={() => handleContactClick('phone', '+523146885645')}
                 >
                     <div className="contact-icon phone">
                         <i className="fa-solid fa-phone"></i>
                     </div>
-                    <span>+52 314 352 6003</span>
+                    <span>+52 314 688 5645 (Oficina)</span>
                 </div>
-                <div 
+                <div
+                    className="contact-item clickable"
+                    onClick={() => handleContactClick('phone', '+523143526003')}
+                >
+                    <div className="contact-icon phone">
+                        <i className="fa-solid fa-mobile"></i>
+                    </div>
+                    <span>+52 314 352 6003 (Celular)</span>
+                </div>
+                <div
                     className="contact-item clickable"
                     onClick={() => handleContactClick('email', 'info@fastpass-visas.com')}
                 >
@@ -80,15 +88,15 @@ function CardPresentation({ onShowServices }) {
             {/* Action buttons */}
             <div className="actions-section">
                 <div className="primary-actions">
-                    <button 
+                    <button
                         className="action-btn primary whatsapp"
                         onClick={() => handleButtonClick('whatsapp', 'https://wa.me/523143526003')}
                     >
                         <i className="fa-brands fa-whatsapp"></i>
                         <span>Contactar por WhatsApp</span>
                     </button>
-                    
-                    <button 
+
+                    <button
                         className="action-btn primary website"
                         onClick={() => handleButtonClick('website', 'https://fastpass-visas.com/')}
                     >
@@ -96,7 +104,7 @@ function CardPresentation({ onShowServices }) {
                         <span>Visitar Sitio Web</span>
                     </button>
 
-                    <button 
+                    <button
                         className="action-btn primary services"
                         onClick={onShowServices}
                     >
@@ -106,23 +114,23 @@ function CardPresentation({ onShowServices }) {
                 </div>
 
                 <div className="secondary-actions">
-                    <button 
+                    <button
                         className="social-btn facebook"
                         onClick={() => handleButtonClick('facebook', 'https://www.facebook.com/visasmanzanillo?mibextid=dGKdO6')}
                         aria-label="Facebook"
                     >
                         <i className="fa-brands fa-facebook-f"></i>
                     </button>
-                    
-                    <button 
+
+                    <button
                         className="social-btn instagram"
                         onClick={() => handleButtonClick('instagram', 'https://www.instagram.com/fastpass_visa/')}
                         aria-label="Instagram"
                     >
                         <i className="fa-brands fa-instagram"></i>
                     </button>
-                    
-                    <button 
+
+                    <button
                         className="social-btn location"
                         onClick={() => handleButtonClick('location', 'https://maps.app.goo.gl/4VwsNwR3GQ7nhRyw8')}
                         aria-label="Ubicación"
