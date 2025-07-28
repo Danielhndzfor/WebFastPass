@@ -61,18 +61,18 @@ function CardPresentation({ onShowServices }) {
                     onClick={() => handleContactClick('phone', '+523146885645')}
                 >
                     <div className="contact-icon phone">
-                        <i className="fa-solid fa-phone"></i>
+                        <i className="fa-solid fa-building"></i>
                     </div>
-                    <span>+52 314 688 5645 (Oficina)</span>
+                    <span>+52 314 688 5645</span>
                 </div>
                 <div
                     className="contact-item clickable"
                     onClick={() => handleContactClick('phone', '+523143526003')}
                 >
                     <div className="contact-icon phone">
-                        <i className="fa-solid fa-mobile"></i>
+                        <i className="fa-solid fa-phone"></i>
                     </div>
-                    <span>+52 314 352 6003 (Celular)</span>
+                    <span>+52 314 352 6003</span>
                 </div>
                 <div
                     className="contact-item clickable"
@@ -144,7 +144,7 @@ function CardPresentation({ onShowServices }) {
             <div className="footer-section">
                 <div className="company-info">
                     <span className="company">FastPass Visa</span>
-                    <span className="year">© 2024</span>
+                    <span className="year">© 2025</span>
                 </div>
                 <div className="save-contact">
                     <i className="fa-solid fa-bookmark"></i>

@@ -92,19 +92,19 @@ const servicesData = [
         link: '/services/seguimiento-tramites'
     },
     {
-        image: '/canada-eta.webp',
+        image: '/ETA.png',
         title: 'Autorización electrónica de viaje Canadá (eTA)',
         description: 'Tramitamos tu autorización electrónica para Canadá (eTA).',
         link: '/services/canada-eta'
     },
     {
-        image: '/canada-visa.webp',
+        image: '/visaCanada.jpg',
         title: 'Visa Visitante Canadá (residente temporal)',
         description: 'Asistencia para obtener tu visa de visitante a Canadá.',
         link: '/services/canada-visitor-visa'
     },
     {
-        image: '/otros-servicios.webp',
+        image: '/otros.webp',
         title: 'Otros servicios',
         description: 'Servicios extra para tus trámites migratorios y documentos.',
         link: '/services/otros-servicios'

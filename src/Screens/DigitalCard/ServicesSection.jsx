@@ -114,7 +114,7 @@ function ServicesSection({ onBack }) {
             <div className="footer-section">
                 <div className="company-info">
                     <span className="company">FastPass Visa</span>
-                    <span className="year">© 2024</span>
+                    <span className="year">© 2025</span>
                 </div>
                 <div className="save-contact">
                     <i className="fa-solid fa-bookmark"></i>

@@ -1,18 +1,18 @@
 // src/utils/seoData.js
 export const seoPages = {
     home: {
-        title: 'FastPass Visa - Consultoría de Trámites Migratorios en Manzanillo, Colima',
-        description: 'Consultoría líder en trámites de visas americanas, pasaportes mexicanos y americanos en Manzanillo, Colima. Más de 10 años ayudando a familias a cumplir sus sueños migratorios.',
-        keywords: 'visa americana, pasaporte mexicano, pasaporte americano, trámites migratorios, Manzanillo, Colima, consultoría, FastPass Visa, citas consulado',
+        title: 'Visas en Manzanillo y Trámite para Visa Americana | FastPass Visa',
+        description: '¿Buscas visas en Manzanillo? Somos expertos en trámite para visa americana en Manzanillo, Colima. Más de 10 años ayudando a familias a cumplir sus sueños migratorios. Consultoría líder en trámites de visas americanas, pasaportes mexicanos y americanos.',
+        keywords: 'visas en Manzanillo, trámite para visa americana en Manzanillo, visa americana, pasaporte mexicano, pasaporte americano, trámites migratorios, Manzanillo, Colima, consultoría, FastPass Visa, citas consulado',
         url: 'https://www.fastpass-visas.com',
         image: '/logoP.webp',
         type: 'website'
     },
     
     services: {
-        title: 'Servicios de Trámites Migratorios - FastPass Visa Manzanillo',
-        description: 'Ofrecemos servicios completos de visas americanas, pasaportes, actas de nacimiento, poderes notariales y más. Consultoría especializada en Manzanillo, Colima.',
-        keywords: 'servicios migratorios, visa americana, pasaporte, actas nacimiento, poder notarial, SAM, traducción documentos, Manzanillo',
+        title: 'Trámite para Visa Americana en Manzanillo y Servicios Migratorios | FastPass Visa',
+        description: 'Especialistas en trámite para visa americana en Manzanillo. Ofrecemos servicios completos de visas, pasaportes, actas de nacimiento, poderes notariales y más. Consultoría migratoria en Manzanillo, Colima.',
+        keywords: 'trámite para visa americana en Manzanillo, visas en Manzanillo, servicios migratorios, visa americana, pasaporte, actas nacimiento, poder notarial, SAM, traducción documentos, Manzanillo',
         url: 'https://www.fastpass-visas.com/services',
         structuredData: {
             "@type": "Service",
@@ -21,9 +21,9 @@ export const seoPages = {
     },
 
     visaAmericana: {
-        title: 'Visa Americana - Trámite Completo en Manzanillo, Colima | FastPass Visa',
-        description: 'Tramita tu visa americana con éxito. Te ayudamos con el formulario DS-160, cita en consulado, preparación de entrevista y documentos. Experiencia comprobada.',
-        keywords: 'visa americana, DS-160, cita consulado, entrevista visa, trámite visa USA, Manzanillo, Colima, consultoría migratoria',
+        title: 'Trámite para Visa Americana en Manzanillo | FastPass Visa',
+        description: '¿Necesitas trámite para visa americana en Manzanillo? Te ayudamos con el formulario DS-160, cita en consulado, preparación de entrevista y documentos. Experiencia comprobada en visas en Manzanillo.',
+        keywords: 'trámite para visa americana en Manzanillo, visas en Manzanillo, visa americana, DS-160, cita consulado, entrevista visa, trámite visa USA, Manzanillo, Colima, consultoría migratoria',
         url: 'https://www.fastpass-visas.com/services/visa-americana',
         structuredData: {
             "@type": "Service",
